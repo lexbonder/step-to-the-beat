@@ -77,6 +77,10 @@ export class Calculations extends Component {
           </form>
         </article>
 
+        <article className='result'>
+          <h2>Your beat is:</h2>
+          <h1>{`${(this.state.result ? this.state.result + ' SPM' : '')}`}</h1>
+        </article>
         {/* Height/Speed */}
         <article className='estimate'>
           <h4>Enter your height and speed to estimate your SPM</h4>
@@ -134,10 +138,6 @@ export class Calculations extends Component {
               <button>Get my SPM</button>
             </form>
           </div>
-        </article>
-        <article className='result'>
-          <h2>Your beat is:</h2>
-          <h1>{`${(this.state.result ? this.state.result + ' SPM' : '')}`}</h1>
         </article>
       </div>
     )
