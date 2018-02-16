@@ -1,0 +1,21 @@
+.Home {
+  padding: 20px;
+  text-align: center;
+}
+
+.Home a {
+  display: inline-block;
+  margin: 20px;
+}
+
+.intro {
+  text-align: center;
+  display: block;
+  width: 750px;
+  margin: auto;
+}
+
+.log-in {
+  text-decoration: underline;
+  cursor: pointer;
+}
