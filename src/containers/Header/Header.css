@@ -1,0 +1,33 @@
+header {
+  padding: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:visited {
+  color: inherit;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header img {
+  height: 40px;
+  margin-top: 10px;
+}
+
+header p {
+  margin: 0;
+  text-align: right;
+}
+
+header .log-out {
+  font-size: .7em;
+  text-decoration: underline;
+}
