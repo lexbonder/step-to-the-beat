@@ -1,4 +1,4 @@
-export const playlistReducer = (state = {}, action) => {
+export const seedsReducer = (state = {}, action) => {
   switch (action.type) {
     case 'SELECT_SPM':
     return {...state, spm: action.spm}

@@ -6,10 +6,10 @@ import Login from '../../containers/Login/Login';
 import SelectGenre from '../../containers/SelectGenre/SelectGenre';
 import Calculations from '../Calculations/Calculations';
 import SelectSPM from '../../containers/SelectSPM/SelectSPM';
+import Confirm from '../../containers/Confirm/Confirm';
 import { SavedSpms } from '../../containers/SavedSpms/SavedSpms';
 import { FavoriteSongs } from '../../containers/FavoriteSongs/FavoriteSongs';
 import { FavoritePlaylists } from '../../containers/FavoritePlaylists/FavoritePlaylists';
-import { Confirm } from '../../containers/Confirm/Confirm';
 import './App.css';
 
 export class App extends Component {
