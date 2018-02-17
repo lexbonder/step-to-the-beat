@@ -22,7 +22,7 @@ export const saveUserName = userName => ({
   userName
 })
 
-export const selectSPM = spm => ({
+export const selectSpm = spm => ({
   type: 'SELECT_SPM',
   spm
 })

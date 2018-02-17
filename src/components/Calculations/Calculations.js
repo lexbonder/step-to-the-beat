@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveSpm } from '../../actions/actions';
+import { saveSpm, selectSpm } from '../../actions/actions';
 import './Calculations.css';
 
 export class Calculations extends Component {
@@ -18,12 +18,6 @@ export class Calculations extends Component {
     }
   }
 
-  componentDidUpdate = () => {
-    if (this.state.result) {
-      console.log('wutup')
-    }
-  }
-
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({[name]: value});
@@ -31,6 +25,7 @@ export class Calculations extends Component {
 
   submitSPM = () => {
     this.props.saveSpm(this.state.result)
+    this.props.selectSpm(this.state.result)
     this.props.history.push('/select-genre')
   }
 
@@ -169,7 +164,8 @@ export class Calculations extends Component {
 }
 
 export const MDTP = dispatch => ({
-  saveSpm: spm => dispatch(saveSpm(spm))
+  saveSpm: spm => dispatch(saveSpm(spm)),
+  selectSpm: spm => dispatch(selectSpm(spm))
 })
 
 export default withRouter(connect(null, MDTP)(Calculations))

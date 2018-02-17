@@ -1,4 +1,4 @@
-export const spmsReducer = (state = [], action) => {
+export const savedSpmsReducer = (state = [], action) => {
   switch (action.type) {
   case 'SAVE_SPM':
     return [...state, action.spm]

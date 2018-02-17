@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
+import { selectSpm } from '../../actions/actions';
 
 export class SelectSPM extends Component {
 
   getSavedSPMs = () => {
-    const { spms } = this.props
-    if (spms && spms.length) {
-      return spms.map(spm => <option>{spm}</option>)
+    const { savedSpms } = this.props
+    if (savedSpms && savedSpms.length) {
+      return savedSpms.map(spm => <option>{spm}</option>)
     } else {
       return <option>No Saved SPMs</option>
     }  
+  }
+
+  handleClick = () => {
+    const selectEelement = document.querySelector('select')
+    const selectedSpm = selectEelement
+      .options
+      [selectEelement.selectedIndex]
+      .innerText
+    this.props.selectSpm(selectedSpm)
   }
 
   render() {
@@ -22,14 +32,18 @@ export class SelectSPM extends Component {
           {this.getSavedSPMs()}
         </select>
         <Link to='/'>Cancel</Link>
-        <Link onClick={this.handleClick} to={`/select-genre`}>Next</Link> {/*Figure out this..*/}
+        <Link onClick={this.handleClick} to={`/select-genre`}>Next</Link>
       </div>
     )
   }
 }
 
 export const MSTP = store => ({
-  spms: store.spms
+  savedSpms: store.savedSpms
 })
 
-export default withRouter(connect(MSTP)(SelectSPM))
+export const MDTP = dispatch => ({
+  selectSpm: spm => dispatch(selectSpm(spm))
+})
+
+export default withRouter(connect(MSTP, MDTP)(SelectSPM))
