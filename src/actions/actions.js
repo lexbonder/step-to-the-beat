@@ -22,12 +22,17 @@ export const saveUserName = userName => ({
   userName
 })
 
-export const saveSPM = spm => ({
-  type: 'SAVE_SPM',
+export const selectSPM = spm => ({
+  type: 'SELECT_SPM',
   spm
 })
 
-export const saveGenre = genre => ({
-  type: 'SAVE_GENRE',
+export const selectGenre = genre => ({
+  type: 'SELECT_GENRE',
   genre
+})
+
+export const saveSpm = spm => ({
+  type: 'SAVE_SPM',
+  spm
 })

@@ -11,6 +11,7 @@ export class SelectSPM extends Component {
       return <option>No Saved SPMs</option>
     }  
   }
+  
   render() {
     return (
       <div>
@@ -20,7 +21,7 @@ export class SelectSPM extends Component {
           {this.getSavedSPMs()}
         </select>
         <Link to='/'>Cancel</Link>
-        <Link to={`/select-genre`}>Next</Link> {/*Figure out this..*/}
+        <Link onClick={this.handleClick} to={`/select-genre`}>Next</Link> {/*Figure out this..*/}
       </div>
     )
   }

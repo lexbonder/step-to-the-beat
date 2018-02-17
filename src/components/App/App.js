@@ -4,7 +4,7 @@ import Header from '../../containers/Header/Header';
 import Home from '../../containers/Home/Home';
 import Login from '../../containers/Login/Login';
 import SelectGenre from '../../containers/SelectGenre/SelectGenre';
-import { Calculations } from '../Calculations/Calculations';
+import Calculations from '../Calculations/Calculations';
 import { SavedSpms } from '../../containers/SavedSpms/SavedSpms';
 import { FavoriteSongs } from '../../containers/FavoriteSongs/FavoriteSongs';
 import { FavoritePlaylists } from '../../containers/FavoritePlaylists/FavoritePlaylists';

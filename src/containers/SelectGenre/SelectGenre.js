@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { genres } from '../../genre-list';
-import { saveGenre } from '../../actions/actions';
+import { selectGenre } from '../../actions/actions';
 
 export class SelectGenre extends Component {
 
@@ -17,7 +17,7 @@ export class SelectGenre extends Component {
       [selectEelement.selectedIndex]
       .innerText
       .toLowerCase()
-    this.props.saveGenre(selectedGenre)
+    this.props.selectGenre(selectedGenre)
   }
 
   render() {
@@ -34,7 +34,7 @@ export class SelectGenre extends Component {
 }
 
 export const MDTP = dispatch => ({
-  saveGenre: genre => dispatch(saveGenre(genre))
+  selectGenre: genre => dispatch(selectGenre(genre))
 })
 
 export default withRouter(connect(null, MDTP)(SelectGenre))

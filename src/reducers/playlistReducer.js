@@ -1,8 +1,8 @@
 export const playlistReducer = (state = {}, action) => {
   switch (action.type) {
-    case 'SAVE_SPM':
+    case 'SELECT_SPM':
     return {...state, spm: action.spm}
-    case 'SAVE_GENRE':
+    case 'SELECT_GENRE':
     return {...state, genre: action.genre}
   default:
     return state;
