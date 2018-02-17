@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 
 export class SelectSPM extends Component {
 
   getSavedSPMs = () => {
-    const myArray = [1,2,3] // This will be the array of saved SPMs retrieved from the store
-    if (myArray.length) {
-      return myArray.map(thing => <option>Yo Dawg</option>)
+    const { spms } = this.props
+    if (spms && spms.length) {
+      return spms.map(spm => <option>{spm}</option>)
     } else {
       return <option>No Saved SPMs</option>
     }  
   }
-  
+
   render() {
     return (
       <div>
@@ -26,3 +27,9 @@ export class SelectSPM extends Component {
     )
   }
 }
+
+export const MSTP = store => ({
+  spms: store.spms
+})
+
+export default withRouter(connect(MSTP)(SelectSPM))
