@@ -3,12 +3,12 @@ import { Route } from 'react-router-dom';
 import Header from '../../containers/Header/Header';
 import Home from '../../containers/Home/Home';
 import Login from '../../containers/Login/Login';
+import SelectGenre from '../../containers/SelectGenre/SelectGenre';
 import { Calculations } from '../Calculations/Calculations';
 import { SavedSpms } from '../../containers/SavedSpms/SavedSpms';
 import { FavoriteSongs } from '../../containers/FavoriteSongs/FavoriteSongs';
 import { FavoritePlaylists } from '../../containers/FavoritePlaylists/FavoritePlaylists';
 import { SelectSPM } from '../../containers/SelectSPM/SelectSPM';
-import { SelectGenre } from '../../containers/SelectGenre/SelectGenre';
 import { Confirm } from '../../containers/Confirm/Confirm';
 import './App.css';
 
