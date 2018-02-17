@@ -15,6 +15,12 @@ export class Calculations extends Component {
     }
   }
 
+  componentDidUpdate = () => {
+    if (this.state.result) {
+      console.log('wutup')
+    }
+  }
+
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({[name]: value});

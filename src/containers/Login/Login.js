@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveAccessToken, logInUser } from '../../actions/actions';
+import { saveAccessToken, logInUser, saveUserName } from '../../actions/actions';
+import { getUserName } from '../../apiCalls.js';
 
 export class Login extends Component {
 
@@ -14,6 +15,13 @@ export class Login extends Component {
     } else {
       alert('You were not signed in')
     }
+  }
+
+  componentDidUpdate = async () => {
+    if (this.props.accessToken) {
+      const userName = await getUserName(this.props.accessToken)
+      this.props.saveUserName(userName)
+    }
     this.props.history.push('/')
   }
 
@@ -24,9 +32,14 @@ export class Login extends Component {
   }
 }
 
-export const MDTP = (dispatch) => ({
-  saveAccessToken: (accessToken) => dispatch(saveAccessToken(accessToken)),
-  logInUser: () => dispatch(logInUser())
+export const MSTP = store => ({
+  accessToken: store.accessToken
 })
 
-export default withRouter(connect(null, MDTP)(Login))
+export const MDTP = dispatch => ({
+  saveAccessToken: accessToken => dispatch(saveAccessToken(accessToken)),
+  logInUser: () => dispatch(logInUser()),
+  saveUserName: userName => dispatch(saveUserName(userName))
+})
+
+export default withRouter(connect(MSTP, MDTP)(Login))
