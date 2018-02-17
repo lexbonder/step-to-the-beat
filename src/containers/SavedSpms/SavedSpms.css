@@ -1,0 +1,9 @@
+.SavedSpms ul {
+  list-style: none;
+  padding: 0;
+}
+
+.SavedSpms li {
+  display: inline-block;
+  margin: 20px;
+}

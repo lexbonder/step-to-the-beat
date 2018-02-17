@@ -19,3 +19,22 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboard a {
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+.dashNav {
+  background-color: #ddd;
+}

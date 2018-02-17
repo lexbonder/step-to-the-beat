@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authorize } from '../../authorizeSpotify';
 import { Link, NavLink, withRouter } from 'react-router-dom';
-import './Home.css'
+import './Home.css';
 
 export class Home extends Component {
 
@@ -10,12 +10,22 @@ export class Home extends Component {
   view = () => {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <NavLink to='/saved-spms'>My Saved SPM's</NavLink>
-          <NavLink to='/favorite-songs'>My Favorite Songs</NavLink>
-          <NavLink to='/favorite-playlists'>My Favorite Playlists</NavLink>
-          <NavLink to='/calculations'>Get New SPM</NavLink>
-          <NavLink to='/select-spm'>Get New Playlist</NavLink>
+        <div className='dashboard'>
+          <NavLink 
+            activeClassName='dashNav'
+            to='/saved-spms'>My Saved SPM's</NavLink>
+          <NavLink 
+            activeClassName='dashNav'
+            to='/favorite-songs'>My Favorite Songs</NavLink>
+          <NavLink 
+            activeClassName='dashNav'
+            to='/favorite-playlists'>My Favorite Playlists</NavLink>
+          <NavLink 
+            activeClassName='dashNav'
+            to='/calculations'>Get New SPM</NavLink>
+          <NavLink 
+            activeClassName='dashNav'
+            to='/select-spm'>Get New Playlist</NavLink>
         </div>
       )
     } else {

@@ -1,4 +1,4 @@
-export const saveAccessToken = (token) => ({
+export const saveAccessToken = token => ({
   type: 'SAVE_ACCESS_TOKEN',
   token
 })
@@ -16,3 +16,13 @@ export const logOutUser = () => ({
   type: 'LOG_OUT_USER',
   loggedIn: false
 })
+
+export const saveUserName = userName => ({
+  type: 'SAVE_USER_NAME',
+  userName
+})
+
+// export const saveSPM = spm => ({
+//   type: 'SAVE_SPM',
+//   spm
+// })
