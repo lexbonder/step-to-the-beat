@@ -1,4 +1,8 @@
 .Home {
+  background-color: #CCC7C4;
+  width: fit-content;
+  border-radius: 20px;
+  margin: auto;
   padding: 20px;
   text-align: center;
 }
@@ -15,9 +19,23 @@
   margin: auto;
 }
 
-.log-in {
-  text-decoration: underline;
+.log-in,
+.begin {
+  color: #322F30;
+  display: inline-block;
+  width: fit-content;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
   cursor: pointer;
+  background-color: #FDAB02;
+}
+/*
+.log-in {
+}*/
+
+.begin {
+  text-decoration: none;
 }
 
 .dashboard {
@@ -26,15 +44,17 @@
 }
 
 .dashboard a {
+  background-color: #FDAB02;
+  text-align: center;
   display: inline-block;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  border: 2px solid black;
   text-decoration: none;
-  color: black;
+  color: #322F30;
 }
 
-.dashNav {
-  background-color: #ddd;
+a.dashNav {
+  background-color: #EC2B06;
+  color: #CCC7C4;
 }

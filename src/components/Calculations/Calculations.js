@@ -14,7 +14,13 @@ export class Calculations extends Component {
       mphSpeed: '',
       mpmMinute: '',
       mpmSecond: '',
-      result: ''
+      result: '',
+      manualVisibility: 'show',
+      estimateVisibility: 'hide',
+      hoverTipVisibility: 'hide',
+      manualButton: 'focused',
+      estimateButton: '',
+      toggleResult: 'hide'
     }
   }
 
@@ -60,12 +66,55 @@ export class Calculations extends Component {
     this.setState({result})
   }
 
+  handleMouseEnter = () => {
+    console.log('word')
+  }
+
+  handleMouseLeave = () => {
+    console.log('suck it')
+  }
+
+  toggleManualEstimate = (event) => {
+    if (event.target.name === 'manual') {
+      this.setState({
+      manualVisibility: 'show',
+      estimateVisibility: 'hide',
+      manualButton: 'focused',
+      estimateButton: ''
+      })
+    } else { 
+      this.setState({
+      manualVisibility: 'hide',
+      estimateVisibility: 'show',
+      manualButton: '',
+      estimateButton: 'focused'
+      })
+    }
+  }
+
+  showResult = () => {
+    this.setState({toggleResult: 'show'})
+  }
+
+
+
   render() {
     return (
       <div className='Calculations'>
-
+        <button
+          name='manual'
+          className={this.state.manualButton}
+          onClick={this.toggleManualEstimate}
+        >Manual</button>
+        <button
+          name='estimate'
+          className={this.state.estimateButton}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+          onClick={this.toggleManualEstimate}
+        >Estimate</button>
         {/*MANUAL CALCULATION*/}
-        <article className='manual'>
+        <article className={`manual ${this.state.manualVisibility}`}>
           <p>Manual calculation is most accurate and only takes 40 seconds!</p>
           <ol>
             <li>Choose your favorite leg.</li>
@@ -82,26 +131,16 @@ export class Calculations extends Component {
               value={this.state.manual}
               placeholder='30'
             />
-            <button className='manual-button'>Get My SPM</button>
+            <button
+              className='manual-button'
+              onClick={this.showResult}
+            >Get My SPM</button>
           </form>
         </article>
 
-        {/* RESULT AND SUBMIT BUTTON */}
-
-        <article className='result'>
-          <h2>Your beat is:</h2>
-          {
-            this.state.result &&
-            <div>
-              <h1>{`${this.state.result + ' SPM'}`}</h1>
-              <button onClick={this.submitSPM}>Save and select Genre</button>
-            </div>
-          }
-        </article>
-
-
         {/* Height/Speed */}
-        <article className='estimate'>
+
+        <article className={`estimate ${this.state.estimateVisibility}`}>
           <h4>Enter your height and speed to estimate your SPM</h4>
           <form>
             <h4 className='height'>Height</h4>
@@ -140,7 +179,9 @@ export class Calculations extends Component {
                   placeholder='00'
                 />
               </p>
-              <button>Get my SPM</button>
+              <button
+                onClick={this.showResult}
+              >Get my SPM</button>
             </form>
             <div className='divider'></div>
             <form onSubmit={this.calculateMilePerHour}>
@@ -154,10 +195,28 @@ export class Calculations extends Component {
                   placeholder='6.0'
                 />
               </p>
-              <button>Get my SPM</button>
+              <button
+                onClick={this.showResult}
+              >Get my SPM</button>
             </form>
           </div>
         </article>
+
+
+        {/* RESULT AND SUBMIT BUTTON */}
+
+        <article className={`result ${this.state.toggleResult}`}>
+          <h2>Your beat is:</h2>
+          {
+            this.state.result &&
+            <div>
+              <h1>{`${this.state.result + ' SPM'}`}</h1>
+              <button onClick={this.submitSPM}>Save and select Genre</button>
+            </div>
+          }
+        </article>
+
+
       </div>
     )
   }
