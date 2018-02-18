@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
+import { savePlaylist } from '../../actions/actions';
 
 export class Confirm extends Component {
   
@@ -10,7 +11,7 @@ export class Confirm extends Component {
     const {seeds, accessToken } = this.props
     const rawPlaylistData = await getPlaylistData(seeds.spm, seeds.genre, accessToken)
     const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks)
-    console.log(cleanedPlaylist)
+    this.props.savePlaylist(cleanedPlaylist)
   }
 
   render() {
@@ -34,4 +35,8 @@ export const MSTP = store => ({
   accessToken: store.accessToken
 })
 
-export default withRouter(connect(MSTP)(Confirm))
+export const MDTP = dispatch => ({
+  savePlaylist: playlist => dispatch(savePlaylist(playlist))
+})
+
+export default withRouter(connect(MSTP, MDTP)(Confirm))

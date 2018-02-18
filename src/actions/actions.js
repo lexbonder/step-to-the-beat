@@ -36,3 +36,8 @@ export const saveSpm = spm => ({
   type: 'SAVE_SPM',
   spm
 })
+
+export const savePlaylist = playlist => ({
+  type: 'SAVE_PLAYLIST',
+  playlist
+})
