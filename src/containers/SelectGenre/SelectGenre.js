@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import { genres } from '../../genre-list';
+import { selectGenre } from '../../actions/actions';
 
 export class SelectGenre extends Component {
 
   getGenres = () => {
-    const myArray = [1,2,3] // This will be the array of genres passed from the songs after being filtered by spm
-    return myArray.map(thing => <option>Yo Dawg</option>)
+    return genres.map(genre => <option>{genre}</option>)
+  }
+
+  handleClick = () => {
+    const selectEelement = document.querySelector('select')
+    const selectedGenre = selectEelement
+      .options
+      [selectEelement.selectedIndex]
+      .innerText
+      .toLowerCase()
+    this.props.selectGenre(selectedGenre)
   }
 
   render() {
@@ -15,8 +27,14 @@ export class SelectGenre extends Component {
           {this.getGenres()}
         </select>
         <Link to='/select-spm'>Back</Link>
-        <Link to='/confirm'>Next</Link>
+        <Link onClick={this.handleClick} to='/confirm'>Next</Link>
       </div>
     )
   }
 }
+
+export const MDTP = dispatch => ({
+  selectGenre: genre => dispatch(selectGenre(genre))
+})
+
+export default withRouter(connect(null, MDTP)(SelectGenre))

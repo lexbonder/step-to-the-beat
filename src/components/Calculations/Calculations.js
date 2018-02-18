@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { saveSpm, selectSpm } from '../../actions/actions';
 import './Calculations.css';
 
 export class Calculations extends Component {
@@ -15,15 +18,15 @@ export class Calculations extends Component {
     }
   }
 
-  componentDidUpdate = () => {
-    if (this.state.result) {
-      console.log('wutup')
-    }
-  }
-
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({[name]: value});
+  }
+
+  submitSPM = () => {
+    this.props.saveSpm(this.state.result)
+    this.props.selectSpm(this.state.result)
+    this.props.history.push('/select-genre')
   }
 
   calculateManual = (event) => {
@@ -83,10 +86,20 @@ export class Calculations extends Component {
           </form>
         </article>
 
+        {/* RESULT AND SUBMIT BUTTON */}
+
         <article className='result'>
           <h2>Your beat is:</h2>
-          <h1>{`${(this.state.result ? this.state.result + ' SPM' : '')}`}</h1>
+          {
+            this.state.result &&
+            <div>
+              <h1>{`${this.state.result + ' SPM'}`}</h1>
+              <button onClick={this.submitSPM}>Save and select Genre</button>
+            </div>
+          }
         </article>
+
+
         {/* Height/Speed */}
         <article className='estimate'>
           <h4>Enter your height and speed to estimate your SPM</h4>
@@ -149,3 +162,10 @@ export class Calculations extends Component {
     )
   }
 }
+
+export const MDTP = dispatch => ({
+  saveSpm: spm => dispatch(saveSpm(spm)),
+  selectSpm: spm => dispatch(selectSpm(spm))
+})
+
+export default withRouter(connect(null, MDTP)(Calculations))
