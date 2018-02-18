@@ -7,6 +7,7 @@ import SelectGenre from '../../containers/SelectGenre/SelectGenre';
 import Calculations from '../Calculations/Calculations';
 import SelectSPM from '../../containers/SelectSPM/SelectSPM';
 import Confirm from '../../containers/Confirm/Confirm';
+import Playlist from '../../containers/Playlist/Playlist';
 import { SavedSpms } from '../../containers/SavedSpms/SavedSpms';
 import { FavoriteSongs } from '../../containers/FavoriteSongs/FavoriteSongs';
 import { FavoritePlaylists } from '../../containers/FavoritePlaylists/FavoritePlaylists';
@@ -27,6 +28,7 @@ export class App extends Component {
         <Route exact path='/select-spm' component={SelectSPM} />
         <Route exact path='/select-genre' component={SelectGenre} />
         <Route exact path='/confirm' component={Confirm} />
+        <Route exact path='/playlist' component={Playlist} />
         
         <Route exact path='/login' component={Login} />
       </div>
