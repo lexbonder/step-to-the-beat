@@ -1,25 +1,32 @@
 .Calculations {
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  max-width: 1290px;
   font-size: .8em;
+  width: 60%;
+  margin: 20px auto;
 }
 
 .Calculations article {
-  width: 30%;
+  padding: 20px;
+  background-color: #CCC7C4;
+  border-radius: 0 0 20px 20px;
+}
+
+.Calculations > button {
+  width: 50%;
+  border-radius: 20px 20px 0 0;
+  border: none;
+  background-color: #AAA5A2;
+  color: #322F30;
+}
+
+.Calculations > button.focused {
+  background-color: #CCC7C4;
+  color: #322F30;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
-}
-
-.manual,
-.estimate {
-  padding: 20px;
-  border: 2px solid black;
 }
 
 .divider {
@@ -51,7 +58,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 10px 0;
 }
 
-.manual-input {
+.manual-input,
+.estimate input {
   text-align: center;
   display: block;
   font-size: 1.5em;
@@ -61,19 +69,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: auto;
 }
 
-.manual-button {
+.estimate input {
+  display: inline-block;
+}
+
+.manual-button,
+.estimate button {
   display: block;
   margin: 30px auto;
 }
 
 .estimate {
   text-align: center;
-}
-
-.estimate input {
-  width: 40px;
-  text-align: center;
-  margin: 10px 0;
 }
 
 .estimate p {
@@ -90,9 +97,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .Calculations .result {
-  width: 15%;
+  width: 80%;
   text-align: center;
-  padding-top: 150px;
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 
