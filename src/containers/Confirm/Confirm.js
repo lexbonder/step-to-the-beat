@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
 import { savePlaylist } from '../../actions/actions';
+import './Confirm.css';
 
 export class Confirm extends Component {
   
@@ -13,13 +14,16 @@ export class Confirm extends Component {
     const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks)
     this.props.savePlaylist(cleanedPlaylist)
   }
-
+// {spm}
+//{ genre.charAt(0).toUpperCase() + genre.slice(1) }
   render() {
     const { spm, genre } = this.props.seeds
     return (
-      <div>
+      <div className='Confirm' >
         <h2>Confirm</h2>
-        <h2>{ spm }</h2>
+        <p>Steps per Minute</p>
+        <h2>{spm}</h2>
+        <p>Genre</p>
         <h2>
           { genre.charAt(0).toUpperCase() + genre.slice(1) }
         </h2>

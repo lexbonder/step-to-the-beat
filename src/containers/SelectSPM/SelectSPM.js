@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { selectSpm } from '../../actions/actions';
+import './SelectSPM.css';
 
 export class SelectSPM extends Component {
 
@@ -25,14 +26,19 @@ export class SelectSPM extends Component {
 
   render() {
     return (
-      <div>
-        <Link to='/calculations'>Add new SPM</Link>
-        <p>or select from below</p>
-        <select>
-          {this.getSavedSPMs()}
-        </select>
-        <Link to='/'>Cancel</Link>
-        <Link onClick={this.handleClick} to={`/select-genre`}>Next</Link>
+      <div className='SelectSPM'>
+        <h2>Select SPM</h2>
+        <div className='select-wrapper'>
+          <Link
+            className='add-new'
+            to='/calculations'>Add new SPM</Link>
+          <p>or select from below</p>
+          <select size='2'>
+            {this.getSavedSPMs()}
+          </select>
+          <Link to='/'>Cancel</Link>
+          <Link onClick={this.handleClick} to={`/select-genre`}>Next</Link>
+        </div>
       </div>
     )
   }
