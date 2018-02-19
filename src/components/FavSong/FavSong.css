@@ -1,0 +1,30 @@
+.song img {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin: 10px;
+}
+
+.song {
+  width: 95%;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.title h1 {
+  font-size: 30px;
+  display: inline-block;
+}
+
+.song h2 {
+  font-size: 20px;
+}
+
+.genre,
+.favorite {
+  text-align: right;
+}

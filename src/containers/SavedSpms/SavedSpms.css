@@ -1,9 +1,20 @@
-.SavedSpms ul {
-  list-style: none;
-  padding: 0;
+.SavedSpms,
+.spm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
 }
 
-.SavedSpms li {
-  display: inline-block;
-  margin: 20px;
+.SavedSpms {
+  width: 70%;
+  margin: auto;
+}
+
+.spm {
+  grid-column: 1 / span 3;
+}
+
+.none {
+  grid-column: 1 / span 3;
+  text-align: center;
 }
