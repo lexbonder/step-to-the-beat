@@ -1,0 +1,28 @@
+.SelectGenre h2 {
+  text-align: center;
+  color: #FDAB02;
+  margin: 20px 0 10px;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 245px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.select-wrapper select {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.select-wrapper a {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #FDAB02;
+  color: #322F30;
+  text-decoration: none;
+  margin: 20px 0;
+}

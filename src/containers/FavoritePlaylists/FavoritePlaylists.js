@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FavPlaylist } from '../../components/FavPlaylist/FavPlaylist';
+import './FavoritePlaylists.css';
 
 export class FavoritePlaylists extends Component {
   
@@ -14,7 +15,11 @@ export class FavoritePlaylists extends Component {
 
   render() {
     return(
-      <div>
+      <div className='favPlaylistWrapper'>
+      <h2>Nickname</h2>
+      <h2>SPM</h2>
+      <h2>Pace</h2>
+      <h2>Genre</h2>
       {this.favPlaylistsToRender()}
       </div>
     )

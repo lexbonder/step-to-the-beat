@@ -77,6 +77,11 @@ input[type=number]::-webkit-outer-spin-button {
 .estimate button {
   display: block;
   margin: 30px auto;
+  height: 1.5em;
+  background-color: #FDAB02;
+  color: #322F30;
+  border-radius: 20px;
+  border: none;
 }
 
 .estimate {
@@ -94,6 +99,10 @@ input[type=number]::-webkit-outer-spin-button {
 .speeds {
   display: flex;
   justify-content: space-around;
+}
+
+.speeds form {
+  width: 48%;
 }
 
 .Calculations .result {

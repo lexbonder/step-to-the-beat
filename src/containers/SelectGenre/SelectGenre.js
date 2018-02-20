@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { genres } from '../../genre-list';
 import { selectGenre } from '../../actions/actions';
+import './SelectGenre.css';
 
 export class SelectGenre extends Component {
 
@@ -22,12 +23,15 @@ export class SelectGenre extends Component {
 
   render() {
     return (
-      <div>
-        <select>
-          {this.getGenres()}
-        </select>
-        <Link to='/select-spm'>Back</Link>
-        <Link onClick={this.handleClick} to='/confirm'>Next</Link>
+      <div className='SelectGenre'>
+        <h2>Select Genre</h2>
+        <div className='select-wrapper'>
+          <select size='3'>
+            {this.getGenres()}
+          </select>
+          <Link to='/select-spm'>Back</Link>
+          <Link onClick={this.handleClick} to='/confirm'>Next</Link>
+        </div>
       </div>
     )
   }

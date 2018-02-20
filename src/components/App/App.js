@@ -8,7 +8,7 @@ import Calculations from '../Calculations/Calculations';
 import SelectSPM from '../../containers/SelectSPM/SelectSPM';
 import Confirm from '../../containers/Confirm/Confirm';
 import Playlist from '../../containers/Playlist/Playlist';
-import { SavedSpms } from '../../containers/SavedSpms/SavedSpms';
+import SavedSpms from '../../containers/SavedSpms/SavedSpms';
 import { FavoriteSongs } from '../../containers/FavoriteSongs/FavoriteSongs';
 import { FavoritePlaylists } from '../../containers/FavoritePlaylists/FavoritePlaylists';
 import './App.css';
