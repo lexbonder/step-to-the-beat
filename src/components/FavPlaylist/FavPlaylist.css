@@ -1,0 +1,14 @@
+.favPlaylist {
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+  align-items: center;
+}
+
+.favPlaylist button {
+  height: 1.5em;
+  background-color: #FDAB02;
+  color: #322F30;
+  border-radius: 20px;
+  border: none;
+}
