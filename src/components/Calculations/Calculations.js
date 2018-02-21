@@ -30,7 +30,12 @@ export class Calculations extends Component {
   }
 
   submitSPM = () => {
-    this.props.saveSpm(this.state.result)
+    this.props.saveSpm({
+      spm: this.state.result,
+      pace: '',
+      nickname: '',
+      id: Date.now()
+    })
     this.props.selectSpm(this.state.result)
     this.props.history.push('/select-genre')
   }

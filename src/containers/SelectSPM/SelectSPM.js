@@ -9,7 +9,7 @@ export class SelectSPM extends Component {
   getSavedSPMs = () => {
     const { savedSpms } = this.props
     if (savedSpms && savedSpms.length) {
-      return savedSpms.map(spm => <option>{spm}</option>)
+      return savedSpms.map(spm => <option>{spm.spm}</option>)
     } else {
       return <option>No Saved SPMs</option>
     }  

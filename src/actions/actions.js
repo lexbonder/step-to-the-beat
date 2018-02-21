@@ -37,6 +37,11 @@ export const saveSpm = spm => ({
   spm
 })
 
+export const updateSpm = spm => ({
+  type: 'UPDATE_SPM',
+  spm
+})
+
 
 // Playlist 
 

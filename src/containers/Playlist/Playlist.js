@@ -7,7 +7,7 @@ import {
   removeFavoriteSong
 } from '../../actions/actions';
 import './Playlist.css';
-import * as firebase from 'firebase';
+import { sendFavSongsToFirebase } from '../../firebaseCalls.js'
 
 export class Playlist extends Component {
 
@@ -30,8 +30,7 @@ export class Playlist extends Component {
 
   componentDidUpdate = () => {
     const { favoriteSongs, user } = this.props
-    const db = firebase.database().ref().child(user.id).child('favoriteSongs')
-    db.set(favoriteSongs)
+    sendFavSongsToFirebase(user.id, favoriteSongs)
   }
 
   playlistToRender = () => {

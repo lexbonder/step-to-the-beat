@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import './SavedSpms.css'
+import { updateSpm } from '../../actions/actions';
+import './SavedSpms.css';
 
 export class SavedSpms extends Component {
+
+  handleChange = (event) => {
+    const { parentElement, name, value } = event.target
+    const { savedSpms } = this.props
+    const editedSpm = savedSpms.find( spm => spm.id === parseInt(parentElement.id))
+    this.props.updateSpm({...editedSpm, [name]: value})
+  }
 
   getSavedSPMs = () => {
     const { savedSpms } = this.props
     if (savedSpms && savedSpms.length) {
       return savedSpms.map(spm => {
         return (
-          <div className='spm'>
-            <h4>{spm}</h4>
-            <h4 contenteditable='true'></h4>
-            <h4 contenteditable='true'></h4>
+          <div id={spm.id} className='spm'>
+            <input
+              onChange={this.handleChange}
+              name='spm'
+              value={spm.spm}  
+            />
+            <input
+              onChange={this.handleChange}
+              contenteditable='true'
+              name='pace'
+              value={spm.pace}
+              placeholder='Add a pace'
+            />
+            <input
+              onChange={this.handleChange}
+              contenteditable='true'
+              name='nickname'
+              value={spm.nickname}
+              placeholder='Add a nickname'
+            />
           </div>
         )}
       )
@@ -38,4 +62,8 @@ export const MSTP = store => ({
   savedSpms: store.savedSpms
 })
 
-export default withRouter(connect(MSTP)(SavedSpms))
+export const MDTP = dispatch => ({
+  updateSpm: spm => dispatch(updateSpm(spm))
+})
+
+export default withRouter(connect(MSTP, MDTP)(SavedSpms))

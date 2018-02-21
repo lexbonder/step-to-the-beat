@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { saveAccessToken, logInUser, saveUser, addToFavoriteSongs } from '../../actions/actions';
 import { getUserName } from '../../apiCalls.js';
-import * as firebase from 'firebase';
+import { getUserFavorites } from '../../firebaseCalls';
+// import * as firebase from 'firebase';
 
 export class Login extends Component {
 
@@ -21,20 +22,22 @@ export class Login extends Component {
   componentDidUpdate = async () => {
     if (this.props.accessToken) {
       const user = await getUserName(this.props.accessToken)
-      this.getUserFavorites(user.id)
+      const userFaves = await getUserFavorites(user.id)
+      this.userFavesToStore(userFaves.val())
+      // this.userIntoLocalStorage(user)
       this.props.saveUser(user)
     }
     this.props.history.push('/')
   }
 
-  getUserFavorites = id => {
-    const db = firebase.database().ref().child(id).child('favoriteSongs')
-    db.once('value', snap => {
-      if (snap.val()) {
-        snap.val().forEach(favorite =>
-          this.props.addToFavoriteSongs(favorite))
-      }
-    })
+  // userIntoLocalStorage = (user) => {
+  //   const stringified = JSON.stringify(user)
+  //   localStorage.setItem(user.id, stringified)
+  // }
+
+  userFavesToStore = userFaves => {
+    const { favoriteSongs } = userFaves
+    favoriteSongs.forEach(favorite => this.props.addToFavoriteSongs(favorite))
   }
 
   render () {
