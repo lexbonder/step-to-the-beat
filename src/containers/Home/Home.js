@@ -35,9 +35,9 @@ export class Home extends Component {
             Step to the beat figures out your personal rhythm! <br/>
             We'll help you calculate your Steps Per Minute (SPM) and
             we'll give you a personalized playlist with the same Beats 
-            Per Minute! <br/><br/> <span className='log-in' onClick={authorize}>Login with Spotify</span>  or just
-            <Link className='begin' to='/calculations'>Click here to begin</Link>
+            Per Minute!
           </p>
+          <button className='log-in' onClick={authorize}>Login with Spotify to begin</button>
         </div>
       )
     }

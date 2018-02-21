@@ -14,13 +14,12 @@ export class Header extends Component {
     clearAccessToken()
   }
   
-  view = () => {
-    if (!this.props.loggedIn) {
-      return <img src={loginButton} onClick={authorize} />
-    } else {
+  userGreeting = () => {
+    const { user, loggedIn } = this.props
+    if (loggedIn) {
       return (
         <div>
-          <p>Welcome, {this.props.user.name}!</p>
+          <p>Welcome, {user.name}!</p>
           <p className='log-out' onClick={this.handleLogOut}>Log Out</p>
         </div>
       )
@@ -34,7 +33,7 @@ export class Header extends Component {
           <Link to='/'>
             <h1>Step to the Beat</h1>
           </Link>
-          {this.view()}
+          {this.userGreeting()}
         </header>
       </div>
     )
