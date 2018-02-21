@@ -17,9 +17,9 @@ export const logOutUser = () => ({
   loggedIn: false
 })
 
-export const saveUserName = userName => ({
-  type: 'SAVE_USER_NAME',
-  userName
+export const saveUser = user => ({
+  type: 'SAVE_USER',
+  user
 })
 
 export const selectSpm = spm => ({
@@ -37,7 +37,27 @@ export const saveSpm = spm => ({
   spm
 })
 
+
+// Playlist 
+
 export const savePlaylist = playlist => ({
   type: 'SAVE_PLAYLIST',
   playlist
+})
+
+export const removeFromPlaylist = id => ({
+  type: 'REMOVE_FROM_PLAYLIST',
+  id
+})
+
+// Favorite Songs
+
+export const addToFavoriteSongs = song => ({
+  type: 'ADD_TO_FAVORITE_SONGS',
+  song
+})
+
+export const removeFavoriteSong = id => ({
+  type: 'REMOVE_FAVORITE_SONG',
+  id
 })

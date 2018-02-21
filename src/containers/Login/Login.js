@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveAccessToken, logInUser, saveUserName } from '../../actions/actions';
+import { saveAccessToken, logInUser, saveUser, addToFavoriteSongs } from '../../actions/actions';
 import { getUserName } from '../../apiCalls.js';
+import * as firebase from 'firebase';
 
 export class Login extends Component {
 
@@ -19,10 +20,21 @@ export class Login extends Component {
 
   componentDidUpdate = async () => {
     if (this.props.accessToken) {
-      const userName = await getUserName(this.props.accessToken)
-      this.props.saveUserName(userName)
+      const user = await getUserName(this.props.accessToken)
+      this.getUserFavorites(user.id)
+      this.props.saveUser(user)
     }
     this.props.history.push('/')
+  }
+
+  getUserFavorites = id => {
+    const db = firebase.database().ref().child(id).child('favoriteSongs')
+    db.once('value', snap => {
+      if (snap.val()) {
+        snap.val().forEach(favorite =>
+          this.props.addToFavoriteSongs(favorite))
+      }
+    })
   }
 
   render () {
@@ -39,7 +51,8 @@ export const MSTP = store => ({
 export const MDTP = dispatch => ({
   saveAccessToken: accessToken => dispatch(saveAccessToken(accessToken)),
   logInUser: () => dispatch(logInUser()),
-  saveUserName: userName => dispatch(saveUserName(userName))
+  saveUser: user => dispatch(saveUser(user)),
+  addToFavoriteSongs: favorite => dispatch(addToFavoriteSongs(favorite))
 })
 
 export default withRouter(connect(MSTP, MDTP)(Login))

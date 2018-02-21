@@ -7,9 +7,13 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import { App } from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
+import * as firebase from 'firebase';
+import config from './firebaseConfig';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const store = createStore(rootReducer, devTools);
+
+firebase.initializeApp(config);
 
 const router = (
   <BrowserRouter>
