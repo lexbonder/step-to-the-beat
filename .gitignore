@@ -24,4 +24,5 @@ yarn-error.log*
 /wire-frames
 
 # Api Key
-apiKey.js
+clientId.js
+firebaseConfig.js

@@ -20,7 +20,7 @@ export class Header extends Component {
     } else {
       return (
         <div>
-          <p>Welcome, {this.props.userName}!</p>
+          <p>Welcome, {this.props.user.name}!</p>
           <p className='log-out' onClick={this.handleLogOut}>Log Out</p>
         </div>
       )
@@ -41,9 +41,9 @@ export class Header extends Component {
   }
 }
 
-export const MSTP = ({ loggedIn, userName }) => ({
+export const MSTP = ({ loggedIn, user }) => ({
   loggedIn,
-  userName
+  user
 })
 
 export const MDTP = (dispatch) => ({

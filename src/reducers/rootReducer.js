@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
 import { accessTokenReducer } from './accessTokenReducer';
 import { loggedInReducer } from './loggedInReducer';
-import { userNameReducer } from './userNameReducer';
+import { userReducer } from './userReducer';
 import { seedsReducer } from './seedsReducer';
 import { savedSpmsReducer } from './savedSpmsReducer';
 import { playlistReducer } from './playlistReducer';
+import { favoriteSongsReducer } from './favoriteSongsReducer';
 
 export const rootReducer = combineReducers({
   accessToken: accessTokenReducer,
   loggedIn: loggedInReducer,
-  userName: userNameReducer,
+  user: userReducer,
   seeds: seedsReducer,
   savedSpms: savedSpmsReducer,
-  playlist: playlistReducer
+  playlist: playlistReducer,
+  favoriteSongs: favoriteSongsReducer
 })

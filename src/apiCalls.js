@@ -3,7 +3,10 @@ export const getUserName = async (accessToken) => {
       headers:{ Authorization: 'Bearer ' + accessToken }
     })
     const userInfo = await initialFetch.json()
-    return userInfo.display_name.split(' ')[0]
+    return {
+      name: userInfo.display_name.split(' ')[0],
+      id: userInfo.id
+    } 
 }
 
 export const getPlaylistData = async (bpm, genre, accessToken) => {
