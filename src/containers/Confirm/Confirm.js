@@ -3,21 +3,28 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
-import { savePlaylist } from '../../actions/actions';
+import { savePlaylist, saveRecentSeed } from '../../actions/actions';
+import { userContentToFirebase } from '../../firebaseCalls';
 import './Confirm.css';
 
 export class Confirm extends Component {
+
+  componentDidMount = () => {
+    const { newSeed } = this.props
+    this.props.saveRecentSeed(newSeed)
+  }
   
   getPlaylist = async () => {
-    const {seeds, accessToken } = this.props
-    const rawPlaylistData = await getPlaylistData(seeds.spm, seeds.genre, accessToken)
+    const {newSeed, accessToken, recentSpms, recentGenres, user, recentSeeds } = this.props
+    const rawPlaylistData = await getPlaylistData(newSeed.spm, newSeed.genre, accessToken)
     const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks)
     this.props.savePlaylist(cleanedPlaylist)
+    userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds)
   }
 // {spm}
 //{ genre.charAt(0).toUpperCase() + genre.slice(1) }
   render() {
-    const { spm, genre } = this.props.seeds
+    const { spm, genre } = this.props.newSeed
     return (
       <div className='Confirm' >
         <h2>Confirm</h2>
@@ -35,12 +42,17 @@ export class Confirm extends Component {
 }
 
 export const MSTP = store => ({
-  seeds: store.seeds,
+  newSeed: store.newSeed,
+  user: store.user,
+  recentSpms: store.recentSpms,
+  recentGenres: store.recentGenres,
+  recentSeeds: store.recentSeeds,
   accessToken: store.accessToken
 })
 
 export const MDTP = dispatch => ({
-  savePlaylist: playlist => dispatch(savePlaylist(playlist))
+  savePlaylist: playlist => dispatch(savePlaylist(playlist)),
+  saveRecentSeed: seed => dispatch(saveRecentSeed(seed))
 })
 
 export default withRouter(connect(MSTP, MDTP)(Confirm))

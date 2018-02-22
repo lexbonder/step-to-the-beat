@@ -1,43 +1,46 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveAccessToken, logInUser, saveUser, addToFavoriteSongs } from '../../actions/actions';
+import { 
+  saveAccessToken,
+  logInUser,
+  saveUser,
+  seedsFromFirebase,
+  genresFromFirebase,
+  spmsFromFirebase
+} from '../../actions/actions';
 import { getUserName } from '../../apiCalls.js';
-import { getUserFavorites } from '../../firebaseCalls';
-// import * as firebase from 'firebase';
+import { getUserContent } from '../../firebaseCalls';
 
 export class Login extends Component {
 
   componentDidMount = () => {
-    if ( this.props.location.hash ) {
-      const fullHash = this.props.location.hash.substr(1)
+    const { location, history, saveAccessToken, logInUser } = this.props;
+    if ( location.hash ) {
+      const fullHash = location.hash.substr(1)
       const accessToken = fullHash.split('&')[0].split('=')[1]
-      this.props.saveAccessToken(accessToken)
-      this.props.logInUser()
+      saveAccessToken(accessToken)
+      logInUser()
     } else {
       alert('You were not signed in')
+      history.push('/')
     }
   }
 
   componentDidUpdate = async () => {
-    if (this.props.accessToken) {
-      const user = await getUserName(this.props.accessToken)
-      const userFaves = await getUserFavorites(user.id)
-      this.userFavesToStore(userFaves.val())
-      // this.userIntoLocalStorage(user)
-      this.props.saveUser(user)
+    const { accessToken, history } = this.props
+    const user = await getUserName(accessToken)
+    const userContent = await getUserContent(user.id)
+    this.props.saveUser(user)
+    if (!userContent.val()) {
+      history.push('/select-spm')
+    } else {
+      const { savedGenres, savedSeeds, savedSpms} = userContent.val()
+      this.props.seedsFromFirebase(savedSeeds)
+      this.props.genresFromFirebase(savedGenres)
+      this.props.spmsFromFirebase(savedSpms)
+      history.push('/saved-playlists')
     }
-    this.props.history.push('/')
-  }
-
-  // userIntoLocalStorage = (user) => {
-  //   const stringified = JSON.stringify(user)
-  //   localStorage.setItem(user.id, stringified)
-  // }
-
-  userFavesToStore = userFaves => {
-    const { favoriteSongs } = userFaves
-    favoriteSongs.forEach(favorite => this.props.addToFavoriteSongs(favorite))
   }
 
   render () {
@@ -55,7 +58,9 @@ export const MDTP = dispatch => ({
   saveAccessToken: accessToken => dispatch(saveAccessToken(accessToken)),
   logInUser: () => dispatch(logInUser()),
   saveUser: user => dispatch(saveUser(user)),
-  addToFavoriteSongs: favorite => dispatch(addToFavoriteSongs(favorite))
+  seedsFromFirebase: seeds => dispatch(seedsFromFirebase(seeds)),
+  genresFromFirebase: genres => dispatch(genresFromFirebase(genres)),
+  spmsFromFirebase: spms => dispatch(spmsFromFirebase(spms))
 })
 
 export default withRouter(connect(MSTP, MDTP)(Login))

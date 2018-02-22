@@ -2,23 +2,46 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { genres } from '../../genre-list';
-import { selectGenre } from '../../actions/actions';
+import { selectGenre, saveRecentGenre } from '../../actions/actions';
 import './SelectGenre.css';
 
 export class SelectGenre extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchParam: '',
+      selectedGenre: ''
+    }
+  }
 
   getGenres = () => {
-    return genres.map(genre => <option>{genre}</option>)
+    const { searchParam } = this.state
+    const filteredGenres = genres.filter( genre => {
+      return genre.toLowerCase().includes(searchParam.toLowerCase())
+    })
+    return filteredGenres.map(genre => <li onClick={this.makeSelection}>{genre}</li>)
+  }
+
+  makeSelection = (event) => {
+    document.querySelectorAll('li').forEach( item => {
+      item.classList.remove('selected')
+    })
+    event.target.classList.add('selected')
+    this.setState({selectedGenre: event.target.innerText})
   }
 
   handleClick = () => {
-    const selectEelement = document.querySelector('select')
-    const selectedGenre = selectEelement
-      .options
-      [selectEelement.selectedIndex]
-      .innerText
-      .toLowerCase()
-    this.props.selectGenre(selectedGenre)
+    const genre = this.state.selectedGenre.toLowerCase()
+    this.props.selectGenre(genre)
+    this.props.saveRecentGenre(genre)
+  }
+
+  handleSearchParam = (event) => {
+    document.querySelectorAll('li').forEach( item => {
+      item.classList.remove('selected')
+    })
+    const searchParam = event.target.value
+    this.setState({searchParam, selectedGenre: ''})
   }
 
   render() {
@@ -26,9 +49,15 @@ export class SelectGenre extends Component {
       <div className='SelectGenre'>
         <h2>Select Genre</h2>
         <div className='select-wrapper'>
-          <select size='3'>
+          <input 
+            type='text'
+            placeholder='Search'
+            value={this.state.searchParam}
+            onChange={this.handleSearchParam}
+          />
+          <ul>
             {this.getGenres()}
-          </select>
+          </ul>
           <Link to='/select-spm'>Back</Link>
           <Link onClick={this.handleClick} to='/confirm'>Next</Link>
         </div>
@@ -38,7 +67,8 @@ export class SelectGenre extends Component {
 }
 
 export const MDTP = dispatch => ({
-  selectGenre: genre => dispatch(selectGenre(genre))
+  selectGenre: genre => dispatch(selectGenre(genre)),
+  saveRecentGenre: genre => dispatch(saveRecentGenre(genre))
 })
 
 export default withRouter(connect(null, MDTP)(SelectGenre))

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveSpm, selectSpm } from '../../actions/actions';
+import { saveRecentSpm } from '../../actions/actions';
+
 import './Calculations.css';
 
 export class Calculations extends Component {
@@ -30,14 +31,12 @@ export class Calculations extends Component {
   }
 
   submitSPM = () => {
-    this.props.saveSpm({
-      spm: this.state.result,
-      pace: '',
-      nickname: '',
-      id: Date.now()
-    })
-    this.props.selectSpm(this.state.result)
-    this.props.history.push('/select-genre')
+    const { recentSpms } = this.props
+    const { result } = this.state
+    if (!recentSpms.includes(result)) {
+      this.props.saveRecentSpm(result)
+    }
+    this.props.history.push('/select-spm')
   }
 
   calculateManual = (event) => {
@@ -216,7 +215,7 @@ export class Calculations extends Component {
             this.state.result &&
             <div>
               <h1>{`${this.state.result + ' SPM'}`}</h1>
-              <button onClick={this.submitSPM}>Save and select Genre</button>
+              <button onClick={this.submitSPM}>Save SPM</button>
             </div>
           }
         </article>
@@ -227,9 +226,12 @@ export class Calculations extends Component {
   }
 }
 
-export const MDTP = dispatch => ({
-  saveSpm: spm => dispatch(saveSpm(spm)),
-  selectSpm: spm => dispatch(selectSpm(spm))
+export const MSTP = store => ({
+  recentSpms: store.recentSpms
 })
 
-export default withRouter(connect(null, MDTP)(Calculations))
+export const MDTP = dispatch => ({
+  saveRecentSpm: spm => dispatch(saveRecentSpm(spm)),
+})
+
+export default withRouter(connect(MSTP, MDTP)(Calculations))
