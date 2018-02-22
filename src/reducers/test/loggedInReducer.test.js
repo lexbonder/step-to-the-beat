@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { loggedInReducer } from '../loggedInReducer';
 
 describe('loggedInReducer', () => {

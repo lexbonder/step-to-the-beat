@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { accessTokenReducer } from '../accessTokenReducer';
 
 describe('accessTokenReducer', () => {

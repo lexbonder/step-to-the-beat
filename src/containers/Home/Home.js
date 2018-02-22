@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authorize } from '../../authorizeSpotify';
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import './Home.css';
 
 export class Home extends Component {
 
   view = () => {
-    const { loggedIn } = this.props
+    const { loggedIn } = this.props;
     if (loggedIn) {
       return (
         <div className='dashboard'>
@@ -18,7 +18,7 @@ export class Home extends Component {
             activeClassName='dashNav'
             to='/select-spm'>Get New Playlist</NavLink>
         </div>
-      )
+      );
     } 
   }
 
@@ -26,17 +26,19 @@ export class Home extends Component {
     return (
       <div className='Home'>
         <p className='intro'>
-          Step to the beat figures out your personal rhythm! <br/>
+          {`Step to the beat figures out your personal rhythm!
           We'll help you calculate your Steps Per Minute (SPM) and
           we'll give you a personalized playlist with the same Beats 
-          Per Minute!
+          Per Minute!`}
         </p>
-        <button className='log-in' onClick={authorize}>Login with Spotify to begin</button>
+        <button className='log-in' onClick={authorize}>
+          Login with Spotify to begin
+        </button>
       </div>
-    )
+    );
   }
 }
 
-export const MSTP = ({loggedIn}) => ({loggedIn})
+export const MSTP = ({loggedIn}) => ({loggedIn});
 
-export default withRouter(connect(MSTP)(Home))
+export default withRouter(connect(MSTP)(Home));

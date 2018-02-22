@@ -9,40 +9,40 @@ export class SelectSPM extends Component {
     super(props);
     this.state = {
       selection: ''
-    }
+    };
   }
 
   componentDidUpdate = () => {
-    this.getRecentSPMs()
+    this.getRecentSPMs();
   }
 
   getRecentSPMs = () => {
-    const { recentSpms } = this.props
+    const { recentSpms } = this.props;
     if (recentSpms && recentSpms.length) {
       return recentSpms.map(spm => {
-        return <li onClick={this.selectRecent}>{spm}</li>
-      })
+        return <li onClick={this.selectRecent}>{spm}</li>;
+      });
     } 
   }
 
   selectRecent = (event) => {
-    const selection = parseInt(event.target.innerText)
-    this.setState({selection})
+    const selection = parseInt(event.target.innerText);
+    this.setState({selection});
   }
 
   handleClick = () => {
-    const { recentSpms, history } = this.props
-    const { selection } = this.state
-    this.props.selectSpm(selection)
+    const { recentSpms, history } = this.props;
+    const { selection } = this.state;
+    this.props.selectSpm(selection);
     if (!recentSpms.includes(selection)) {
-      this.props.saveRecentSpm(selection)
+      this.props.saveRecentSpm(selection);
     }
-    history.push('/select-genre')
+    history.push('/select-genre');
   }
 
   handleChange = (event) => {
-    const selection = parseInt(event.target.value)
-    this.setState({selection})
+    const selection = parseInt(event.target.value);
+    this.setState({selection});
   }
 
   render() {
@@ -73,17 +73,17 @@ export class SelectSPM extends Component {
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
 export const MSTP = store => ({
-  recentSpms: store.recentSpms,
-})
+  recentSpms: store.recentSpms
+});
 
 export const MDTP = dispatch => ({
   saveRecentSpm: spm => dispatch(saveRecentSpm(spm)),
   selectSpm: spm => dispatch(selectSpm(spm))
-})
+});
 
-export default withRouter(connect(MSTP, MDTP)(SelectSPM))
+export default withRouter(connect(MSTP, MDTP)(SelectSPM));

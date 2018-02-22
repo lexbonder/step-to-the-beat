@@ -10,21 +10,29 @@ import './Confirm.css';
 export class Confirm extends Component {
 
   componentDidMount = () => {
-    const { newSeed } = this.props
-    this.props.saveRecentSeed(newSeed)
+    const { newSeed } = this.props;
+    this.props.saveRecentSeed(newSeed);
   }
   
   getPlaylist = async () => {
-    const {newSeed, accessToken, recentSpms, recentGenres, user, recentSeeds } = this.props
-    const rawPlaylistData = await getPlaylistData(newSeed.spm, newSeed.genre, accessToken)
-    const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks)
-    this.props.savePlaylist(cleanedPlaylist)
-    userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds)
+    const {
+      newSeed,
+      accessToken,
+      recentSpms,
+      recentGenres,
+      user,
+      recentSeeds
+    } = this.props;
+    const { spm, genre } = newSeed;
+    const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
+    const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
+    this.props.savePlaylist(cleanedPlaylist);
+    userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds);
   }
-// {spm}
-//{ genre.charAt(0).toUpperCase() + genre.slice(1) }
+  // {spm}
+  //{ genre.charAt(0).toUpperCase() + genre.slice(1) }
   render() {
-    const { spm, genre } = this.props.newSeed
+    const { spm, genre } = this.props.newSeed;
     return (
       <div className='Confirm' >
         <h2>Confirm</h2>
@@ -37,7 +45,7 @@ export class Confirm extends Component {
         <Link to={`/select-genre`}>Back</Link>
         <Link onClick={this.getPlaylist} to='/playlist'>Get My Playlist!</Link>
       </div>
-    )
+    );
   }  
 }
 
@@ -48,11 +56,11 @@ export const MSTP = store => ({
   recentGenres: store.recentGenres,
   recentSeeds: store.recentSeeds,
   accessToken: store.accessToken
-})
+});
 
 export const MDTP = dispatch => ({
   savePlaylist: playlist => dispatch(savePlaylist(playlist)),
   saveRecentSeed: seed => dispatch(saveRecentSeed(seed))
-})
+});
 
-export default withRouter(connect(MSTP, MDTP)(Confirm))
+export default withRouter(connect(MSTP, MDTP)(Confirm));

@@ -11,37 +11,39 @@ export class SelectGenre extends Component {
     this.state = {
       searchParam: '',
       selectedGenre: ''
-    }
+    };
   }
 
   getGenres = () => {
-    const { searchParam } = this.state
+    const { searchParam } = this.state;
     const filteredGenres = genres.filter( genre => {
-      return genre.toLowerCase().includes(searchParam.toLowerCase())
-    })
-    return filteredGenres.map(genre => <li onClick={this.makeSelection}>{genre}</li>)
+      return genre.toLowerCase().includes(searchParam.toLowerCase());
+    });
+    return filteredGenres.map(genre => {
+      return <li onClick={this.makeSelection}>{genre}</li>;
+    });
   }
 
   makeSelection = (event) => {
     document.querySelectorAll('li').forEach( item => {
-      item.classList.remove('selected')
-    })
-    event.target.classList.add('selected')
-    this.setState({selectedGenre: event.target.innerText})
+      item.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+    this.setState({selectedGenre: event.target.innerText});
   }
 
   handleClick = () => {
-    const genre = this.state.selectedGenre.toLowerCase()
-    this.props.selectGenre(genre)
-    this.props.saveRecentGenre(genre)
+    const genre = this.state.selectedGenre.toLowerCase();
+    this.props.selectGenre(genre);
+    this.props.saveRecentGenre(genre);
   }
 
   handleSearchParam = (event) => {
     document.querySelectorAll('li').forEach( item => {
-      item.classList.remove('selected')
-    })
-    const searchParam = event.target.value
-    this.setState({searchParam, selectedGenre: ''})
+      item.classList.remove('selected');
+    });
+    const searchParam = event.target.value;
+    this.setState({searchParam, selectedGenre: ''});
   }
 
   render() {
@@ -62,13 +64,13 @@ export class SelectGenre extends Component {
           <Link onClick={this.handleClick} to='/confirm'>Next</Link>
         </div>
       </div>
-    )
+    );
   }
 }
 
 export const MDTP = dispatch => ({
   selectGenre: genre => dispatch(selectGenre(genre)),
   saveRecentGenre: genre => dispatch(saveRecentGenre(genre))
-})
+});
 
-export default withRouter(connect(null, MDTP)(SelectGenre))
+export default withRouter(connect(null, MDTP)(SelectGenre));

@@ -7,7 +7,6 @@ export class Playlist extends Component {
 
   playlistToRender = () => {
     const { playlist } = this.props;
-    console.log(playlist)
     return playlist.map(track => (
       <div
         className='track'
@@ -17,21 +16,21 @@ export class Playlist extends Component {
         <h4>{track.title}</h4>
         <h4>{track.artist}</h4>
       </div>
-    ))
+    ));
   }
 
   toggleSelectAll = event => {
-    const { checked } = event.target
-    const allCheckboxes = document.querySelectorAll('.checkbox')
+    const { checked } = event.target;
+    const allCheckboxes = document.querySelectorAll('.checkbox');
     if (checked) {
-      allCheckboxes.forEach( checkbox => checkbox.checked = true)
+      allCheckboxes.forEach( checkbox => checkbox.checked = true);
     } else {
-      allCheckboxes.forEach( checkbox => checkbox.checked = false)
+      allCheckboxes.forEach( checkbox => checkbox.checked = false);
     }
   }
 
   render() {
-    const {spm, genre} = this.props.newSeed
+    const {spm, genre} = this.props.newSeed;
     
     return (
       <div>
@@ -53,7 +52,7 @@ export class Playlist extends Component {
         </div>
         <button>Send Playlist to Spotify</button>
       </div>
-    )
+    );
   }
 }
 
@@ -61,7 +60,6 @@ export const MSTP = store => ({
   playlist: store.playlist,
   newSeed: store.newSeed,
   user: store.user
-})
+});
 
-
-export default withRouter(connect(MSTP)(Playlist))
+export default withRouter(connect(MSTP)(Playlist));
