@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SavedPlaylist from '../../components/SavedPlaylist/SavedPlaylist';
+import SavedPlaylist from '../SavedPlaylist/SavedPlaylist';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './SavedPlaylistContainer.css';

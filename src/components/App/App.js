@@ -4,12 +4,10 @@ import Header from '../../containers/Header/Header';
 import Home from '../../containers/Home/Home';
 import Login from '../../containers/Login/Login';
 import SelectGenre from '../../containers/SelectGenre/SelectGenre';
-import Calculations from '../Calculations/Calculations';
+import Calculations from '../../containers/Calculations/Calculations';
 import SelectSPM from '../../containers/SelectSPM/SelectSPM';
 import Confirm from '../../containers/Confirm/Confirm';
 import Playlist from '../../containers/Playlist/Playlist';
-import FavoriteSongs from 
-  '../../containers/FavoriteSongs/FavoriteSongs';
 import SavedPlaylistContainer from 
   '../../containers/SavedPlaylistContainer/SavedPlaylistContainer';
 import './App.css';
@@ -29,9 +27,6 @@ export class App extends Component {
         <Route 
           exact path='/calculations'
           component={Calculations} />
-        <Route
-          exact path='/favorite-songs' 
-          component={FavoriteSongs} />
         <Route 
           exact path='/saved-playlists' 
           component={SavedPlaylistContainer} />

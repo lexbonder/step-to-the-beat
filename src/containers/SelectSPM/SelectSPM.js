@@ -26,7 +26,7 @@ export class SelectSPM extends Component {
   }
 
   selectRecent = (event) => {
-    const selection = parseInt(event.target.innerText);
+    const selection = parseInt(event.target.innerText, 10);
     this.setState({selection});
   }
 
@@ -41,7 +41,7 @@ export class SelectSPM extends Component {
   }
 
   handleChange = (event) => {
-    const selection = parseInt(event.target.value);
+    const selection = parseInt(event.target.value, 10);
     this.setState({selection});
   }
 

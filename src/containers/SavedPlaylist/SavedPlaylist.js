@@ -7,9 +7,6 @@ import { playlistCleaner } from '../../dataCleaner';
 import './SavedPlaylist.css';
 
 export class SavedPlaylist extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleClick = async () => {
     const {seed, accessToken, history } = this.props;
