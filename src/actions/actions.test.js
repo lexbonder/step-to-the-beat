@@ -34,4 +34,13 @@ describe('Actions', () => {
     expect(actions.logOutUser()).toEqual(expected)
   })
 
+  it('saveUser should return an object with the type SAVE_USER and a user object', () => {
+    const user = {name: 'Alex', id: 'lxbndr'}
+    const expected = {
+      type: 'SAVE_USER',
+      user
+    }
+    expect(actions.saveUser(user)).toEqual(expected)
+  })
+
 })

@@ -26,3 +26,7 @@
   text-decoration: none;
   margin: 20px 0;
 }
+
+.selected {
+  background-color: magenta;
+}

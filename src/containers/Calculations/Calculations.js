@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveSpm, selectSpm } from '../../actions/actions';
+import { saveRecentSpm } from '../../actions/actions';
+
 import './Calculations.css';
 
 export class Calculations extends Component {
@@ -18,10 +19,10 @@ export class Calculations extends Component {
       manualVisibility: 'show',
       estimateVisibility: 'hide',
       hoverTipVisibility: 'hide',
-      manualButton: 'focused',
-      estimateButton: '',
+      manualButton: '',
+      estimateButton: 'focused',
       toggleResult: 'hide'
-    }
+    };
   }
 
   handleChange = (event) => {
@@ -30,73 +31,70 @@ export class Calculations extends Component {
   }
 
   submitSPM = () => {
-    this.props.saveSpm(this.state.result)
-    this.props.selectSpm(this.state.result)
-    this.props.history.push('/select-genre')
+    const { recentSpms } = this.props;
+    const { result } = this.state;
+    if (!recentSpms.includes(result)) {
+      this.props.saveRecentSpm(result);
+    }
+    this.props.history.push('/select-spm');
   }
 
   calculateManual = (event) => {
-    event.preventDefault()
-    const result = this.state.manual * 4
-    this.setState({result})
+    event.preventDefault();
+    const result = this.state.manual * 4;
+    this.setState({result});
   }
 
   calculateMinutePerMile = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const {mpmMinute, mpmSecond} = this.state;
-    const paceInDecimal = parseInt(mpmMinute, 10) + parseInt(mpmSecond / 60, 10)
+    const paceInDecimal = 
+      parseInt(mpmMinute, 10) + 
+      parseInt(mpmSecond / 60, 10);
     
-    this.setStepPerMinute(paceInDecimal)
+    this.setStepPerMinute(paceInDecimal);
   }
 
   calculateMilePerHour = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const {mphSpeed} = this.state;
-    const paceInMPM = 60 / parseInt(mphSpeed, 10)
+    const paceInMPM = 60 / parseInt(mphSpeed, 10);
 
-    this.setStepPerMinute(paceInMPM)
+    this.setStepPerMinute(paceInMPM);
   }
 
   setStepPerMinute = (pace) => {
     const {heightFeet, heightInch} = this.state;
-    const heightInInches = parseInt(heightFeet * 12, 10) + parseInt(heightInch, 10)
-    const stepPerMile = 1084 + ((143.6 * pace) - (13.5 * heightInInches))
+    const heightInInches = 
+      parseInt(heightFeet * 12, 10) + 
+      parseInt(heightInch, 10);
+    const stepPerMile = 1084 + ((143.6 * pace) - (13.5 * heightInInches));
 
     const result = Math.round(stepPerMile / pace);
-    this.setState({result})
-  }
-
-  handleMouseEnter = () => {
-    console.log('word')
-  }
-
-  handleMouseLeave = () => {
-    console.log('suck it')
+    this.setState({result});
   }
 
   toggleManualEstimate = (event) => {
     if (event.target.name === 'manual') {
       this.setState({
-      manualVisibility: 'show',
-      estimateVisibility: 'hide',
-      manualButton: 'focused',
-      estimateButton: ''
-      })
+        manualVisibility: 'show',
+        estimateVisibility: 'hide',
+        manualButton: 'focused',
+        estimateButton: ''
+      });
     } else { 
       this.setState({
-      manualVisibility: 'hide',
-      estimateVisibility: 'show',
-      manualButton: '',
-      estimateButton: 'focused'
-      })
+        manualVisibility: 'hide',
+        estimateVisibility: 'show',
+        manualButton: '',
+        estimateButton: 'focused'
+      });
     }
   }
 
   showResult = () => {
-    this.setState({toggleResult: 'show'})
+    this.setState({toggleResult: 'show'});
   }
-
-
 
   render() {
     return (
@@ -109,8 +107,6 @@ export class Calculations extends Component {
         <button
           name='estimate'
           className={this.state.estimateButton}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
           onClick={this.toggleManualEstimate}
         >Estimate</button>
         {/*MANUAL CALCULATION*/}
@@ -118,8 +114,14 @@ export class Calculations extends Component {
           <p>Manual calculation is most accurate and only takes 40 seconds!</p>
           <ol>
             <li>Choose your favorite leg.</li>
-            <li>Start walking or running for 10 seconds. Find your comfortable pace</li>
-            <li>For the next 30 seconds, count how many times you land on your favorite leg</li>
+            <li>
+              Start walking or running for 10 seconds.
+              Find your comfortable pace
+            </li>
+            <li>
+              For the next 30 seconds
+              count how many times you land on your favorite leg
+            </li>
             <li>Enter that number below!</li>
           </ol>
           <form onSubmit={this.calculateManual}>
@@ -150,14 +152,14 @@ export class Calculations extends Component {
               onChange={this.handleChange}
               value={this.state.heightFeet}
               placeholder='5'
-            />'
+            />{`'`}
             <input
               name='heightInch'
               type='number'
               onChange={this.handleChange}
               value={this.state.heightInch}
               placeholder='4'
-            />"</p>
+            />{`"`}</p>
           </form>
           <h4>Speed</h4>
           <div className='speeds'>
@@ -211,20 +213,23 @@ export class Calculations extends Component {
             this.state.result &&
             <div>
               <h1>{`${this.state.result + ' SPM'}`}</h1>
-              <button onClick={this.submitSPM}>Save and select Genre</button>
+              <button onClick={this.submitSPM}>Save SPM</button>
             </div>
           }
         </article>
 
 
       </div>
-    )
+    );
   }
 }
 
-export const MDTP = dispatch => ({
-  saveSpm: spm => dispatch(saveSpm(spm)),
-  selectSpm: spm => dispatch(selectSpm(spm))
-})
+export const MSTP = store => ({
+  recentSpms: store.recentSpms
+});
 
-export default withRouter(connect(null, MDTP)(Calculations))
+export const MDTP = dispatch => ({
+  saveRecentSpm: spm => dispatch(saveRecentSpm(spm))
+});
+
+export default withRouter(connect(MSTP, MDTP)(Calculations));

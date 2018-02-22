@@ -1,3 +1,5 @@
+// accessTokenReducer
+
 export const saveAccessToken = token => ({
   type: 'SAVE_ACCESS_TOKEN',
   token
@@ -6,6 +8,8 @@ export const saveAccessToken = token => ({
 export const clearAccessToken = () => ({
   type: 'CLEAR_ACCESS_TOKEN'
 })
+
+// loggedInReducer
 
 export const logInUser = () => ({
   type: 'LOG_IN_USER',
@@ -17,10 +21,14 @@ export const logOutUser = () => ({
   loggedIn: false
 })
 
+// userReducer
+
 export const saveUser = user => ({
   type: 'SAVE_USER',
   user
 })
+
+// newSeedReducer
 
 export const selectSpm = spm => ({
   type: 'SELECT_SPM',
@@ -32,32 +40,50 @@ export const selectGenre = genre => ({
   genre
 })
 
-export const saveSpm = spm => ({
-  type: 'SAVE_SPM',
+export const selectSeed = seed => ({
+  type: 'SELECT_SEED',
+  seed
+})
+
+// recentSpmReducer
+
+export const saveRecentSpm = spm => ({
+  type: 'SAVE_RECENT_SPM',
   spm
 })
 
+export const spmsFromFirebase = spms => ({
+  type: 'SPMS_FROM_FIREBASE',
+  spms
+})
 
-// Playlist 
+// recentGenreReducer
+
+export const saveRecentGenre = genre => ({
+  type: 'SAVE_RECENT_GENRE',
+  genre
+})
+
+export const genresFromFirebase = genres => ({
+  type: 'GENRES_FROM_FIREBASE',
+  genres
+})
+
+// recentSeedReducer
+
+export const saveRecentSeed = seed => ({
+  type: 'SAVE_RECENT_SEED',
+  seed
+})
+
+export const seedsFromFirebase = seeds => ({
+  type: 'SEEDS_FROM_FIREBASE',
+  seeds
+})
+
+// playlistReducer
 
 export const savePlaylist = playlist => ({
   type: 'SAVE_PLAYLIST',
   playlist
-})
-
-export const removeFromPlaylist = id => ({
-  type: 'REMOVE_FROM_PLAYLIST',
-  id
-})
-
-// Favorite Songs
-
-export const addToFavoriteSongs = song => ({
-  type: 'ADD_TO_FAVORITE_SONGS',
-  song
-})
-
-export const removeFavoriteSong = id => ({
-  type: 'REMOVE_FAVORITE_SONG',
-  id
 })
