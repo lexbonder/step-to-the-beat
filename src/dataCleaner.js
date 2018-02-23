@@ -4,5 +4,5 @@ export const playlistCleaner = rawPlaylist => {
     title: track.name,
     id: track.id,
     uri: track.uri
-  }))
-}
+  }));
+};

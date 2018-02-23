@@ -7,4 +7,4 @@ export const loggedInReducer = (state = false, action) => {
   default:
     return state;
   }
-}
+};

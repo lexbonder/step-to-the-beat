@@ -3,8 +3,8 @@ export const recentGenresReducer = (state = [], action) => {
   case 'SAVE_RECENT_GENRE':
     return [...state, action.genre];
   case 'GENRES_FROM_FIREBASE':
-    return action.genres
+    return action.genres;
   default:
     return state;
   }
-}
+};
