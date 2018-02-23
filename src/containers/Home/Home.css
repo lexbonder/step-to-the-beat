@@ -1,4 +1,4 @@
-.Home {
+/*.Home {
   background-color: #CCC7C4;
   width: fit-content;
   border-radius: 20px;
@@ -30,9 +30,9 @@
   cursor: pointer;
   background-color: #FDAB02;
 }
-/*
+
 .log-in {
-}*/
+}
 
 .begin {
   text-decoration: none;
@@ -57,4 +57,4 @@
 a.dashNav {
   background-color: #EC2B06;
   color: #CCC7C4;
-}
+}*/
