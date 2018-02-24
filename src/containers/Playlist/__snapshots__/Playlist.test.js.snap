@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Playlist playlistToRender should match the snapshot 1`] = `[Function]`;
+
 exports[`Playlist should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -457,3 +459,7 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`Playlist toggleSelectAll should match the snapshot when event.target.checked is false 1`] = `undefined`;
+
+exports[`Playlist toggleSelectAll should match the snapshot when event.target.checked is true 1`] = `undefined`;
