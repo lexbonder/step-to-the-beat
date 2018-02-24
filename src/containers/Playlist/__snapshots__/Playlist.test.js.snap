@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Playlist should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Playlist
+    accessToken="12345abcde"
+    newSeed={
+        Object {
+            "genre": "ska",
+            "spm": 148,
+          }
+    }
+    playlist={
+        Array [
+            Object {
+              "artist": "I Fight Dragons",
+              "id": "1234abcd",
+              "title": "Dont You?",
+              "uri": "spotify:tracks:1234abcd",
+            },
+          ]
+    }
+    user={
+        Object {
+            "id": "lxbndr",
+            "name": "Alex",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          <h3 />
+          <input
+                    className="summary"
+                    onChange={[Function]}
+                    value="Alex's 148 SPM, ska playlist"
+          />
+          <button
+                    onClick={[Function]}
+          >
+                    Send to Spotify
+          </button>
+</div>,
+        <div
+          className="playlist"
+>
+          <h3>
+                    Title
+          </h3>
+          <h3>
+                    Artist
+          </h3>
+          <div
+                    className="track"
+                    id="1234abcd"
+          >
+                    <h4>
+                              Dont You?
+                    </h4>
+                    <h4>
+                              I Fight Dragons
+                    </h4>
+          </div>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3 />,
+            <input
+              className="summary"
+              onChange={[Function]}
+              value="Alex's 148 SPM, ska playlist"
+/>,
+            <button
+              onClick={[Function]}
+>
+              Send to Spotify
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "summary",
+              "onChange": [Function],
+              "value": "Alex's 148 SPM, ska playlist",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Send to Spotify",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Send to Spotify",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Title
+</h3>,
+            <h3>
+              Artist
+</h3>,
+            Array [
+              <div
+                className="track"
+                id="1234abcd"
+>
+                <h4>
+                                Dont You?
+                </h4>
+                <h4>
+                                I Fight Dragons
+                </h4>
+</div>,
+            ],
+          ],
+          "className": "playlist",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Title",
+            },
+            "ref": null,
+            "rendered": "Title",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Artist",
+            },
+            "ref": null,
+            "rendered": "Artist",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": "1234abcd",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  Dont You?
+</h4>,
+                <h4>
+                  I Fight Dragons
+</h4>,
+              ],
+              "className": "track",
+              "id": "1234abcd",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Dont You?",
+                },
+                "ref": null,
+                "rendered": "Dont You?",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "I Fight Dragons",
+                },
+                "ref": null,
+                "rendered": "I Fight Dragons",
+                "type": "h4",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <h3 />
+            <input
+                        className="summary"
+                        onChange={[Function]}
+                        value="Alex's 148 SPM, ska playlist"
+            />
+            <button
+                        onClick={[Function]}
+            >
+                        Send to Spotify
+            </button>
+</div>,
+          <div
+            className="playlist"
+>
+            <h3>
+                        Title
+            </h3>
+            <h3>
+                        Artist
+            </h3>
+            <div
+                        className="track"
+                        id="1234abcd"
+            >
+                        <h4>
+                                    Dont You?
+                        </h4>
+                        <h4>
+                                    I Fight Dragons
+                        </h4>
+            </div>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3 />,
+              <input
+                className="summary"
+                onChange={[Function]}
+                value="Alex's 148 SPM, ska playlist"
+/>,
+              <button
+                onClick={[Function]}
+>
+                Send to Spotify
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "summary",
+                "onChange": [Function],
+                "value": "Alex's 148 SPM, ska playlist",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Send to Spotify",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Send to Spotify",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Title
+</h3>,
+              <h3>
+                Artist
+</h3>,
+              Array [
+                <div
+                  className="track"
+                  id="1234abcd"
+>
+                  <h4>
+                                    Dont You?
+                  </h4>
+                  <h4>
+                                    I Fight Dragons
+                  </h4>
+</div>,
+              ],
+            ],
+            "className": "playlist",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Title",
+              },
+              "ref": null,
+              "rendered": "Title",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Artist",
+              },
+              "ref": null,
+              "rendered": "Artist",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": "1234abcd",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4>
+                    Dont You?
+</h4>,
+                  <h4>
+                    I Fight Dragons
+</h4>,
+                ],
+                "className": "track",
+                "id": "1234abcd",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Dont You?",
+                  },
+                  "ref": null,
+                  "rendered": "Dont You?",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "I Fight Dragons",
+                  },
+                  "ref": null,
+                  "rendered": "I Fight Dragons",
+                  "type": "h4",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
