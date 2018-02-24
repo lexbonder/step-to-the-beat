@@ -9,7 +9,7 @@ export class SavedPlaylistContainer extends Component {
   savedPlaylistsToRender = () => {
     const { recentSeeds } = this.props;
     if (recentSeeds.length) {
-      return recentSeeds.map(seed => <SavedPlaylist seed={seed} />);
+      return recentSeeds.map((seed, index) => <SavedPlaylist key={index} seed={seed} />);
     } else {
       return <h1>You do not have any favorited playlists!</h1>;
     }  
