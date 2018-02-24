@@ -16,18 +16,18 @@ export class SelectGenre extends Component {
 
   getGenres = () => {
     const { searchParam } = this.state;
-    const filteredGenres = genres.filter( genre => {
-      return genre.toLowerCase().includes(searchParam.toLowerCase());
-    });
-    return filteredGenres.map(genre => {
-      return <li onClick={this.makeSelection}>{genre}</li>;
-    });
+    const filteredGenres = genres.filter( genre =>
+      genre.toLowerCase().includes(searchParam.toLowerCase())
+    );
+    return filteredGenres.map((genre, index) => 
+      <li key={index} onClick={this.makeSelection}>{genre}</li>
+    );
   }
 
   makeSelection = (event) => {
-    document.querySelectorAll('li').forEach( item => {
-      item.classList.remove('selected');
-    });
+    document.querySelectorAll('li').forEach( item =>
+      item.classList.remove('selected')
+    );
     event.target.classList.add('selected');
     this.setState({selectedGenre: event.target.innerText});
   }
@@ -39,9 +39,9 @@ export class SelectGenre extends Component {
   }
 
   handleSearchParam = (event) => {
-    document.querySelectorAll('li').forEach( item => {
-      item.classList.remove('selected');
-    });
+    document.querySelectorAll('li').forEach( item =>
+      item.classList.remove('selected')
+    );
     const searchParam = event.target.value;
     this.setState({searchParam, selectedGenre: ''});
   }
