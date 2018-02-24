@@ -24,6 +24,7 @@ ShallowWrapper {
 />,
         <Route
           component={[Function]}
+          exact={true}
           path="/"
 />,
         <Route
@@ -34,17 +35,7 @@ ShallowWrapper {
         <Route
           component={[Function]}
           exact={true}
-          path="/saved-spms"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/favorite-songs"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/favorite-playlists"
+          path="/saved-playlists"
 />,
         <Route
           component={[Function]}
@@ -60,6 +51,11 @@ ShallowWrapper {
           component={[Function]}
           exact={true}
           path="/confirm"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/playlist"
 />,
         <Route
           component={[Function]}
@@ -88,6 +84,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
+          "exact": true,
           "path": "/",
         },
         "ref": null,
@@ -114,33 +111,7 @@ ShallowWrapper {
         "props": Object {
           "component": [Function],
           "exact": true,
-          "path": "/saved-spms",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/favorite-songs",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/favorite-playlists",
+          "path": "/saved-playlists",
         },
         "ref": null,
         "rendered": null,
@@ -192,6 +163,19 @@ ShallowWrapper {
         "props": Object {
           "component": [Function],
           "exact": true,
+          "path": "/playlist",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
           "path": "/login",
         },
         "ref": null,
@@ -214,6 +198,7 @@ ShallowWrapper {
 />,
           <Route
             component={[Function]}
+            exact={true}
             path="/"
 />,
           <Route
@@ -224,17 +209,7 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
-            path="/saved-spms"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/favorite-songs"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/favorite-playlists"
+            path="/saved-playlists"
 />,
           <Route
             component={[Function]}
@@ -250,6 +225,11 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/confirm"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/playlist"
 />,
           <Route
             component={[Function]}
@@ -278,6 +258,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
             "path": "/",
           },
           "ref": null,
@@ -304,33 +285,7 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "exact": true,
-            "path": "/saved-spms",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/favorite-songs",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/favorite-playlists",
+            "path": "/saved-playlists",
           },
           "ref": null,
           "rendered": null,
@@ -370,6 +325,19 @@ ShallowWrapper {
             "component": [Function],
             "exact": true,
             "path": "/confirm",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/playlist",
           },
           "ref": null,
           "rendered": null,

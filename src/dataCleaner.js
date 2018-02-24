@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const playlistCleaner = rawPlaylist => {
   return rawPlaylist.map(track => ({
     artist: track.artists[0].name,

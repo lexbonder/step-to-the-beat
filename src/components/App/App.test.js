@@ -1,10 +1,10 @@
-// /* eslint-disable */
-// import React from 'react';
-// import { App } from './App';
-// import { shallow } from 'enzyme';
+/* eslint-disable */
+import React from 'react';
+import { App } from './App';
+import { shallow } from 'enzyme';
 
-// it('should match the snapshot', () => {
-//   const wrapper = shallow(<App />);
+it('should match the snapshot', () => {
+  const wrapper = shallow(<App />);
 
-//   expect(wrapper).toMatchSnapshot()
-// });
+  expect(wrapper).toMatchSnapshot()
+});
