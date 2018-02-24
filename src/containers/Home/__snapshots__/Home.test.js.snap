@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home While a user is logged in should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    loggedIn={true}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="intro"
+>
+          Step to the beat figures out your personal rhythm!
+                    We'll help you calculate your Steps Per Minute (SPM) and
+                    we'll give you a personalized playlist with the same Beats 
+                    Per Minute!
+</p>,
+        <button
+          className="log-in"
+          onClick={[Function]}
+>
+          Login with Spotify to begin
+</button>,
+      ],
+      "className": "Home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+          "className": "intro",
+        },
+        "ref": null,
+        "rendered": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Login with Spotify to begin",
+          "className": "log-in",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Login with Spotify to begin",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="intro"
+>
+            Step to the beat figures out your personal rhythm!
+                      We'll help you calculate your Steps Per Minute (SPM) and
+                      we'll give you a personalized playlist with the same Beats 
+                      Per Minute!
+</p>,
+          <button
+            className="log-in"
+            onClick={[Function]}
+>
+            Login with Spotify to begin
+</button>,
+        ],
+        "className": "Home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+            "className": "intro",
+          },
+          "ref": null,
+          "rendered": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Login with Spotify to begin",
+            "className": "log-in",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Login with Spotify to begin",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Home While a user is logged in view should match the snapshot 1`] = `
+<div
+  className="dashboard"
+>
+  <NavLink
+    activeClassName="dashNav"
+    ariaCurrent="true"
+    to="/favorite-playlists"
+  >
+    My Favorite Playlists
+  </NavLink>
+  <NavLink
+    activeClassName="dashNav"
+    ariaCurrent="true"
+    to="/select-spm"
+  >
+    Get New Playlist
+  </NavLink>
+</div>
+`;
+
+exports[`Home While a user is not logged in should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    loggedIn={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="intro"
+>
+          Step to the beat figures out your personal rhythm!
+                    We'll help you calculate your Steps Per Minute (SPM) and
+                    we'll give you a personalized playlist with the same Beats 
+                    Per Minute!
+</p>,
+        <button
+          className="log-in"
+          onClick={[Function]}
+>
+          Login with Spotify to begin
+</button>,
+      ],
+      "className": "Home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+          "className": "intro",
+        },
+        "ref": null,
+        "rendered": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Login with Spotify to begin",
+          "className": "log-in",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Login with Spotify to begin",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="intro"
+>
+            Step to the beat figures out your personal rhythm!
+                      We'll help you calculate your Steps Per Minute (SPM) and
+                      we'll give you a personalized playlist with the same Beats 
+                      Per Minute!
+</p>,
+          <button
+            className="log-in"
+            onClick={[Function]}
+>
+            Login with Spotify to begin
+</button>,
+        ],
+        "className": "Home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+            "className": "intro",
+          },
+          "ref": null,
+          "rendered": "Step to the beat figures out your personal rhythm!
+          We'll help you calculate your Steps Per Minute (SPM) and
+          we'll give you a personalized playlist with the same Beats 
+          Per Minute!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Login with Spotify to begin",
+            "className": "log-in",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Login with Spotify to begin",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

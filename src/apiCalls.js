@@ -18,7 +18,7 @@ export const getPlaylistData = async (bpm, genre, accessToken) => {
 
 export const createNewPlaylist = async (userId, accessToken, playlistName) => {
   const playlistBody = {
-    name: `${playlistName}, made with Step to the Beat`
+    name: `${playlistName} (Step to the Beat)`
   };
   const initialFetch = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
     method: 'POST',
@@ -30,7 +30,7 @@ export const createNewPlaylist = async (userId, accessToken, playlistName) => {
   });
   const response = await initialFetch.json();
   return {
-    response: `${response.name} created successfully`,
+    response: `${playlistName} created successfully`,
     playlistId: response.id
   };
 };

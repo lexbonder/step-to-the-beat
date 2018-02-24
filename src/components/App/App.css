@@ -16,3 +16,11 @@ h1, h2, h3 {
 p {
   color: #999999
 }
+
+.error {
+  text-align: center;
+  color: black;
+  background-color: red;
+  border: 2px solid red;
+  padding: 5px;
+}

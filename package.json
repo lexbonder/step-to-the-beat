@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "enzyme": "^3.3.0",
-    "firebase": "^4.10.0",
+    "firebase": "^4.10.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -19,10 +19,10 @@
     "eslint": "./node_modules/eslint/bin/eslint.js ./src .js"
   },
   "devDependencies": {
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "redux": "^3.7.2",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
   }
 }

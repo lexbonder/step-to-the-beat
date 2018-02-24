@@ -55,7 +55,6 @@ export class Playlist extends Component {
     const playlistResponse = await 
       createNewPlaylist(user.id, accessToken, playlistName);
     const { response, playlistId } = playlistResponse;
-
     populatePlaylist(user.id, playlistId, accessToken, trackUris);
 
     this.setState({playlistResponse: response});
@@ -64,10 +63,22 @@ export class Playlist extends Component {
   componentDidMount = () => {
     const { user, newSeed, playlist } = this.props;
     const { spm, genre } = newSeed;
+    const trackUris = playlist.map( track => track.uri )
     const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
-    const trackUris = playlist.map( track => track.uri );
-    this.setState({playlistName, trackUris});
+    this.setState({ playlistName, trackUris });
   }
+
+  // shouldComponentUpdate = () => {
+
+  // }
+
+  // componentDidUpdate = () => {
+    // console.log('updated')
+    // const { playlist } = this.props;
+    // const trackUris = playlist.map( track => track.uri );
+    // console.log(trackUris)
+    // this.setState({trackUris})
+  // }
 
   changePlaylistName = (event) => {
     const playlistName = event.target.value;
