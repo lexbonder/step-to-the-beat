@@ -10,6 +10,7 @@ export class Playlist extends Component {
     this.state = {
       playlistName: '',
       playlistResponse: '',
+      errorStatus: '',
       trackUris: []
     };
   }
@@ -52,12 +53,15 @@ export class Playlist extends Component {
   sendToSpotify = async () => {
     const { user, accessToken } = this.props;
     const { playlistName, trackUris } = this.state;
-    const playlistResponse = await 
-      createNewPlaylist(user.id, accessToken, playlistName);
-    const { response, playlistId } = playlistResponse;
-    populatePlaylist(user.id, playlistId, accessToken, trackUris);
-
-    this.setState({playlistResponse: response});
+    try {
+      const playlistResponse = await 
+        createNewPlaylist(user.id, accessToken, playlistName);
+      const { response, playlistId } = playlistResponse;
+      populatePlaylist(user.id, playlistId, accessToken, trackUris);
+      this.setState({playlistResponse: response})
+    } catch (error) {
+      this.setState({errorStatus: error.message})
+    }
   }
 
   componentDidMount = () => {

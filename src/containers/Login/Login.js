@@ -50,9 +50,7 @@ export class Login extends Component {
   }
 }
 
-export const MSTP = store => ({
-  accessToken: store.accessToken
-});
+export const MSTP = ({accessToken}) => ({accessToken});
 
 export const MDTP = dispatch => ({
   saveAccessToken: accessToken => dispatch(saveAccessToken(accessToken)),

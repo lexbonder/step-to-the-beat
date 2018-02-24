@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const getPlaylistData = jest.fn()
   .mockImplementationOnce(() => ({
     tracks: [
@@ -8,4 +9,9 @@ export const getPlaylistData = jest.fn()
         uri: 'spotify:track:12341234'
       }
     ]
+  }))
+
+export const getUserName = jest.fn()
+  .mockImplementation(() => ({
+    name: 'Alex' , id: 'lxbndr'
   }))
