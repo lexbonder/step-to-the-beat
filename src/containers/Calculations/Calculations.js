@@ -16,8 +16,8 @@ export class Calculations extends Component {
       mpmMinute: '',
       mpmSecond: '',
       result: '',
-      manualVisibility: 'show',
-      estimateVisibility: 'hide',
+      manualVisibility: 'hide',
+      estimateVisibility: 'show',
       hoverTipVisibility: 'hide',
       manualButton: '',
       estimateButton: 'focused',
@@ -30,7 +30,7 @@ export class Calculations extends Component {
     this.setState({[name]: value});
   }
 
-  submitSPM = () => {
+  submitSpm = () => {
     const { recentSpms } = this.props;
     const { result } = this.state;
     if (!recentSpms.includes(result)) {
@@ -50,7 +50,7 @@ export class Calculations extends Component {
     const {mpmMinute, mpmSecond} = this.state;
     const paceInDecimal = 
       parseInt(mpmMinute, 10) + 
-      parseInt(mpmSecond / 60, 10);
+      (parseInt(mpmSecond, 10) / 60);
     
     this.setStepPerMinute(paceInDecimal);
   }
@@ -66,7 +66,7 @@ export class Calculations extends Component {
   setStepPerMinute = (pace) => {
     const {heightFeet, heightInch} = this.state;
     const heightInInches = 
-      parseInt(heightFeet * 12, 10) + 
+      (parseInt(heightFeet, 10) * 12) + 
       parseInt(heightInch, 10);
     const stepPerMile = 1084 + ((143.6 * pace) - (13.5 * heightInInches));
 
@@ -213,7 +213,7 @@ export class Calculations extends Component {
             this.state.result &&
             <div>
               <h1>{`${this.state.result + ' SPM'}`}</h1>
-              <button onClick={this.submitSPM}>Save SPM</button>
+              <button onClick={this.submitSpm}>Save SPM</button>
             </div>
           }
         </article>

@@ -8,6 +8,12 @@ import { userContentToFirebase } from '../../firebaseCalls';
 import './Confirm.css';
 
 export class Confirm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorStatus: ''
+    }
+  }
 
   componentDidMount = () => {
     const { newSeed } = this.props;
@@ -15,19 +21,26 @@ export class Confirm extends Component {
   }
   
   getPlaylist = async () => {
-    const {
-      newSeed,
+    const { newSeed,
       accessToken,
       recentSpms,
       recentGenres,
       user,
-      recentSeeds
+      recentSeeds,
+      history
     } = this.props;
     const { spm, genre } = newSeed;
-    const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
-    const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
-    this.props.savePlaylist(cleanedPlaylist);
-    userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds);
+    try {
+      const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
+      const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
+      this.props.savePlaylist(cleanedPlaylist);
+      userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds);
+      history.push('/playlist');
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Failed to retrieve playlist'
+      })
+    }
   }
   // {spm}
   //{ genre.charAt(0).toUpperCase() + genre.slice(1) }
@@ -35,6 +48,7 @@ export class Confirm extends Component {
     const { spm, genre } = this.props.newSeed;
     return (
       <div className='Confirm' >
+        <h2 className='error'>{this.state.errorStatus}</h2>
         <h2>Confirm</h2>
         <p>Steps per Minute</p>
         <h2>{spm}</h2>
@@ -43,7 +57,7 @@ export class Confirm extends Component {
           { genre.charAt(0).toUpperCase() + genre.slice(1) }
         </h2>
         <Link to={`/select-genre`}>Back</Link>
-        <Link onClick={this.getPlaylist} to='/playlist'>Get My Playlist!</Link>
+        <button onClick={this.getPlaylist}>Get My Playlist!</button>
       </div>
     );
   }  

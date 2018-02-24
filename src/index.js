@@ -10,7 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 import * as firebase from 'firebase';
 import config from './firebaseConfig';
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__();
 const store = createStore(rootReducer, devTools);
 
 firebase.initializeApp(config);
@@ -19,7 +20,7 @@ const router = (
   <BrowserRouter>
     <App />
   </BrowserRouter>
-)
+);
 
 ReactDOM.render(
   <Provider store={store}>{router}</Provider>,

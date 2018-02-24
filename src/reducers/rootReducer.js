@@ -19,4 +19,4 @@ export const rootReducer = combineReducers({
   recentSeeds: recentSeedsReducer,
   playlist: playlistReducer,
   favoriteSongs: favoriteSongsReducer
-})
+});

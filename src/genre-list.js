@@ -125,4 +125,4 @@ export const genres = [
   "Turkish",
   "Work-out",
   "World-music"
-]
+];
