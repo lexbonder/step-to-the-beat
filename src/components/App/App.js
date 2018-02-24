@@ -5,7 +5,7 @@ import Home from '../../containers/Home/Home';
 import Login from '../../containers/Login/Login';
 import SelectGenre from '../../containers/SelectGenre/SelectGenre';
 import Calculations from '../../containers/Calculations/Calculations';
-import SelectSPM from '../../containers/SelectSPM/SelectSPM';
+import SelectSpm from '../../containers/SelectSpm/SelectSpm';
 import Confirm from '../../containers/Confirm/Confirm';
 import Playlist from '../../containers/Playlist/Playlist';
 import SavedPlaylistContainer from 
@@ -32,7 +32,7 @@ export class App extends Component {
           component={SavedPlaylistContainer} />
         <Route
           exact path='/select-spm' 
-          component={SelectSPM} />
+          component={SelectSpm} />
         <Route
           exact path='/select-genre'
           component={SelectGenre} />

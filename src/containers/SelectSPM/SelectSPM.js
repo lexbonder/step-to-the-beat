@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { selectSpm, saveRecentSpm } from '../../actions/actions';
-import './SelectSPM.css';
+import './SelectSpm.css';
 
-export class SelectSPM extends Component {
+export class SelectSpm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ export class SelectSPM extends Component {
   }
 
   componentDidUpdate = () => {
-    this.getRecentSPMs();
+    this.getRecentSpms();
   }
 
   getRecentSPMs = () => {
@@ -47,12 +47,12 @@ export class SelectSPM extends Component {
 
   render() {
     return (
-      <div className='SelectSPM'>
+      <div className='SelectSpm'>
         <h2>Select SPM</h2>
         <div className='select-wrapper'>
           <p>Your recent SPMs</p>
           <ul>
-            {this.getRecentSPMs()}
+            {this.getRecentSpms()}
             <li>
               <Link to='/calculations'>
                   Calculate a new SPM...
@@ -86,4 +86,4 @@ export const MDTP = dispatch => ({
   selectSpm: spm => dispatch(selectSpm(spm))
 });
 
-export default withRouter(connect(MSTP, MDTP)(SelectSPM));
+export default withRouter(connect(MSTP, MDTP)(SelectSpm));
