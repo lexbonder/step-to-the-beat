@@ -15,3 +15,11 @@ export const getUserName = jest.fn()
   .mockImplementation(() => ({
     name: 'Alex' , id: 'lxbndr'
   }))
+
+export const createNewPlaylist = jest.fn()
+  .mockImplementationOnce(() => ({
+    response: `Alex's 148 SPM, ska playlist created successfully`,
+    playlistId: '12345abcde'
+  }))
+
+export const populatePlaylist = jest.fn()

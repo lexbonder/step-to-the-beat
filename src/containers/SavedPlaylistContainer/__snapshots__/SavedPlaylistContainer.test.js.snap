@@ -1,0 +1,386 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedPlaylistContainer savedPlaylistsToRender should match the snapshot if there are no recentSeeds 1`] = `
+<h1>
+  You do not have any favorited playlists!
+</h1>
+`;
+
+exports[`SavedPlaylistContainer savedPlaylistsToRender should match the snapshot if there are recentSeeds 1`] = `
+Array [
+  <withRouter(Connect(SavedPlaylist))
+    seed={
+        Object {
+            "genre": "ska",
+            "spm": 148,
+          }
+    }
+/>,
+  <withRouter(Connect(SavedPlaylist))
+    seed={
+        Object {
+            "genre": "rock",
+            "spm": 160,
+          }
+    }
+/>,
+]
+`;
+
+exports[`SavedPlaylistContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedPlaylistContainer
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    recentSeeds={
+        Array [
+            Object {
+              "genre": "ska",
+              "spm": 148,
+            },
+            Object {
+              "genre": "rock",
+              "spm": 160,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          onClick={[Function]}
+>
+          Get New Playlist
+</button>,
+        <div>
+          <h2>
+                    Nickname
+          </h2>
+          <h2>
+                    SPM
+          </h2>
+          <h2>
+                    Genre
+          </h2>
+          <withRouter(Connect(SavedPlaylist))
+                    seed={
+                              Object {
+                                        "genre": "ska",
+                                        "spm": 148,
+                                      }
+                    }
+          />
+          <withRouter(Connect(SavedPlaylist))
+                    seed={
+                              Object {
+                                        "genre": "rock",
+                                        "spm": 160,
+                                      }
+                    }
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Get New Playlist",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Get New Playlist",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Nickname
+</h2>,
+            <h2>
+              SPM
+</h2>,
+            <h2>
+              Genre
+</h2>,
+            Array [
+              <withRouter(Connect(SavedPlaylist))
+                seed={
+                                Object {
+                                                "genre": "ska",
+                                                "spm": 148,
+                                              }
+                }
+/>,
+              <withRouter(Connect(SavedPlaylist))
+                seed={
+                                Object {
+                                                "genre": "rock",
+                                                "spm": 160,
+                                              }
+                }
+/>,
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Nickname",
+            },
+            "ref": null,
+            "rendered": "Nickname",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "SPM",
+            },
+            "ref": null,
+            "rendered": "SPM",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Genre",
+            },
+            "ref": null,
+            "rendered": "Genre",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "seed": Object {
+                "genre": "ska",
+                "spm": 148,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "seed": Object {
+                "genre": "rock",
+                "spm": 160,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            onClick={[Function]}
+>
+            Get New Playlist
+</button>,
+          <div>
+            <h2>
+                        Nickname
+            </h2>
+            <h2>
+                        SPM
+            </h2>
+            <h2>
+                        Genre
+            </h2>
+            <withRouter(Connect(SavedPlaylist))
+                        seed={
+                                    Object {
+                                                "genre": "ska",
+                                                "spm": 148,
+                                              }
+                        }
+            />
+            <withRouter(Connect(SavedPlaylist))
+                        seed={
+                                    Object {
+                                                "genre": "rock",
+                                                "spm": 160,
+                                              }
+                        }
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Get New Playlist",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Get New Playlist",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Nickname
+</h2>,
+              <h2>
+                SPM
+</h2>,
+              <h2>
+                Genre
+</h2>,
+              Array [
+                <withRouter(Connect(SavedPlaylist))
+                  seed={
+                                    Object {
+                                                      "genre": "ska",
+                                                      "spm": 148,
+                                                    }
+                  }
+/>,
+                <withRouter(Connect(SavedPlaylist))
+                  seed={
+                                    Object {
+                                                      "genre": "rock",
+                                                      "spm": 160,
+                                                    }
+                  }
+/>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Nickname",
+              },
+              "ref": null,
+              "rendered": "Nickname",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "SPM",
+              },
+              "ref": null,
+              "rendered": "SPM",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Genre",
+              },
+              "ref": null,
+              "rendered": "Genre",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "seed": Object {
+                  "genre": "ska",
+                  "spm": 148,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "seed": Object {
+                  "genre": "rock",
+                  "spm": 160,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

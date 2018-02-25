@@ -7,15 +7,25 @@ import { playlistCleaner } from '../../dataCleaner';
 import './SavedPlaylist.css';
 
 export class SavedPlaylist extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorState: ''
+    }
+  }
 
   handleClick = async () => {
     const {seed, accessToken, history } = this.props;
     const { spm, genre } = seed;
-    const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
-    const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
-    this.props.savePlaylist(cleanedPlaylist);
-    this.props.selectSeed(seed);
-    history.push('/playlist');
+    try {
+      const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
+      const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
+      this.props.savePlaylist(cleanedPlaylist);
+      this.props.selectSeed(seed);
+      history.push('/playlist');
+    } catch (error) {
+      this.setState({errorState: error.message})
+    }
   }
 
   render() {

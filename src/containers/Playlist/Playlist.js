@@ -14,6 +14,14 @@ export class Playlist extends Component {
       trackUris: []
     };
   }
+  
+  componentDidMount = () => {
+    const { user, newSeed, playlist } = this.props;
+    const { spm, genre } = newSeed;
+    const trackUris = playlist.map( track => track.uri )
+    const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
+    this.setState({ playlistName, trackUris });
+  }
 
   playlistToRender = () => {
     const { playlist } = this.props;
@@ -64,13 +72,6 @@ export class Playlist extends Component {
     }
   }
 
-  componentDidMount = () => {
-    const { user, newSeed, playlist } = this.props;
-    const { spm, genre } = newSeed;
-    const trackUris = playlist.map( track => track.uri )
-    const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
-    this.setState({ playlistName, trackUris });
-  }
 
   // shouldComponentUpdate = () => {
 
