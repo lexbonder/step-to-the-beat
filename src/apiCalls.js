@@ -71,7 +71,9 @@ export const populatePlaylist = async (userId, playlistId, accessToken, tracks) 
         'Content-Type': 'application/json'
       }
     });
-    if (initialFetch.status >= 300) {
+    if (initialFetch.status < 300) {
+      return await initialFetch.status
+    } else {
       throw new Error('Add Songs to Playlist Failed')
     }
   } catch (error) {

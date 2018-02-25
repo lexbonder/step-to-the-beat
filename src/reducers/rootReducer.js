@@ -7,7 +7,6 @@ import { recentSpmsReducer } from './recentSpmsReducer';
 import { recentGenresReducer } from './recentGenresReducer';
 import { recentSeedsReducer } from './recentSeedsReducer';
 import { playlistReducer } from './playlistReducer';
-import { favoriteSongsReducer } from './favoriteSongsReducer';
 
 export const rootReducer = combineReducers({
   accessToken: accessTokenReducer,
@@ -18,5 +17,4 @@ export const rootReducer = combineReducers({
   recentGenres: recentGenresReducer,
   recentSeeds: recentSeedsReducer,
   playlist: playlistReducer,
-  favoriteSongs: favoriteSongsReducer
 });
