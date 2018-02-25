@@ -16,11 +16,11 @@ export class SelectSpm extends Component {
     this.getRecentSpms();
   }
 
-  getRecentSPMs = () => {
+  getRecentSpms = () => {
     const { recentSpms } = this.props;
     if (recentSpms && recentSpms.length) {
-      return recentSpms.map(spm => {
-        return <li onClick={this.selectRecent}>{spm}</li>;
+      return recentSpms.map((spm, index) => {
+        return <li key={index} onClick={this.selectRecent}>{spm}</li>;
       });
     } 
   }
@@ -77,9 +77,7 @@ export class SelectSpm extends Component {
   }
 }
 
-export const MSTP = store => ({
-  recentSpms: store.recentSpms
-});
+export const MSTP = ({recentSpms}) => ({recentSpms});
 
 export const MDTP = dispatch => ({
   saveRecentSpm: spm => dispatch(saveRecentSpm(spm)),
