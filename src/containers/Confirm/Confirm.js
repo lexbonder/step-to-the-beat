@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
-import { playlistCleaner } from '../../dataCleaner';
+import { playlistCleaner } from '../../playlistCleaner';
 import { savePlaylist, saveRecentSeed } from '../../actions/actions';
 import { userContentToFirebase } from '../../firebaseCalls';
 import './Confirm.css';
