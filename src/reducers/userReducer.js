@@ -1,4 +1,4 @@
-export const userReducer = (state = '', action) => {
+export const userReducer = (state = {}, action) => {
   switch (action.type) {
   case 'SAVE_USER':
     return action.user;
