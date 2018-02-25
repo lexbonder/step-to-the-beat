@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { recentSeedsReducer } from '../recentSeedsReducer';
 
 describe('recentSeedsReducer', () => {

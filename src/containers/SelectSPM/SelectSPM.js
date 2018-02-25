@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { selectSpm, saveRecentSpm } from '../../actions/actions';
+import PropTypes from 'prop-types';
 import './SelectSpm.css';
 
 export class SelectSpm extends Component {
@@ -76,6 +77,15 @@ export class SelectSpm extends Component {
     );
   }
 }
+
+const { arrayOf, number, func, object } = PropTypes;
+
+SelectSpm.propTypes = {
+  recentSpms: arrayOf(number),
+  saveRecentSpm: func,
+  selectSpm: func,
+  history: object
+};
 
 export const MSTP = ({recentSpms}) => ({recentSpms});
 

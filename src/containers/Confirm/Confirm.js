@@ -5,6 +5,7 @@ import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../playlistCleaner';
 import { savePlaylist, saveRecentSeed } from '../../actions/actions';
 import { userContentToFirebase } from '../../firebaseCalls';
+import PropTypes from 'prop-types';
 import './Confirm.css';
 
 export class Confirm extends Component {
@@ -12,7 +13,7 @@ export class Confirm extends Component {
     super(props);
     this.state = {
       errorStatus: ''
-    }
+    };
   }
 
   componentDidMount = () => {
@@ -39,7 +40,7 @@ export class Confirm extends Component {
     } catch (error) {
       this.setState({
         errorStatus: 'Failed to retrieve playlist'
-      })
+      });
     }
   }
   // {spm}
@@ -62,6 +63,28 @@ export class Confirm extends Component {
     );
   }  
 }
+
+const { shape, number, string, arrayOf, func } = PropTypes;
+
+Confirm.propTypes = {
+  newSeed: shape({
+    spm: number,
+    genre: string
+  }),
+  user: shape({
+    id: string,
+    name: string
+  }),
+  recentSpms: arrayOf(number),
+  recentGenres: arrayOf(string),
+  recentSeeds: arrayOf(shape({
+    spm: number,
+    genre: string
+  })),
+  accessToken: string,
+  savePlaylist: func,
+  saveRecentSeed: func
+};
 
 export const MSTP = store => ({
   newSeed: store.newSeed,

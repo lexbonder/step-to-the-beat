@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { genres } from '../../genre-list';
 import { selectGenre, saveRecentGenre } from '../../actions/actions';
+import PropTypes from 'prop-types';
 import './SelectGenre.css';
 
 export class SelectGenre extends Component {
@@ -67,6 +68,13 @@ export class SelectGenre extends Component {
     );
   }
 }
+
+const { func } = PropTypes;
+
+SelectGenre.propTypes = {
+  selectGenre: func,
+  saveRecentGenre: func
+};
 
 export const MDTP = dispatch => ({
   selectGenre: genre => dispatch(selectGenre(genre)),

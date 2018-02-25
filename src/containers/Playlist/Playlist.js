@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createNewPlaylist, populatePlaylist } from '../../apiCalls';
+import PropTypes from 'prop-types';
 import './Playlist.css';
 
 export class Playlist extends Component {
@@ -18,7 +19,7 @@ export class Playlist extends Component {
   componentDidMount = () => {
     const { user, newSeed, playlist } = this.props;
     const { spm, genre } = newSeed;
-    const trackUris = playlist.map( track => track.uri )
+    const trackUris = playlist.map( track => track.uri );
     const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
     this.setState({ playlistName, trackUris });
   }
@@ -66,9 +67,9 @@ export class Playlist extends Component {
         createNewPlaylist(user.id, accessToken, playlistName);
       const { response, playlistId } = playlistResponse;
       populatePlaylist(user.id, playlistId, accessToken, trackUris);
-      this.setState({playlistResponse: response})
+      this.setState({playlistResponse: response});
     } catch (error) {
-      this.setState({errorStatus: error.message})
+      this.setState({errorStatus: error.message});
     }
   }
 
@@ -78,11 +79,11 @@ export class Playlist extends Component {
   // }
 
   // componentDidUpdate = () => {
-    // console.log('updated')
-    // const { playlist } = this.props;
-    // const trackUris = playlist.map( track => track.uri );
-    // console.log(trackUris)
-    // this.setState({trackUris})
+  // console.log('updated')
+  // const { playlist } = this.props;
+  // const trackUris = playlist.map( track => track.uri );
+  // console.log(trackUris)
+  // this.setState({trackUris})
   // }
 
   changePlaylistName = (event) => {
@@ -117,6 +118,26 @@ export class Playlist extends Component {
     );
   }
 }
+
+const { arrayOf, shape, string, number } = PropTypes;
+
+Playlist.propTypes = {
+  playlist: arrayOf(shape({
+    artist: string,
+    title: string,
+    id: string,
+    uri: string
+  })),
+  newSeed: shape({
+    spm: number,
+    genre: string
+  }),
+  user: shape({
+    name: string,
+    id: string
+  }),
+  accessToken: string
+};
 
 export const MSTP = store => ({
   playlist: store.playlist,

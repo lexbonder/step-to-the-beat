@@ -16,5 +16,5 @@ export const rootReducer = combineReducers({
   recentSpms: recentSpmsReducer,
   recentGenres: recentGenresReducer,
   recentSeeds: recentSeedsReducer,
-  playlist: playlistReducer,
+  playlist: playlistReducer
 });

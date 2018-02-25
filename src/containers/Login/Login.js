@@ -11,6 +11,7 @@ import {
 } from '../../actions/actions';
 import { getUserName } from '../../apiCalls.js';
 import { getUserContent } from '../../firebaseCalls';
+import PropTypes from 'prop-types';
 
 export class Login extends Component {
 
@@ -49,6 +50,20 @@ export class Login extends Component {
     );
   }
 }
+
+const { string, func, object } = PropTypes;
+
+Login.propTypes = {
+  accessToken: string,
+  saveAccessToken: func,
+  logInUser: func,
+  saveUser: func,
+  seedsFromFirebase: func,
+  genresFromFirebase: func,
+  spmsFromFirebase: func,
+  location: object,
+  history: object
+};
 
 export const MSTP = ({accessToken}) => ({accessToken});
 

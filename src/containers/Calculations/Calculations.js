@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { saveRecentSpm } from '../../actions/actions';
+import PropTypes from 'prop-types';
 
 import './Calculations.css';
 
@@ -224,9 +225,17 @@ export class Calculations extends Component {
   }
 }
 
-export const MSTP = store => ({
-  recentSpms: store.recentSpms
-});
+const { arrayOf, number, func, shape } = PropTypes;
+
+Calculations.propTypes = {
+  recentSpms: arrayOf(number),
+  saveRecentSpm: func,
+  history: shape({
+    push: func
+  })
+};
+
+export const MSTP = ({recentSpms}) => ({recentSpms});
 
 export const MDTP = dispatch => ({
   saveRecentSpm: spm => dispatch(saveRecentSpm(spm))
