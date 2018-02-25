@@ -26,11 +26,22 @@ export class Home extends Component {
   render() {
     return (
       <div className='Home'>
+        <h1 className='title'>
+          Step <span className='small-words'>
+              to the
+            </span> Beat
+        </h1>
         <p className='intro'>
-          {`Step to the beat figures out your personal rhythm!
-          We'll help you calculate your Steps Per Minute (SPM) and
-          we'll give you a personalized playlist with the same Beats 
-          Per Minute!`}
+          <span className='app-name'>Step to the Beat</span> finds music that fits your personal rhythm!
+          <br />
+          <br />
+          We'll help you calculate your
+          <br/>
+            <strong>
+              Steps Per Minute
+            </strong>
+          <br/>
+          and give you a playlist that runs to your beat.
         </p>
         <button className='log-in' onClick={authorize}>
           Login with Spotify to begin

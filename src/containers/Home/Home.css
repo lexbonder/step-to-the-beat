@@ -1,60 +1,54 @@
-/*.Home {
-  background-color: #CCC7C4;
-  width: fit-content;
-  border-radius: 20px;
-  margin: auto;
-  padding: 20px;
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60vh;
+  margin-top: 120px;
+}
+
+.Home * {
   text-align: center;
 }
 
-.Home a {
-  display: inline-block;
-  margin: 20px;
+.title {
+  font-size: 40px;
+}
+
+.small-words {
+  font-size: 25px;
 }
 
 .intro {
-  text-align: center;
-  display: block;
-  width: 750px;
+  display: inline-block;
+  border: 5px solid #404040;
+  padding: 20px 40px;
+  width: 90%;
   margin: auto;
 }
 
-.log-in,
-.begin {
-  color: #322F30;
+strong,
+.app-name,
+.log-in {
+  color: #63B700;
+}
+
+.app-name {
+  font-weight: bold;
+}
+
+strong {
+  font-size: 20px;
   display: inline-block;
-  width: fit-content;
-  padding: 20px;
   margin: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #FDAB02;
 }
 
 .log-in {
-}
-
-.begin {
-  text-decoration: none;
-}
-
-.dashboard {
-  display: flex;
-  justify-content: space-around;
-}
-
-.dashboard a {
-  background-color: #FDAB02;
-  text-align: center;
-  display: inline-block;
+  font-weight: bold;
+  border: 3px solid #63B700;
+  background-color: transparent;
   padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #322F30;
+  display: inline-block;
+  width: fit-content;
+  margin: auto;
+  border-radius: 50px;
 }
-
-a.dashNav {
-  background-color: #EC2B06;
-  color: #CCC7C4;
-}*/

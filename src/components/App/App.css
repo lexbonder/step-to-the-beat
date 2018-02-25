@@ -1,3 +1,14 @@
+/* Colors
+Dark Green = #63B700
+Light Green = #8ECF32
+Light Gray = #999999
+Medium Gray = #404040
+Dark Gray = #373737
+
+
+
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -9,12 +20,18 @@ body {
   background-color: #373737;
 }
 
-h1, h2, h3 {
+h1, h3 {
   color: #63B700;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
-  color: #999999
+  color: #999999;
+  margin: 0;
 }
 
 .error {

@@ -1,4 +1,24 @@
 /*header {
+  padding: 10px;
+  border-bottom: 2px solid #8ECF32;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.greeting {
+  color: #63B700;
+  text-align: center;
+}
+
+.log-out {
+  text-align: right;
+  text-decoration: underline;
+}
+
+header {
   padding: 30px;
   display: flex;
   align-content: center;

@@ -18,11 +18,12 @@ export class App extends Component {
     return (
       <div>
         <Route 
-          path='/' 
-          component={Header} />
-        <Route 
           exact path='/' 
           component={Home} /> 
+        
+        <Route 
+          path='/' 
+          component={Header} />
         
         <Route 
           exact path='/calculations'

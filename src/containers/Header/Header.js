@@ -12,13 +12,13 @@ export class Header extends Component {
     logOutUser();
     clearAccessToken();
   }
-  
+
   userGreeting = () => {
     const { user, loggedIn } = this.props;
     if (loggedIn) {
       return (
-        <div>
-          <p>Welcome, {user.name}!</p>
+        <div className='greeting'>
+          <img src={user.image} alt='profile' />
           <p className='log-out' onClick={this.handleLogOut}>Log Out</p>
         </div>
       );
@@ -29,9 +29,6 @@ export class Header extends Component {
     return (
       <div>
         <header>
-          <Link to='/'>
-            <h1>Step to the Beat</h1>
-          </Link>
           {this.userGreeting()}
         </header>
       </div>
