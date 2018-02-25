@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SavedPlaylist from '../SavedPlaylist/SavedPlaylist';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './SavedPlaylistContainer.css';
 
 export class SavedPlaylistContainer extends Component {
@@ -9,7 +10,10 @@ export class SavedPlaylistContainer extends Component {
   savedPlaylistsToRender = () => {
     const { recentSeeds } = this.props;
     if (recentSeeds.length) {
-      return recentSeeds.map((seed, index) => <SavedPlaylist key={index} seed={seed} />);
+      return recentSeeds.map((seed, index) => <SavedPlaylist
+        key={index} 
+        seed={seed} 
+      />);
     } else {
       return <h1>You do not have any favorited playlists!</h1>;
     }  
@@ -36,8 +40,18 @@ export class SavedPlaylistContainer extends Component {
   }
 }
 
-export const MSTP = store => ({
-  recentSeeds: store.recentSeeds
-});
+const { arrayOf, shape, number, string, func } = PropTypes;
+
+SavedPlaylistContainer.propTypes = {
+  recentSeeds: arrayOf(shape({
+    spm: number,
+    genre: string
+  })),
+  history: shape({
+    push: func
+  })
+};
+
+export const MSTP = ({recentSeeds}) => ({recentSeeds});
 
 export default withRouter(connect(MSTP)(SavedPlaylistContainer));

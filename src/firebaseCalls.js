@@ -5,7 +5,9 @@ export const getUserContent = id => {
   return db.once('value', snap => snap);
 };
 
-export const userContentToFirebase = (id, savedSpms, savedGenres, savedSeeds) => {
+export const userContentToFirebase = (
+  id, savedSpms, savedGenres, savedSeeds
+) => {
   const spms = firebase.database().ref().child(id).child('savedSpms');
   spms.set(savedSpms);
 

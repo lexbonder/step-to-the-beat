@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { recentGenresReducer } from '../recentGenresReducer';
 
 describe('recentGenresReducer', () => {

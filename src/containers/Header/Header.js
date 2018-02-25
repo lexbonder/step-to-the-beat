@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { logOutUser, clearAccessToken } from '../../actions/actions';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 export class Header extends Component {
@@ -37,6 +38,18 @@ export class Header extends Component {
     );
   }
 }
+
+const { bool, shape, string, func } = PropTypes;
+
+Header.propTypes = {
+  loggedIn: bool,
+  user: shape({
+    name: string,
+    id: string
+  }),
+  logOutUser: func,
+  clearAccessToken: func
+};
 
 export const MSTP = ({ loggedIn, user }) => ({
   loggedIn,

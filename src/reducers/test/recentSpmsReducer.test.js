@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { recentSpmsReducer } from '../recentSpmsReducer';
 
 describe('recentSpmsReducer', () => {

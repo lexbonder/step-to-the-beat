@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { newSeedReducer } from '../newSeedReducer';
 
 describe('newSeedReducer', () => {

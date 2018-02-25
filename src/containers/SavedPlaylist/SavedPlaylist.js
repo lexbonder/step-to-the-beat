@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { savePlaylist, selectSeed } from '../../actions/actions';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../playlistCleaner';
+import PropTypes from 'prop-types';
 import './SavedPlaylist.css';
 
 export class SavedPlaylist extends Component {
@@ -11,7 +12,7 @@ export class SavedPlaylist extends Component {
     super(props);
     this.state = {
       errorState: ''
-    }
+    };
   }
 
   handleClick = async () => {
@@ -24,7 +25,7 @@ export class SavedPlaylist extends Component {
       this.props.selectSeed(seed);
       history.push('/playlist');
     } catch (error) {
-      this.setState({errorState: error.message})
+      this.setState({errorState: error.message});
     }
   }
 
@@ -41,9 +42,19 @@ export class SavedPlaylist extends Component {
   }
 }
 
-export const MSTP = store => ({
-  accessToken: store.accessToken
-});
+const { string, func, shape, number } = PropTypes;
+
+SavedPlaylist.propTypes = {
+  accessToken: string,
+  savePlaylist: func,
+  selectSeed: func,
+  seed: shape({
+    spm: number,
+    genre: string
+  })
+};
+
+export const MSTP = ({accessToken}) => ({accessToken});
 
 export const MDTP = dispatch => ({
   savePlaylist: playlist => dispatch(savePlaylist(playlist)),

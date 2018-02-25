@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { playlistReducer } from '../playlistReducer';
 
 describe('playlistReducer', () => {

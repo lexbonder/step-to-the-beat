@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authorize } from '../../authorizeSpotify';
 import { NavLink, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Home.css';
 
 export class Home extends Component {
@@ -38,6 +39,12 @@ export class Home extends Component {
     );
   }
 }
+
+const { bool } = PropTypes;
+
+Home.propTypes = {
+  loggedIn: bool
+};
 
 export const MSTP = ({loggedIn}) => ({loggedIn});
 
