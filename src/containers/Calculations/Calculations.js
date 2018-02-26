@@ -168,6 +168,7 @@ export class Calculations extends Component {
               />
               <div className='button-wrapper'>
                 <button
+                  disabled={!this.state.manual}
                   className={`
                     manual-button
                     next-and-back-buttons
@@ -239,6 +240,12 @@ export class Calculations extends Component {
                 />
                 <div className='button-wrapper'>
                   <button
+                    disabled={
+                      !this.state.mpmSecond ||
+                      !this.state.mpmMinute ||
+                      !this.state.heightFeet ||
+                      !this.state.heightInch
+                    }
                     className={`
                       next-and-back-buttons
                       ${this.state.toggleGetButton}
@@ -260,6 +267,10 @@ export class Calculations extends Component {
                 />
                 <div className='button-wrapper'>
                   <button
+                    disabled={
+                      !this.state.mphSpeed ||
+                      !this.state.heightFeet ||
+                      !this.state.heightInch }
                     className={`
                       next-and-back-buttons 
                       ${this.state.toggleGetButton}
