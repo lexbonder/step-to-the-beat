@@ -23,7 +23,7 @@ ShallowWrapper {
 </h1>,
         <img
           alt="loading gif"
-          src="bears-running.gif"
+          src="bacon-running.gif"
 />,
       ],
       "className": "LoadingGif",
@@ -47,7 +47,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "loading gif",
-          "src": "bears-running.gif",
+          "src": "bacon-running.gif",
         },
         "ref": null,
         "rendered": null,
@@ -68,7 +68,7 @@ ShallowWrapper {
 </h1>,
           <img
             alt="loading gif"
-            src="bears-running.gif"
+            src="bacon-running.gif"
 />,
         ],
         "className": "LoadingGif",
@@ -92,7 +92,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "loading gif",
-            "src": "bears-running.gif",
+            "src": "bacon-running.gif",
           },
           "ref": null,
           "rendered": null,
