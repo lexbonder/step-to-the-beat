@@ -17,12 +17,19 @@ export class Calculations extends Component {
       mpmMinute: '',
       mpmSecond: '',
       result: '',
+      
       manualVisibility: 'hide',
       estimateVisibility: 'show',
-      hoverTipVisibility: 'hide',
       manualButton: '',
       estimateButton: 'focused',
-      toggleResult: 'hide'
+      
+      toggleGetButton: 'show',
+      toggleResult: 'hide',
+
+      minuteMileVisibility: 'show',
+      mileHourVisibility: 'hide',
+      minuteMileButton: 'focused',
+      mileHourButton: '' 
     };
   }
 
@@ -93,133 +100,191 @@ export class Calculations extends Component {
     }
   }
 
+  toggleMeasurement = (event) => {
+    if (event.target.name === 'minuteMile') {
+      this.setState({
+        minuteMileVisibility: 'show',
+        mileHourVisibility: 'hide',
+        minuteMileButton: 'focused',
+        mileHourButton: ''
+      });
+    } else { 
+      this.setState({
+        minuteMileVisibility: 'hide',
+        mileHourVisibility: 'show',
+        minuteMileButton: '',
+        mileHourButton: 'focused'
+      });
+    }
+  }
+
   showResult = () => {
-    this.setState({toggleResult: 'show'});
+    this.setState({
+      toggleResult: 'show',
+      toggleGetButton: 'hide'
+    });
   }
 
   render() {
     return (
-      <div className='Calculations'>
-        <button
-          name='manual'
-          className={this.state.manualButton}
-          onClick={this.toggleManualEstimate}
-        >Manual</button>
-        <button
-          name='estimate'
-          className={this.state.estimateButton}
-          onClick={this.toggleManualEstimate}
-        >Estimate</button>
-        {/*MANUAL CALCULATION*/}
-        <article className={`manual ${this.state.manualVisibility}`}>
-          <p>Manual calculation is most accurate and only takes 40 seconds!</p>
-          <ol>
-            <li>Choose your favorite leg.</li>
-            <li>
-              Start walking or running for 10 seconds.
-              Find your comfortable pace
-            </li>
-            <li>
-              For the next 30 seconds
-              count how many times you land on your favorite leg
-            </li>
-            <li>Enter that number below!</li>
-          </ol>
-          <form onSubmit={this.calculateManual}>
-            <input
-              name='manual'
-              type='number'
-              className='manual-input'
-              onChange={this.handleChange}
-              value={this.state.manual}
-              placeholder='30'
-            />
+      <div>
+        <div className='Calculations'>
+          <button
+            name='estimate'
+            className={`estimate-tab ${this.state.estimateButton}`}
+            onClick={this.toggleManualEstimate}
+          >Estimate</button>
+          <button
+            name='manual'
+            className={`manual-tab ${this.state.manualButton}`}
+            onClick={this.toggleManualEstimate}
+          >Manual</button>
+          {/*MANUAL CALCULATION*/}
+          <article className={`manual ${this.state.manualVisibility}`}>
+            <h4 className='instructions'>
+              Manual calculation is most accurate
+              and takes less than a minute to do
+            </h4>
+            <ol>
+              <li>Choose your favorite leg.</li>
+              <li>
+                Start walking or running at a comfortable pace.
+              </li>
+              <li>
+                Count how many times you land on your chosen leg for 30 seconds
+              </li>
+              <li>Enter that number below!</li>
+            </ol>
+            <form
+              className='manual-input-form'
+              onSubmit={this.calculateManual}>
+              <input
+                name='manual'
+                type='number'
+                className='manual-input'
+                onChange={this.handleChange}
+                value={this.state.manual}
+                placeholder='30'
+              />
+              <div className='button-wrapper'>
+                <button
+                  className={`
+                    manual-button
+                    next-and-back-buttons
+                    ${this.state.toggleGetButton}`}
+                  onClick={this.showResult}
+                >Get my SPM</button>
+              </div>
+            </form>
+          </article>
+
+          {/* Height/Speed */}
+
+          <article className={`estimate ${this.state.estimateVisibility}`}>
+            <h4 className='instructions'>
+              Enter your height and speed to estimate your SPM
+              <br />
+              <br />
+              <span className='disclaimer'>
+                (Manual calculation is more accurate)
+              </span>
+            </h4>
+            
+            <form className='height'>
+              <h4><input
+                name='heightFeet'
+                type='number'
+                onChange={this.handleChange}
+                value={this.state.heightFeet}
+                placeholder='5'
+              />{`Feet`}
+              <input
+                name='heightInch'
+                type='number'
+                onChange={this.handleChange}
+                value={this.state.heightInch}
+                placeholder='4'
+              />{`Inches`}</h4>
+            </form>
+            
             <button
-              className='manual-button'
-              onClick={this.showResult}
-            >Get My SPM</button>
-          </form>
-        </article>
-
-        {/* Height/Speed */}
-
-        <article className={`estimate ${this.state.estimateVisibility}`}>
-          <h4>Enter your height and speed to estimate your SPM</h4>
-          <form>
-            <h4 className='height'>Height</h4>
-            <p><input
-              name='heightFeet'
-              type='number'
-              onChange={this.handleChange}
-              value={this.state.heightFeet}
-              placeholder='5'
-            />{`'`}
-            <input
-              name='heightInch'
-              type='number'
-              onChange={this.handleChange}
-              value={this.state.heightInch}
-              placeholder='4'
-            />{`"`}</p>
-          </form>
-          <h4>Speed</h4>
-          <div className='speeds'>
-            <form onSubmit={this.calculateMinutePerMile}>
-              <p>
-                Minute/Mile<br/>
+              name='minuteMile'
+              className={`minute-mile-button ${this.state.minuteMileButton}`}
+              onClick={this.toggleMeasurement}
+            >Minutes/Mile</button>
+            <button
+              name='mileHour'
+              className={`mile-hour-button ${this.state.mileHourButton}`}
+              onClick={this.toggleMeasurement}
+            >Miles/Hour</button>
+            <div className='speeds'>
+              <form
+                className={`mile-minute-box ${this.state.minuteMileVisibility}`}
+                onSubmit={this.calculateMinutePerMile}
+              >
                 <input
                   name='mpmMinute'
                   type='number'
                   onChange={this.handleChange}
                   value={this.state.mpmMinute}
-                  placeholder='10'
-                />:
+                  placeholder='Min'
+                />
+                <h2 className='colon'>:</h2>
                 <input
                   name='mpmSecond'
                   type='number'
                   onChange={this.handleChange}
                   value={this.state.mpmSecond}
-                  placeholder='00'
+                  placeholder='Sec'
                 />
-              </p>
-              <button
-                onClick={this.showResult}
-              >Get my SPM</button>
-            </form>
-            <div className='divider'></div>
-            <form onSubmit={this.calculateMilePerHour}>
-              <p>
-                MPH<br/>
+                <div className='button-wrapper'>
+                  <button
+                    className={`
+                      next-and-back-buttons
+                      ${this.state.toggleGetButton}
+                    `}
+                    onClick={this.showResult}
+                  >Get my SPM</button>
+                </div>
+              </form>
+              <form
+                className={`mile-hour-box ${this.state.mileHourVisibility}`}
+                onSubmit={this.calculateMilePerHour}
+              >
                 <input
                   name='mphSpeed'
                   type='number'
                   onChange={this.handleChange}
                   value={this.state.mphSpeed}
-                  placeholder='6.0'
+                  placeholder='MPH'
                 />
-              </p>
-              <button
-                onClick={this.showResult}
-              >Get my SPM</button>
-            </form>
-          </div>
-        </article>
-
+                <div className='button-wrapper'>
+                  <button
+                    className={`
+                      next-and-back-buttons 
+                      ${this.state.toggleGetButton}
+                    `}
+                    onClick={this.showResult}
+                  >Get my SPM</button>
+                </div>
+              </form>
+            </div>
+          </article>
+        </div>
 
         {/* RESULT AND SUBMIT BUTTON */}
 
-        <article className={`result ${this.state.toggleResult}`}>
-          <h2>Your beat is:</h2>
-          {
-            this.state.result &&
-            <div>
-              <h1>{`${this.state.result + ' SPM'}`}</h1>
-              <button onClick={this.submitSpm}>Save SPM</button>
-            </div>
-          }
+        <article className={`result button-wrapper ${this.state.toggleResult}`}>
+          <div>
+            <h2>Your beat is:</h2>
+            <h1>{`${this.state.result} SPM`}</h1>
+          </div>
+          <button
+            className='next-and-back-buttons'
+            onClick={this.submitSpm}>
+            Save and Go
+          </button>
         </article>
-
-
       </div>
     );
   }

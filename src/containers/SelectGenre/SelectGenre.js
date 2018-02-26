@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { genres } from '../../genre-list';
 import { selectGenre, saveRecentGenre } from '../../actions/actions';
 import PropTypes from 'prop-types';
@@ -34,9 +34,11 @@ export class SelectGenre extends Component {
   }
 
   handleClick = () => {
+    const { history } = this.props;
     const genre = this.state.selectedGenre.toLowerCase();
     this.props.selectGenre(genre);
     this.props.saveRecentGenre(genre);
+    history.push('/confirm');
   }
 
   handleSearchParam = (event) => {
@@ -47,33 +49,50 @@ export class SelectGenre extends Component {
     this.setState({searchParam, selectedGenre: ''});
   }
 
+  handleBackButton = () => {
+    const { history } = this.props;
+    history.push('/select-spm');
+  }
+
   render() {
     return (
       <div className='SelectGenre'>
-        <h2>Select Genre</h2>
-        <div className='select-wrapper'>
-          <input 
-            type='text'
-            placeholder='Search'
-            value={this.state.searchParam}
-            onChange={this.handleSearchParam}
-          />
-          <ul>
-            {this.getGenres()}
-          </ul>
-          <Link to='/select-spm'>Back</Link>
-          <Link onClick={this.handleClick} to='/confirm'>Next</Link>
+        <input 
+          type='text'
+          placeholder='Search'
+          className='search-bar'
+          value={this.state.searchParam}
+          onChange={this.handleSearchParam}
+        />
+        <ul>
+          {this.getGenres()}
+        </ul>
+        <div className='button-wrapper'> 
+          <button
+            className='next-and-back-buttons'
+            onClick={this.handleBackButton}>
+              Back
+          </button>
+          <button
+            onClick={this.handleClick}
+            disabled={!this.state.selectedGenre}
+            className='next-and-back-buttons'>
+              Confirm
+          </button>
         </div>
       </div>
     );
   }
 }
 
-const { func } = PropTypes;
+const { func, shape } = PropTypes;
 
 SelectGenre.propTypes = {
   selectGenre: func,
-  saveRecentGenre: func
+  saveRecentGenre: func,
+  history: shape({
+    path: func
+  })
 };
 
 export const MDTP = dispatch => ({

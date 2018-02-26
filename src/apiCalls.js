@@ -50,7 +50,7 @@ export const createNewPlaylist = async (userId, accessToken, playlistName) => {
     if (initialFetch.status < 300) {
       const response = await initialFetch.json();
       return {
-        response: `${playlistName} created successfully`,
+        response: `Playlist Sent!`,
         playlistId: response.id
       };
     } else {

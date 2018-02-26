@@ -1,28 +1,19 @@
-/*.Confirm {
+.Confirm {
   width: fit-content;
   margin: auto;
 }
 
-.Confirm h2 {
-  text-align: center;
-  color: #FDAB02;
+.Confirm h2,
+.Confirm p {
+  margin: 20px 0;
 }
 
-.Confirm h2:first-of-type {
-  text-decoration: underline;
-  color: #322F30;
+.Confirm h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #63B700;
 }
 
 .Confirm p {
-  padding-left: 40px;
+  font-size: 30px;
 }
-
-.Confirm a {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px;
-  background-color: #FDAB02;
-  color: #322F30;
-  text-decoration: none;
-}*/

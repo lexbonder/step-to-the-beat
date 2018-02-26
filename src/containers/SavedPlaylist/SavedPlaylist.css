@@ -1,0 +1,17 @@
+.saved-playlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  position: relative;
+}
+
+.playlist-name {
+  color: #999999;
+  display: inline-block;
+}
+
+.playlist-details {
+  color: #555555;
+}

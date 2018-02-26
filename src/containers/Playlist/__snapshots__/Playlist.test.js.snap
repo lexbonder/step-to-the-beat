@@ -44,14 +44,17 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div>
-          <h3 />
-          <input
-                    className="summary"
-                    onChange={[Function]}
-                    value="Alex's 148 SPM, ska playlist"
-          />
+        <h2
+          className="response"
+/>,
+        <div
+          className="playlist-header"
+>
+          <h2>
+                    Alex's 148 SPM, ska playlist
+          </h2>
           <button
+                    className="next-and-back-buttons"
                     onClick={[Function]}
           >
                     Send to Spotify
@@ -60,20 +63,18 @@ ShallowWrapper {
         <div
           className="playlist"
 >
-          <h3>
-                    Title
-          </h3>
-          <h3>
-                    Artist
-          </h3>
           <div
                     className="track"
                     id="1234abcd"
           >
-                    <h4>
+                    <h4
+                              className="song-title"
+                    >
                               Dont You?
                     </h4>
-                    <h4>
+                    <h4
+                              className="song-artist"
+                    >
                               I Fight Dragons
                     </h4>
           </div>
@@ -87,19 +88,30 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "",
+          "className": "response",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": Array [
-            <h3 />,
-            <input
-              className="summary"
-              onChange={[Function]}
-              value="Alex's 148 SPM, ska playlist"
-/>,
+            <h2>
+              Alex's 148 SPM, ska playlist
+</h2>,
             <button
+              className="next-and-back-buttons"
               onClick={[Function]}
 >
               Send to Spotify
 </button>,
           ],
+          "className": "playlist-header",
         },
         "ref": null,
         "rendered": Array [
@@ -108,24 +120,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "",
+              "children": "Alex's 148 SPM, ska playlist",
             },
             "ref": null,
-            "rendered": "",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "summary",
-              "onChange": [Function],
-              "value": "Alex's 148 SPM, ska playlist",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
+            "rendered": "Alex's 148 SPM, ska playlist",
+            "type": "h2",
           },
           Object {
             "instance": null,
@@ -133,6 +132,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Send to Spotify",
+              "className": "next-and-back-buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -148,25 +148,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3>
-              Title
-</h3>,
-            <h3>
-              Artist
-</h3>,
-            Array [
-              <div
-                className="track"
-                id="1234abcd"
+            <div
+              className="track"
+              id="1234abcd"
 >
-                <h4>
-                                Dont You?
-                </h4>
-                <h4>
-                                I Fight Dragons
-                </h4>
+              <h4
+                            className="song-title"
+              >
+                            Dont You?
+              </h4>
+              <h4
+                            className="song-artist"
+              >
+                            I Fight Dragons
+              </h4>
 </div>,
-            ],
           ],
           "className": "playlist",
         },
@@ -174,36 +170,18 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Title",
-            },
-            "ref": null,
-            "rendered": "Title",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Artist",
-            },
-            "ref": null,
-            "rendered": "Artist",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
             "key": "1234abcd",
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h4>
+                <h4
+                  className="song-title"
+>
                   Dont You?
 </h4>,
-                <h4>
+                <h4
+                  className="song-artist"
+>
                   I Fight Dragons
 </h4>,
               ],
@@ -218,6 +196,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Dont You?",
+                  "className": "song-title",
                 },
                 "ref": null,
                 "rendered": "Dont You?",
@@ -229,6 +208,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "I Fight Dragons",
+                  "className": "song-artist",
                 },
                 "ref": null,
                 "rendered": "I Fight Dragons",
@@ -250,14 +230,17 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
-            <h3 />
-            <input
-                        className="summary"
-                        onChange={[Function]}
-                        value="Alex's 148 SPM, ska playlist"
-            />
+          <h2
+            className="response"
+/>,
+          <div
+            className="playlist-header"
+>
+            <h2>
+                        Alex's 148 SPM, ska playlist
+            </h2>
             <button
+                        className="next-and-back-buttons"
                         onClick={[Function]}
             >
                         Send to Spotify
@@ -266,20 +249,18 @@ ShallowWrapper {
           <div
             className="playlist"
 >
-            <h3>
-                        Title
-            </h3>
-            <h3>
-                        Artist
-            </h3>
             <div
                         className="track"
                         id="1234abcd"
             >
-                        <h4>
+                        <h4
+                                    className="song-title"
+                        >
                                     Dont You?
                         </h4>
-                        <h4>
+                        <h4
+                                    className="song-artist"
+                        >
                                     I Fight Dragons
                         </h4>
             </div>
@@ -293,19 +274,30 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "",
+            "className": "response",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
-              <h3 />,
-              <input
-                className="summary"
-                onChange={[Function]}
-                value="Alex's 148 SPM, ska playlist"
-/>,
+              <h2>
+                Alex's 148 SPM, ska playlist
+</h2>,
               <button
+                className="next-and-back-buttons"
                 onClick={[Function]}
 >
                 Send to Spotify
 </button>,
             ],
+            "className": "playlist-header",
           },
           "ref": null,
           "rendered": Array [
@@ -314,24 +306,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "",
+                "children": "Alex's 148 SPM, ska playlist",
               },
               "ref": null,
-              "rendered": "",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "summary",
-                "onChange": [Function],
-                "value": "Alex's 148 SPM, ska playlist",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
+              "rendered": "Alex's 148 SPM, ska playlist",
+              "type": "h2",
             },
             Object {
               "instance": null,
@@ -339,6 +318,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Send to Spotify",
+                "className": "next-and-back-buttons",
                 "onClick": [Function],
               },
               "ref": null,
@@ -354,25 +334,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3>
-                Title
-</h3>,
-              <h3>
-                Artist
-</h3>,
-              Array [
-                <div
-                  className="track"
-                  id="1234abcd"
+              <div
+                className="track"
+                id="1234abcd"
 >
-                  <h4>
-                                    Dont You?
-                  </h4>
-                  <h4>
-                                    I Fight Dragons
-                  </h4>
+                <h4
+                                className="song-title"
+                >
+                                Dont You?
+                </h4>
+                <h4
+                                className="song-artist"
+                >
+                                I Fight Dragons
+                </h4>
 </div>,
-              ],
             ],
             "className": "playlist",
           },
@@ -380,36 +356,18 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Title",
-              },
-              "ref": null,
-              "rendered": "Title",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Artist",
-              },
-              "ref": null,
-              "rendered": "Artist",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
               "key": "1234abcd",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h4>
+                  <h4
+                    className="song-title"
+>
                     Dont You?
 </h4>,
-                  <h4>
+                  <h4
+                    className="song-artist"
+>
                     I Fight Dragons
 </h4>,
                 ],
@@ -424,6 +382,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Dont You?",
+                    "className": "song-title",
                   },
                   "ref": null,
                   "rendered": "Dont You?",
@@ -435,6 +394,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "I Fight Dragons",
+                    "className": "song-artist",
                   },
                   "ref": null,
                   "rendered": "I Fight Dragons",

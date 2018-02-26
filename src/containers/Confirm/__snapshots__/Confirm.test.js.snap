@@ -66,9 +66,6 @@ ShallowWrapper {
         <h2
           className="error"
 />,
-        <h2>
-          Confirm
-</h2>,
         <p>
           Steps per Minute
 </p>,
@@ -81,17 +78,22 @@ ShallowWrapper {
         <h2>
           Ska
 </h2>,
-        <Link
-          replace={false}
-          to="/select-genre"
+        <div
+          className="button-wrapper"
 >
-          Back
-</Link>,
-        <button
-          onClick={[Function]}
->
-          Get My Playlist!
-</button>,
+          <button
+                    className="next-and-back-buttons"
+                    onClick={[Function]}
+          >
+                    Back
+          </button>
+          <button
+                    className="next-and-back-buttons"
+                    onClick={[Function]}
+          >
+                    Get My Playlist!
+          </button>
+</div>,
       ],
       "className": "Confirm",
     },
@@ -107,17 +109,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Confirm",
-        },
-        "ref": null,
-        "rendered": "Confirm",
         "type": "h2",
       },
       Object {
@@ -167,27 +158,54 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "Back",
-          "replace": false,
-          "to": "/select-genre",
-        },
-        "ref": null,
-        "rendered": "Back",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Get My Playlist!",
-          "onClick": [Function],
+          "children": Array [
+            <button
+              className="next-and-back-buttons"
+              onClick={[Function]}
+>
+              Back
+</button>,
+            <button
+              className="next-and-back-buttons"
+              onClick={[Function]}
+>
+              Get My Playlist!
+</button>,
+          ],
+          "className": "button-wrapper",
         },
         "ref": null,
-        "rendered": "Get My Playlist!",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Back",
+              "className": "next-and-back-buttons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Back",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Get My Playlist!",
+              "className": "next-and-back-buttons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Get My Playlist!",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -202,9 +220,6 @@ ShallowWrapper {
           <h2
             className="error"
 />,
-          <h2>
-            Confirm
-</h2>,
           <p>
             Steps per Minute
 </p>,
@@ -217,17 +232,22 @@ ShallowWrapper {
           <h2>
             Ska
 </h2>,
-          <Link
-            replace={false}
-            to="/select-genre"
+          <div
+            className="button-wrapper"
 >
-            Back
-</Link>,
-          <button
-            onClick={[Function]}
->
-            Get My Playlist!
-</button>,
+            <button
+                        className="next-and-back-buttons"
+                        onClick={[Function]}
+            >
+                        Back
+            </button>
+            <button
+                        className="next-and-back-buttons"
+                        onClick={[Function]}
+            >
+                        Get My Playlist!
+            </button>
+</div>,
         ],
         "className": "Confirm",
       },
@@ -243,17 +263,6 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Confirm",
-          },
-          "ref": null,
-          "rendered": "Confirm",
           "type": "h2",
         },
         Object {
@@ -303,27 +312,54 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "Back",
-            "replace": false,
-            "to": "/select-genre",
-          },
-          "ref": null,
-          "rendered": "Back",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Get My Playlist!",
-            "onClick": [Function],
+            "children": Array [
+              <button
+                className="next-and-back-buttons"
+                onClick={[Function]}
+>
+                Back
+</button>,
+              <button
+                className="next-and-back-buttons"
+                onClick={[Function]}
+>
+                Get My Playlist!
+</button>,
+            ],
+            "className": "button-wrapper",
           },
           "ref": null,
-          "rendered": "Get My Playlist!",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Back",
+                "className": "next-and-back-buttons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Back",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Get My Playlist!",
+                "className": "next-and-back-buttons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Get My Playlist!",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

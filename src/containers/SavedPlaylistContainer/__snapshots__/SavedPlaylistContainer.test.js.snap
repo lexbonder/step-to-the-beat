@@ -64,20 +64,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
+          className="next-and-back-buttons new-playlist"
           onClick={[Function]}
 >
           Get New Playlist
 </button>,
         <div>
-          <h2>
-                    Nickname
-          </h2>
-          <h2>
-                    SPM
-          </h2>
-          <h2>
-                    Genre
-          </h2>
           <withRouter(Connect(SavedPlaylist))
                     seed={
                               Object {
@@ -96,6 +88,7 @@ ShallowWrapper {
           />
 </div>,
       ],
+      "className": "SavedPlaylistContainer",
     },
     "ref": null,
     "rendered": Array [
@@ -105,6 +98,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Get New Playlist",
+          "className": "next-and-back-buttons new-playlist",
           "onClick": [Function],
         },
         "ref": null,
@@ -117,70 +111,26 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2>
-              Nickname
-</h2>,
-            <h2>
-              SPM
-</h2>,
-            <h2>
-              Genre
-</h2>,
-            Array [
-              <withRouter(Connect(SavedPlaylist))
-                seed={
-                                Object {
-                                                "genre": "ska",
-                                                "spm": 148,
-                                              }
-                }
+            <withRouter(Connect(SavedPlaylist))
+              seed={
+                            Object {
+                                          "genre": "ska",
+                                          "spm": 148,
+                                        }
+              }
 />,
-              <withRouter(Connect(SavedPlaylist))
-                seed={
-                                Object {
-                                                "genre": "rock",
-                                                "spm": 160,
-                                              }
-                }
+            <withRouter(Connect(SavedPlaylist))
+              seed={
+                            Object {
+                                          "genre": "rock",
+                                          "spm": 160,
+                                        }
+              }
 />,
-            ],
           ],
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Nickname",
-            },
-            "ref": null,
-            "rendered": "Nickname",
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "SPM",
-            },
-            "ref": null,
-            "rendered": "SPM",
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Genre",
-            },
-            "ref": null,
-            "rendered": "Genre",
-            "type": "h2",
-          },
           Object {
             "instance": null,
             "key": "0",
@@ -223,20 +173,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
+            className="next-and-back-buttons new-playlist"
             onClick={[Function]}
 >
             Get New Playlist
 </button>,
           <div>
-            <h2>
-                        Nickname
-            </h2>
-            <h2>
-                        SPM
-            </h2>
-            <h2>
-                        Genre
-            </h2>
             <withRouter(Connect(SavedPlaylist))
                         seed={
                                     Object {
@@ -255,6 +197,7 @@ ShallowWrapper {
             />
 </div>,
         ],
+        "className": "SavedPlaylistContainer",
       },
       "ref": null,
       "rendered": Array [
@@ -264,6 +207,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Get New Playlist",
+            "className": "next-and-back-buttons new-playlist",
             "onClick": [Function],
           },
           "ref": null,
@@ -276,70 +220,26 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2>
-                Nickname
-</h2>,
-              <h2>
-                SPM
-</h2>,
-              <h2>
-                Genre
-</h2>,
-              Array [
-                <withRouter(Connect(SavedPlaylist))
-                  seed={
-                                    Object {
-                                                      "genre": "ska",
-                                                      "spm": 148,
-                                                    }
-                  }
+              <withRouter(Connect(SavedPlaylist))
+                seed={
+                                Object {
+                                                "genre": "ska",
+                                                "spm": 148,
+                                              }
+                }
 />,
-                <withRouter(Connect(SavedPlaylist))
-                  seed={
-                                    Object {
-                                                      "genre": "rock",
-                                                      "spm": 160,
-                                                    }
-                  }
+              <withRouter(Connect(SavedPlaylist))
+                seed={
+                                Object {
+                                                "genre": "rock",
+                                                "spm": 160,
+                                              }
+                }
 />,
-              ],
             ],
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Nickname",
-              },
-              "ref": null,
-              "rendered": "Nickname",
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "SPM",
-              },
-              "ref": null,
-              "rendered": "SPM",
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Genre",
-              },
-              "ref": null,
-              "rendered": "Genre",
-              "type": "h2",
-            },
             Object {
               "instance": null,
               "key": "0",

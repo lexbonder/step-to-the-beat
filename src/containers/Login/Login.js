@@ -9,11 +9,18 @@ import {
   genresFromFirebase,
   spmsFromFirebase
 } from '../../actions/actions';
+import LoadingGif from '../../components/LoadingGif/LoadingGif';
 import { getUserName } from '../../apiCalls.js';
 import { getUserContent } from '../../firebaseCalls';
 import PropTypes from 'prop-types';
 
 export class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorMessage: ''
+    };
+  }
 
   componentDidMount = () => {
     const { location, history, saveAccessToken, logInUser } = this.props;
@@ -29,10 +36,27 @@ export class Login extends Component {
   }
 
   componentDidUpdate = async () => {
-    const { accessToken, history } = this.props;
-    const user = await getUserName(accessToken);
-    const userContent = await getUserContent(user.id);
-    this.props.saveUser(user);
+    const { accessToken } = this.props;
+    try {
+      const user = await getUserName(accessToken);
+      this.props.saveUser(user);
+      this.getContentFromFirebase(user.id);
+    } catch (error) {
+      this.setState({errorMessage: error.message});
+    }
+  }
+
+  getContentFromFirebase = async (userId) => {
+    try {
+      const userContent = await getUserContent(userId);
+      this.redirectUser(userContent);
+    } catch (error) {
+      this.setState({errorMessage: error.message});
+    }
+  }
+
+  redirectUser = (userContent) => {
+    const { history } = this.props;
     if (!userContent.val()) {
       history.push('/select-spm');
     } else {
@@ -41,12 +65,15 @@ export class Login extends Component {
       this.props.genresFromFirebase(savedGenres);
       this.props.spmsFromFirebase(savedSpms);
       history.push('/saved-playlists');
-    }
+    } 
   }
 
   render () {
     return (
-      <div></div>
+      <div>
+        <LoadingGif />
+        {this.state.errorMessage}
+      </div>
     );
   }
 }

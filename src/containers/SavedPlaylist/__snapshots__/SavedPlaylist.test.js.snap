@@ -19,6 +19,13 @@ ShallowWrapper {
           }
     }
     selectSeed={[Function]}
+    user={
+        Object {
+            "id": "lxbndr",
+            "image": "superlongurl",
+            "name": "Alex",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,22 +40,28 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2>
-          Playlist Name
-</h2>,
-        <h2>
-          148
-</h2>,
-        <h2>
-          ska
-</h2>,
+        <div>
+          <h2
+                    className="playlist-name"
+          >
+                    Alex's 148 SPM, ska playlist
+          </h2>
+          <h3
+                    className="playlist-details"
+          >
+                    148
+                     SPM • 
+                    ska
+          </h3>
+</div>,
         <button
+          className="next-and-back-buttons"
           onClick={[Function]}
 >
-          Get Now
+          View
 </button>,
       ],
-      "className": "savedPlaylist",
+      "className": "saved-playlist",
     },
     "ref": null,
     "rendered": Array [
@@ -57,44 +70,69 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Playlist Name",
+          "children": Array [
+            <h2
+              className="playlist-name"
+>
+              Alex's 148 SPM, ska playlist
+</h2>,
+            <h3
+              className="playlist-details"
+>
+              148
+               SPM • 
+              ska
+</h3>,
+          ],
         },
         "ref": null,
-        "rendered": "Playlist Name",
-        "type": "h2",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Alex's 148 SPM, ska playlist",
+              "className": "playlist-name",
+            },
+            "ref": null,
+            "rendered": "Alex's 148 SPM, ska playlist",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                148,
+                " SPM • ",
+                "ska",
+              ],
+              "className": "playlist-details",
+            },
+            "ref": null,
+            "rendered": Array [
+              148,
+              " SPM • ",
+              "ska",
+            ],
+            "type": "h3",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": 148,
-        },
-        "ref": null,
-        "rendered": 148,
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "ska",
-        },
-        "ref": null,
-        "rendered": "ska",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Get Now",
+          "children": "View",
+          "className": "next-and-back-buttons",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Get Now",
+        "rendered": "View",
         "type": "button",
       },
     ],
@@ -107,22 +145,28 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
-            Playlist Name
-</h2>,
-          <h2>
-            148
-</h2>,
-          <h2>
-            ska
-</h2>,
+          <div>
+            <h2
+                        className="playlist-name"
+            >
+                        Alex's 148 SPM, ska playlist
+            </h2>
+            <h3
+                        className="playlist-details"
+            >
+                        148
+                         SPM • 
+                        ska
+            </h3>
+</div>,
           <button
+            className="next-and-back-buttons"
             onClick={[Function]}
 >
-            Get Now
+            View
 </button>,
         ],
-        "className": "savedPlaylist",
+        "className": "saved-playlist",
       },
       "ref": null,
       "rendered": Array [
@@ -131,44 +175,69 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Playlist Name",
+            "children": Array [
+              <h2
+                className="playlist-name"
+>
+                Alex's 148 SPM, ska playlist
+</h2>,
+              <h3
+                className="playlist-details"
+>
+                148
+                 SPM • 
+                ska
+</h3>,
+            ],
           },
           "ref": null,
-          "rendered": "Playlist Name",
-          "type": "h2",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Alex's 148 SPM, ska playlist",
+                "className": "playlist-name",
+              },
+              "ref": null,
+              "rendered": "Alex's 148 SPM, ska playlist",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  148,
+                  " SPM • ",
+                  "ska",
+                ],
+                "className": "playlist-details",
+              },
+              "ref": null,
+              "rendered": Array [
+                148,
+                " SPM • ",
+                "ska",
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": 148,
-          },
-          "ref": null,
-          "rendered": 148,
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "ska",
-          },
-          "ref": null,
-          "rendered": "ska",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Get Now",
+            "children": "View",
+            "className": "next-and-back-buttons",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Get Now",
+          "rendered": "View",
           "type": "button",
         },
       ],

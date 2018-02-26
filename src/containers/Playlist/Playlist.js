@@ -33,8 +33,8 @@ export class Playlist extends Component {
         id={track.id}
       >
         {/*<input type='checkbox' className='checkbox' />*/}
-        <h4>{track.title}</h4>
-        <h4>{track.artist}</h4>
+        <h4 className='song-title'>{track.title}</h4>
+        <h4 className='song-artist'>{track.artist}</h4>
       </div>
     ));
   }
@@ -50,15 +50,6 @@ export class Playlist extends Component {
     }
   }
 
-  // saveChecked = () => {
-  //   const allCheckboxes = document.querySelectorAll('.checkbox');
-  //   allCheckboxes.forEach( checkbox => {
-  //     if (checkbox.checked) {
-  //       this.props.saveTrack() ////////////////////////////////
-  //     }
-  //   })
-  // }
-
   sendToSpotify = async () => {
     const { user, accessToken } = this.props;
     const { playlistName, trackUris } = this.state;
@@ -73,45 +64,19 @@ export class Playlist extends Component {
     }
   }
 
-
-  // shouldComponentUpdate = () => {
-
-  // }
-
-  // componentDidUpdate = () => {
-  // console.log('updated')
-  // const { playlist } = this.props;
-  // const trackUris = playlist.map( track => track.uri );
-  // console.log(trackUris)
-  // this.setState({trackUris})
-  // }
-
-  changePlaylistName = (event) => {
-    const playlistName = event.target.value;
-    this.setState({playlistName});
-  }
-
   render() {
-  
     return (
       <div>
-        <div>
-          <h3>{this.state.playlistResponse}</h3>
-          <input
-            className='summary'
-            onChange={this.changePlaylistName}
-            value={this.state.playlistName}
-          />
-          <button onClick={this.sendToSpotify}>Send to Spotify</button>
+        <h2 className='response'>{this.state.playlistResponse}</h2>
+        <div className='playlist-header'>
+          <h2>{this.state.playlistName}</h2>
+          <button
+            className='next-and-back-buttons'
+            onClick={this.sendToSpotify}>
+              Send to Spotify
+          </button>
         </div>
         <div className='playlist'>
-          {/*<input
-            type='checkbox'
-            id='select-all' 
-            onClick={this.toggleSelectAll}
-          />*/}
-          <h3>Title</h3>
-          <h3>Artist</h3>
           {this.playlistToRender()}
         </div>
       </div>
@@ -147,3 +112,33 @@ export const MSTP = store => ({
 });
 
 export default withRouter(connect(MSTP)(Playlist));
+// {<input
+//   type='checkbox'
+//   id='select-all' 
+//   onClick={this.toggleSelectAll}
+// />}
+// {<input
+//             className='summary'
+//             onChange={this.changePlaylistName}
+//             value={this.state.playlistName}
+//           />}
+// saveChecked = () => {
+//   const allCheckboxes = document.querySelectorAll('.checkbox');
+//   allCheckboxes.forEach( checkbox => {
+//     if (checkbox.checked) {
+//       this.props.saveTrack() ////////////////////////////////
+//     }
+//   })
+// }
+// componentDidUpdate = () => {
+// console.log('updated')
+// const { playlist } = this.props;
+// const trackUris = playlist.map( track => track.uri );
+// console.log(trackUris)
+// this.setState({trackUris})
+// }
+
+// changePlaylistName = (event) => {
+//   const playlistName = event.target.value;
+//   this.setState({playlistName});
+// }

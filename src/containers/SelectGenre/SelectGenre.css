@@ -1,32 +1,31 @@
-/*.SelectGenre h2 {
-  text-align: center;
-  color: #FDAB02;
-  margin: 20px 0 10px;
+.SelectGenre {
+  margin: 30px;
 }
 
-.select-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 245px;
-  margin: auto;
-  justify-content: space-between;
+.SelectGenre ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  height: 300px;
+  overflow: auto;
+  background-color: #999999;
+  list-style: none;
 }
 
-.select-wrapper select {
-  border-radius: 20px;
+.SelectGenre input {
   width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
-.select-wrapper a {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #FDAB02;
-  color: #322F30;
-  text-decoration: none;
-  margin: 20px 0;
+.SelectGenre li {
+  font-size: 25px;
 }
 
-.selected {
-  background-color: magenta;
-}*/
+li.selected {
+  color: #63B700;
+  background-color: #404040;
+  border-color: #63B700;
+  cursor: pointer;
+}

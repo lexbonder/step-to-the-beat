@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../playlistCleaner';
 import { savePlaylist, saveRecentSeed } from '../../actions/actions';
@@ -12,13 +12,25 @@ export class Confirm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorStatus: ''
+      errorStatus: '',
+      genre: '',
+      spm: ''
     };
   }
 
   componentDidMount = () => {
-    const { newSeed } = this.props;
-    this.props.saveRecentSeed(newSeed);
+    const { newSeed, history } = this.props;
+    if (newSeed.genre) {
+      this.props.saveRecentSeed(newSeed);
+      const { genre, spm } = newSeed;
+      const capitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
+      this.setState({
+        genre: capitalized,
+        spm
+      });
+    } else {
+      history.push('/saved-playlists');
+    }
   }
   
   getPlaylist = async () => {
@@ -43,22 +55,34 @@ export class Confirm extends Component {
       });
     }
   }
+
+  handleBackButton = () => {
+    const { history } = this.props;
+    history.push('/select-genre');
+  }
+
   // {spm}
-  //{ genre.charAt(0).toUpperCase() + genre.slice(1) }
+  // { genre.charAt(0).toUpperCase() + genre.slice(1) }
   render() {
-    const { spm, genre } = this.props.newSeed;
     return (
       <div className='Confirm' >
         <h2 className='error'>{this.state.errorStatus}</h2>
-        <h2>Confirm</h2>
         <p>Steps per Minute</p>
-        <h2>{spm}</h2>
+        <h2>{this.state.spm}</h2>
         <p>Genre</p>
-        <h2>
-          { genre.charAt(0).toUpperCase() + genre.slice(1) }
-        </h2>
-        <Link to={`/select-genre`}>Back</Link>
-        <button onClick={this.getPlaylist}>Get My Playlist!</button>
+        <h2>{this.state.genre}</h2>
+        <div className='button-wrapper'>
+          <button
+            onClick={this.handleBackButton}
+            className='next-and-back-buttons'>
+              Back
+          </button>
+          <button 
+            className='next-and-back-buttons'
+            onClick={this.getPlaylist}>
+              Get My Playlist!
+          </button>
+        </div>
       </div>
     );
   }  
@@ -83,7 +107,10 @@ Confirm.propTypes = {
   })),
   accessToken: string,
   savePlaylist: func,
-  saveRecentSeed: func
+  saveRecentSeed: func,
+  history: shape({
+    push: func
+  })
 };
 
 export const MSTP = store => ({

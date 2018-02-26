@@ -20,11 +20,11 @@ ShallowWrapper {
       "children": Array [
         <Route
           component={[Function]}
+          exact={true}
           path="/"
 />,
         <Route
           component={[Function]}
-          exact={true}
           path="/"
 />,
         <Route
@@ -63,6 +63,7 @@ ShallowWrapper {
           path="/login"
 />,
       ],
+      "className": "App",
     },
     "ref": null,
     "rendered": Array [
@@ -72,6 +73,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
+          "exact": true,
           "path": "/",
         },
         "ref": null,
@@ -84,7 +86,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
-          "exact": true,
           "path": "/",
         },
         "ref": null,
@@ -194,11 +195,11 @@ ShallowWrapper {
         "children": Array [
           <Route
             component={[Function]}
+            exact={true}
             path="/"
 />,
           <Route
             component={[Function]}
-            exact={true}
             path="/"
 />,
           <Route
@@ -237,6 +238,7 @@ ShallowWrapper {
             path="/login"
 />,
         ],
+        "className": "App",
       },
       "ref": null,
       "rendered": Array [
@@ -246,6 +248,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
             "path": "/",
           },
           "ref": null,
@@ -258,7 +261,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "exact": true,
             "path": "/",
           },
           "ref": null,

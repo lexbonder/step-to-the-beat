@@ -44,6 +44,28 @@ describe('Confirm', () => {
     it('should call save recent seed with a newSeed object when the component mounts', () => {
       expect(mockSaveRecentSeed).toHaveBeenCalledWith({spm: 148, genre: 'ska'})
     })
+
+    it('should set the genre and spm into state', () => {
+      expect(wrapper.state().genre).toEqual('Ska')
+      expect(wrapper.state().spm).toEqual(148)
+    })
+
+    it('should redirect the user to /saved-playlists if there is no new seed', () => {
+      const mockNewSeed = {}
+
+      const wrapper = shallow(<Confirm 
+        newSeed={mockNewSeed}
+        user={mockUser}
+        recentSpms={mockRecentSpms}
+        recentGenres={mockRecentGenres}
+        recentSeeds={mockRecentSeeds}
+        accessToken={mockAccessToken}
+        savePlaylist={mockSavePlaylist}
+        saveRecentSeed={mockSaveRecentSeed}
+        history={mockHistory}
+      />)
+      expect(mockHistory.push).toHaveBeenCalledWith('/saved-playlists')
+    })
   })
 
   describe('getPlaylist', () => {
@@ -66,6 +88,13 @@ describe('Confirm', () => {
     it('sets errorStatus in state if the fetch fails', async () => {
       await wrapper.instance().getPlaylist()
       expect(wrapper.state().errorStatus).toEqual('Failed to retrieve playlist')
+    })
+  })
+
+  describe('handleBackButton', () => {
+    it('should redirect the user to /select-genre when called', () => {
+      wrapper.instance().handleBackButton()
+      expect(mockHistory.push).toHaveBeenCalledWith('/select-genre')
     })
   })
 

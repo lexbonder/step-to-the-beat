@@ -80,13 +80,13 @@ describe('Playlist', () => {
     })
   })
 
-  describe('changePlaylistName', () => {
-    it('should set state of playlistName with whatever is in the input', () => {
-      const mockEvent = {target: {value: 'Rock n Roll Son!'}}
-      wrapper.instance().changePlaylistName(mockEvent)
-      expect(wrapper.state().playlistName).toEqual('Rock n Roll Son!')
-    })
-  })
+  // describe('changePlaylistName', () => {
+  //   it('should set state of playlistName with whatever is in the input', () => {
+  //     const mockEvent = {target: {value: 'Rock n Roll Son!'}}
+  //     wrapper.instance().changePlaylistName(mockEvent)
+  //     expect(wrapper.state().playlistName).toEqual('Rock n Roll Son!')
+  //   })
+  // })
 
   describe('MSTP', () => {
     it('should return an object with values matching whatever is in state', () => {

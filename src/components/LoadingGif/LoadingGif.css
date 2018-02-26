@@ -1,0 +1,14 @@
+.LoadingGif {
+  margin: 20vh auto;
+  text-align: center;
+}
+
+.LoadingGif img,
+.LoadingGif {
+  width: 300px;
+}
+
+.LoadingGif h1 {
+  color: #63B700;
+  margin-bottom: 10px;
+}

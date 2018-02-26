@@ -11,8 +11,21 @@ export class SavedPlaylist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorState: ''
+      errorState: '',
+      spm: '',
+      genre: '',
+      playlistName: ''
     };
+  }
+
+  componentDidMount = () => {
+    const { user, seed } = this.props;
+    const {spm, genre} = seed;
+    this.setState({
+      spm,
+      genre,
+      playlistName: `${user.name}'s ${spm} SPM, ${genre} playlist`
+    });
   }
 
   handleClick = async () => {
@@ -30,13 +43,22 @@ export class SavedPlaylist extends Component {
   }
 
   render() {
-    const {spm, genre} = this.props.seed;
+    const {playlistName, spm, genre} = this.state;
     return (
-      <div className='savedPlaylist'>
-        <h2>Playlist Name</h2>
-        <h2>{spm}</h2>
-        <h2>{genre}</h2>
-        <button onClick={this.handleClick}>Get Now</button>
+      <div className='saved-playlist'>
+        <div>
+          <h2 className='playlist-name'>
+            {playlistName}
+          </h2>
+          <h3 className='playlist-details'>
+            {spm} SPM &bull; {genre}
+          </h3>
+        </div>
+        <button 
+          className='next-and-back-buttons'
+          onClick={this.handleClick}>
+            View
+        </button>
       </div>
     );
   }
@@ -45,6 +67,11 @@ export class SavedPlaylist extends Component {
 const { string, func, shape, number } = PropTypes;
 
 SavedPlaylist.propTypes = {
+  user: shape({
+    name: string,
+    id: string,
+    image: string
+  }),
   accessToken: string,
   savePlaylist: func,
   selectSeed: func,
@@ -54,7 +81,7 @@ SavedPlaylist.propTypes = {
   })
 };
 
-export const MSTP = ({accessToken}) => ({accessToken});
+export const MSTP = ({accessToken, user}) => ({accessToken, user});
 
 export const MDTP = dispatch => ({
   savePlaylist: playlist => dispatch(savePlaylist(playlist)),

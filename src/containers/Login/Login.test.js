@@ -114,7 +114,7 @@ describe('Login', () => {
 
     it('should call saveUser with a userObject', async () => {
       await wrapper.instance().componentDidUpdate()
-      expect(mockSaveUser).toHaveBeenCalledWith({name: 'Alex', id: 'lxbndr'})
+      expect(mockSaveUser).toHaveBeenCalledWith({name: 'Alex', id: 'lxbndr', image: 'superlongurl'})
     })
   })
 

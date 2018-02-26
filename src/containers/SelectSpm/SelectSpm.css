@@ -1,5 +1,92 @@
-/*.SelectSPM h2 {
+.recent-spms,
+.spm-instructions {
+  color: #63B700;
   text-align: center;
-  color: #FDAB02;
-  margin: 20px 0 10px;
-}*/
+  margin: 20px 0;
+}
+
+.SelectSpm ul {
+  max-height: 200px;
+  overflow: auto;
+  background-color: #999999;
+  list-style: none;
+  padding: 0;
+  margin: 0 30px;
+}
+
+.ul-wrapper {
+  height: 200px;
+}
+
+li {
+  color: #373737;
+  border: 1px solid #999999;
+  font-size: 22px;
+  padding: 10px;
+}
+
+li:hover {
+  color: #999999;
+  background-color: #404040;
+  border-color: #63B700;
+  cursor: pointer;
+}
+
+li:active {
+  color: #777777;
+  background-color: #1e1e1e;
+  border-color: #419500;
+}
+
+.select-spm-input {
+  font-size: 30px;
+  background-color: #999999;
+  color: #373737;
+  width: 53%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border: 2px solid #8ECF32;
+  padding: 10px;
+}
+
+.select-spm-input::placeholder {
+  color: #666666;
+}
+
+.button-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.next-and-back-buttons {
+  font-size: 20px;
+  background-color: transparent;
+  color: #63B700;
+  border: 2px solid #63B700;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.next-and-back-buttons:hover {
+  cursor: pointer;
+  color: #85d922;
+  border-color: #85d922;
+}
+
+.next-and-back-buttons:active {
+  color: #419700;
+  border-color: #419700;
+  background-color: #151515
+}
+
+.next-and-back-buttons:disabled {
+  color: #999999;
+  border-color: #999999;
+  background-color: #262626
+}

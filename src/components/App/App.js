@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../../containers/Header/Header';
-import Home from '../../containers/Home/Home';
+import Home from '../Home/Home';
 import Login from '../../containers/Login/Login';
 import SelectGenre from '../../containers/SelectGenre/SelectGenre';
 import Calculations from '../../containers/Calculations/Calculations';
@@ -16,7 +16,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <Route 
           exact path='/' 
           component={Home} /> 

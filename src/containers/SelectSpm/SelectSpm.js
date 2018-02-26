@@ -21,7 +21,12 @@ export class SelectSpm extends Component {
     const { recentSpms } = this.props;
     if (recentSpms && recentSpms.length) {
       return recentSpms.map((spm, index) => {
-        return <li key={index} onClick={this.selectRecent}>{spm}</li>;
+        return <li
+          key={index} 
+          onClick={this.selectRecent}
+          className='spm-list-item'>
+          {spm}
+        </li>;
       });
     } 
   }
@@ -46,30 +51,46 @@ export class SelectSpm extends Component {
     this.setState({selection});
   }
 
+  handleBackButton = () => {
+    const { history } = this.props;
+    history.push('/saved-playlists');
+  }
+
   render() {
     return (
       <div className='SelectSpm'>
-        <h2>Select SPM</h2>
-        <div className='select-wrapper'>
-          <p>Your recent SPMs</p>
-          <ul>
+        <h2 className='recent-spms'>Your Recent SPMs</h2>
+        <div className='ul-wrapper'>
+          <ul className='spm-list'>
             {this.getRecentSpms()}
-            <li>
-              <Link to='/calculations'>
-                  Calculate a new SPM...
-              </Link>
-            </li>
+            <Link 
+              className='link-to-calc'
+              to='/calculations'>
+              <li className='spm-list-item'>
+                Calculate a new SPM...
+              </li>
+            </Link>
           </ul>
-          <p>Enter an SPM or select from above</p>
-          <input
-            type='number'
-            name='selection'
-            value={this.state.selection}
-            placeholder='Enter SPM'
-            onChange={this.handleChange}
-          />
-          <button to='/favorite-playlists'>Cancel</button>
-          <button disabled={!this.state.selection} onClick={this.handleClick}>
+        </div>
+        <h3 className='spm-instructions'>Enter an SPM or select from above</h3>
+        <input
+          type='number'
+          name='selection'
+          className='select-spm-input'
+          value={this.state.selection}
+          placeholder='Enter SPM'
+          onChange={this.handleChange}
+        />
+        <div className='button-wrapper'>
+          <button
+            onClick={this.handleBackButton}
+            className='next-and-back-buttons'>
+              Cancel
+          </button>
+          <button
+            disabled={!this.state.selection}
+            onClick={this.handleClick}
+            className='next-and-back-buttons'>
               Select a Genre
           </button>
         </div>
