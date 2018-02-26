@@ -8,7 +8,8 @@ export const getUserName = async (accessToken) => {
       const userInfo = await initialFetch.json();
       return {
         name: userInfo.display_name.split(' ')[0],
-        id: userInfo.id
+        id: userInfo.id,
+        image: userInfo.images[0].url
       };
     } else {
       throw new Error('Failed to get User Name')
@@ -49,7 +50,7 @@ export const createNewPlaylist = async (userId, accessToken, playlistName) => {
     if (initialFetch.status < 300) {
       const response = await initialFetch.json();
       return {
-        response: `${playlistName} created successfully`,
+        response: `Playlist Sent!`,
         playlistId: response.id
       };
     } else {

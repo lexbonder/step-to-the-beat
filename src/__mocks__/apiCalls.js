@@ -13,7 +13,7 @@ export const getPlaylistData = jest.fn()
 
 export const getUserName = jest.fn()
   .mockImplementation(() => ({
-    name: 'Alex' , id: 'lxbndr'
+    name: 'Alex' , id: 'lxbndr', image:'superlongurl'
   }))
 
 export const createNewPlaylist = jest.fn()

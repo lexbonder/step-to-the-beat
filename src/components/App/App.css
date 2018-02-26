@@ -1,5 +1,14 @@
+/* Colors
+Dark Green = #63B700
+Light Green = #8ECF32
+Light Gray = #999999
+Medium Gray = #404040
+Dark Gray = #373737
+*/
+
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -9,18 +18,62 @@ body {
   background-color: #373737;
 }
 
-h1, h2, h3 {
-  color: #63B700;
+.App {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h4 {
+  color: #373737;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
-  color: #999999
+  color: #999999;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .error {
   text-align: center;
   color: black;
   background-color: red;
-  border: 2px solid red;
-  padding: 5px;
+}
+
+@media (min-width: 500px) {
+  .Home {
+    height: 50vh;
+    margin-top: 200px;
+  }
+
+  .intro {
+    max-width: 650px;
+  }
+
+  .SelectSpm {
+    max-width: 550px;
+  }
+
+  .SelectGenre {
+    max-width: 550px;
+    margin: 30px auto;
+  }
+
+  .button-wrapper {
+    max-width: 550px;
+    margin: auto;
+  }
 }

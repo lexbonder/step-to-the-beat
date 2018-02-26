@@ -9,6 +9,7 @@ jest.mock('../../apiCalls')
 describe('SavedPlaylist', () => {
   let wrapper;
   let mockSeed = {spm: 148, genre: 'ska'}
+  let mockUser = {name: 'Alex', id: 'lxbndr', image: 'superlongurl'}
   let mockAccessToken = '12345abcde';
   let mockSavePlaylist = jest.fn()
   let mockSelectSeed = jest.fn()
@@ -16,6 +17,7 @@ describe('SavedPlaylist', () => {
 
   beforeEach(() => {
     wrapper = shallow(<SavedPlaylist
+      user={mockUser}
       seed={mockSeed} 
       accessToken={mockAccessToken}
       savePlaylist={mockSavePlaylist}
@@ -28,8 +30,16 @@ describe('SavedPlaylist', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should have a default state', () => {
-    expect(wrapper.state()).toEqual({errorState: ''})
+  describe('componentDidMount', () => {
+    it('should set genre playlistName and spm after mounting', () => {
+      const expectedState = {
+        errorState: '',
+        genre: 'ska',
+        playlistName: `Alex's 148 SPM, ska playlist`,
+        spm: 148,
+      }
+      expect(wrapper.state()).toEqual(expectedState)
+    })
   })
 
   describe('handleClick', () => {
@@ -64,12 +74,18 @@ describe('SavedPlaylist', () => {
   describe('MSTP', () => {
     it('should return an object with the values it gets from state', () => {
       const mockState = {
-        accessToken: mockAccessToken
+        accessToken: mockAccessToken,
+        user: {
+          name: 'Alex',
+          id: 'lxbndr',
+          image: 'superlongurl'
+        }
       }
 
       const mapped = MSTP(mockState)
 
       expect(mapped.accessToken).toEqual(mockAccessToken)
+      expect(mapped.user).toEqual(mockUser)
     })
   })
 

@@ -25,14 +25,13 @@ export class SavedPlaylistContainer extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.handleClick}>
-          Get New Playlist
+      <div className='SavedPlaylistContainer'>
+        <button 
+          className='next-and-back-buttons new-playlist'
+          onClick={this.handleClick}>
+            Get New Playlist
         </button>
         <div>
-          <h2>Nickname</h2>
-          <h2>SPM</h2>
-          <h2>Genre</h2>
           {this.savedPlaylistsToRender()}
         </div>
       </div>

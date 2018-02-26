@@ -1,4 +1,37 @@
-.playlist,
+.track {
+  padding: 20px;
+  border-bottom: 1px solid #151515;
+}
+
+.song-title {
+  color: #999999;
+  font-size: 25px;
+}
+
+.song-artist {
+  color: #666666;
+  font-size: 20px;
+}
+
+.playlist-header {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid #404040;
+  padding: 10px;
+}
+
+.playlist-header h2, 
+.response {
+  color: #63B700;
+}
+
+.response {
+  text-align: center;
+}
+
+/*.playlist,
 .track {
   display: grid;
   grid-template-columns: 1fr 1fr 50px 110px;
@@ -38,3 +71,4 @@
   color: #CCC7C4;
   background-color: #EC2B06;
 }
+*/

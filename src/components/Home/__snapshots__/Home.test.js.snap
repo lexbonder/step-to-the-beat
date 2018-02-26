@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="title"
+>
+          Step 
+          <span
+                    className="small-words"
+          >
+                    to the
+          </span>
+           Beat
+</h1>,
+        <p
+          className="intro"
+>
+          <span
+                    className="app-name"
+          >
+                    Step to the Beat
+          </span>
+           finds music that fits your personal rhythm!
+          <br />
+          <br />
+          We'll help you calculate your
+          <br />
+          <strong>
+                    Steps Per Minute
+          </strong>
+          <br />
+          and give you a playlist that runs to your beat.
+</p>,
+        <button
+          className="log-in"
+          onClick={[Function]}
+>
+          Login with Spotify to begin
+</button>,
+      ],
+      "className": "Home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Step ",
+            <span
+              className="small-words"
+>
+              to the
+</span>,
+            " Beat",
+          ],
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Step ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "to the",
+              "className": "small-words",
+            },
+            "ref": null,
+            "rendered": "to the",
+            "type": "span",
+          },
+          " Beat",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="app-name"
+>
+              Step to the Beat
+</span>,
+            " finds music that fits your personal rhythm!",
+            <br />,
+            <br />,
+            "We'll help you calculate your",
+            <br />,
+            <strong>
+              Steps Per Minute
+</strong>,
+            <br />,
+            "and give you a playlist that runs to your beat.",
+          ],
+          "className": "intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Step to the Beat",
+              "className": "app-name",
+            },
+            "ref": null,
+            "rendered": "Step to the Beat",
+            "type": "span",
+          },
+          " finds music that fits your personal rhythm!",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "We'll help you calculate your",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Steps Per Minute",
+            },
+            "ref": null,
+            "rendered": "Steps Per Minute",
+            "type": "strong",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "and give you a playlist that runs to your beat.",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Login with Spotify to begin",
+          "className": "log-in",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Login with Spotify to begin",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="title"
+>
+            Step 
+            <span
+                        className="small-words"
+            >
+                        to the
+            </span>
+             Beat
+</h1>,
+          <p
+            className="intro"
+>
+            <span
+                        className="app-name"
+            >
+                        Step to the Beat
+            </span>
+             finds music that fits your personal rhythm!
+            <br />
+            <br />
+            We'll help you calculate your
+            <br />
+            <strong>
+                        Steps Per Minute
+            </strong>
+            <br />
+            and give you a playlist that runs to your beat.
+</p>,
+          <button
+            className="log-in"
+            onClick={[Function]}
+>
+            Login with Spotify to begin
+</button>,
+        ],
+        "className": "Home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Step ",
+              <span
+                className="small-words"
+>
+                to the
+</span>,
+              " Beat",
+            ],
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Step ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "to the",
+                "className": "small-words",
+              },
+              "ref": null,
+              "rendered": "to the",
+              "type": "span",
+            },
+            " Beat",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="app-name"
+>
+                Step to the Beat
+</span>,
+              " finds music that fits your personal rhythm!",
+              <br />,
+              <br />,
+              "We'll help you calculate your",
+              <br />,
+              <strong>
+                Steps Per Minute
+</strong>,
+              <br />,
+              "and give you a playlist that runs to your beat.",
+            ],
+            "className": "intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Step to the Beat",
+                "className": "app-name",
+              },
+              "ref": null,
+              "rendered": "Step to the Beat",
+              "type": "span",
+            },
+            " finds music that fits your personal rhythm!",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "We'll help you calculate your",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Steps Per Minute",
+              },
+              "ref": null,
+              "rendered": "Steps Per Minute",
+              "type": "strong",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "and give you a playlist that runs to your beat.",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Login with Spotify to begin",
+            "className": "log-in",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Login with Spotify to begin",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -6,6 +6,16 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
     clearAccessToken={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    location={
+        Object {
+            "pathname": "/confirm",
+          }
+    }
     logOutUser={[Function]}
     loggedIn={true}
     user={
@@ -28,26 +38,38 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <header>
-        <Link
-                replace={false}
-                to="/"
+        <button
+                className="home-button"
+                onClick={[Function]}
         >
-                <h1>
-                        Step to the Beat
-                </h1>
-        </Link>
-        <div>
-                <p>
-                        Welcome, 
-                        Alex
-                        !
-                </p>
-                <p
-                        className="log-out"
+                <i
+                        className="fas fa-home"
+                />
+        </button>
+        <h2
+                className="page-name"
+        >
+                Confirm
+        </h2>
+        <div
+                className="menu-wrapper"
+        >
+                <img
+                        alt="profile"
+                        className="profile-pic"
                         onClick={[Function]}
+                        src={undefined}
+                />
+                <div
+                        className="menu hide"
                 >
-                        Log Out
-                </p>
+                        <p
+                                className="log-out"
+                                onClick={[Function]}
+                        >
+                                Log Out
+                        </p>
+                </div>
         </div>
 </header>,
     },
@@ -58,26 +80,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Link
-            replace={false}
-            to="/"
+          <button
+            className="home-button"
+            onClick={[Function]}
 >
-            <h1>
-                        Step to the Beat
-            </h1>
-</Link>,
-          <div>
-            <p>
-                        Welcome, 
-                        Alex
-                        !
-            </p>
-            <p
-                        className="log-out"
+            <i
+                        className="fas fa-home"
+            />
+</button>,
+          <h2
+            className="page-name"
+>
+            Confirm
+</h2>,
+          <div
+            className="menu-wrapper"
+>
+            <img
+                        alt="profile"
+                        className="profile-pic"
                         onClick={[Function]}
+                        src={undefined}
+            />
+            <div
+                        className="menu hide"
             >
-                        Log Out
-            </p>
+                        <p
+                                    className="log-out"
+                                    onClick={[Function]}
+                        >
+                                    Log Out
+                        </p>
+            </div>
 </div>,
         ],
       },
@@ -86,13 +120,13 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "children": <h1>
-              Step to the Beat
-</h1>,
-            "replace": false,
-            "to": "/",
+            "children": <i
+              className="fas fa-home"
+/>,
+            "className": "home-button",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": Object {
@@ -100,13 +134,25 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Step to the Beat",
+              "className": "fas fa-home",
             },
             "ref": null,
-            "rendered": "Step to the Beat",
-            "type": "h1",
+            "rendered": null,
+            "type": "i",
           },
-          "type": [Function],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Confirm",
+            "className": "page-name",
+          },
+          "ref": null,
+          "rendered": "Confirm",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -114,18 +160,24 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
-                Welcome, 
-                Alex
-                !
-</p>,
-              <p
-                className="log-out"
+              <img
+                alt="profile"
+                className="profile-pic"
                 onClick={[Function]}
+                src={undefined}
+/>,
+              <div
+                className="menu hide"
 >
-                Log Out
-</p>,
+                <p
+                                className="log-out"
+                                onClick={[Function]}
+                >
+                                Log Out
+                </p>
+</div>,
             ],
+            "className": "menu-wrapper",
           },
           "ref": null,
           "rendered": Array [
@@ -134,32 +186,43 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Welcome, ",
-                  "Alex",
-                  "!",
-                ],
+                "alt": "profile",
+                "className": "profile-pic",
+                "onClick": [Function],
+                "src": undefined,
               },
               "ref": null,
-              "rendered": Array [
-                "Welcome, ",
-                "Alex",
-                "!",
-              ],
-              "type": "p",
+              "rendered": null,
+              "type": "img",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Log Out",
-                "className": "log-out",
-                "onClick": [Function],
+                "children": <p
+                  className="log-out"
+                  onClick={[Function]}
+>
+                  Log Out
+</p>,
+                "className": "menu hide",
               },
               "ref": null,
-              "rendered": "Log Out",
-              "type": "p",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Log Out",
+                  "className": "log-out",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Log Out",
+                "type": "p",
+              },
+              "type": "div",
             },
           ],
           "type": "div",
@@ -176,26 +239,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <header>
-          <Link
-                    replace={false}
-                    to="/"
+          <button
+                    className="home-button"
+                    onClick={[Function]}
           >
-                    <h1>
-                              Step to the Beat
-                    </h1>
-          </Link>
-          <div>
-                    <p>
-                              Welcome, 
-                              Alex
-                              !
-                    </p>
-                    <p
-                              className="log-out"
+                    <i
+                              className="fas fa-home"
+                    />
+          </button>
+          <h2
+                    className="page-name"
+          >
+                    Confirm
+          </h2>
+          <div
+                    className="menu-wrapper"
+          >
+                    <img
+                              alt="profile"
+                              className="profile-pic"
                               onClick={[Function]}
+                              src={undefined}
+                    />
+                    <div
+                              className="menu hide"
                     >
-                              Log Out
-                    </p>
+                              <p
+                                        className="log-out"
+                                        onClick={[Function]}
+                              >
+                                        Log Out
+                              </p>
+                    </div>
           </div>
 </header>,
       },
@@ -206,26 +281,38 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Link
-              replace={false}
-              to="/"
+            <button
+              className="home-button"
+              onClick={[Function]}
 >
-              <h1>
-                            Step to the Beat
-              </h1>
-</Link>,
-            <div>
-              <p>
-                            Welcome, 
-                            Alex
-                            !
-              </p>
-              <p
-                            className="log-out"
+              <i
+                            className="fas fa-home"
+              />
+</button>,
+            <h2
+              className="page-name"
+>
+              Confirm
+</h2>,
+            <div
+              className="menu-wrapper"
+>
+              <img
+                            alt="profile"
+                            className="profile-pic"
                             onClick={[Function]}
+                            src={undefined}
+              />
+              <div
+                            className="menu hide"
               >
-                            Log Out
-              </p>
+                            <p
+                                          className="log-out"
+                                          onClick={[Function]}
+                            >
+                                          Log Out
+                            </p>
+              </div>
 </div>,
           ],
         },
@@ -234,13 +321,13 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "children": <h1>
-                Step to the Beat
-</h1>,
-              "replace": false,
-              "to": "/",
+              "children": <i
+                className="fas fa-home"
+/>,
+              "className": "home-button",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": Object {
@@ -248,13 +335,25 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Step to the Beat",
+                "className": "fas fa-home",
               },
               "ref": null,
-              "rendered": "Step to the Beat",
-              "type": "h1",
+              "rendered": null,
+              "type": "i",
             },
-            "type": [Function],
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Confirm",
+              "className": "page-name",
+            },
+            "ref": null,
+            "rendered": "Confirm",
+            "type": "h2",
           },
           Object {
             "instance": null,
@@ -262,18 +361,24 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <p>
-                  Welcome, 
-                  Alex
-                  !
-</p>,
-                <p
-                  className="log-out"
+                <img
+                  alt="profile"
+                  className="profile-pic"
                   onClick={[Function]}
+                  src={undefined}
+/>,
+                <div
+                  className="menu hide"
 >
-                  Log Out
-</p>,
+                  <p
+                                    className="log-out"
+                                    onClick={[Function]}
+                  >
+                                    Log Out
+                  </p>
+</div>,
               ],
+              "className": "menu-wrapper",
             },
             "ref": null,
             "rendered": Array [
@@ -282,32 +387,43 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    "Welcome, ",
-                    "Alex",
-                    "!",
-                  ],
+                  "alt": "profile",
+                  "className": "profile-pic",
+                  "onClick": [Function],
+                  "src": undefined,
                 },
                 "ref": null,
-                "rendered": Array [
-                  "Welcome, ",
-                  "Alex",
-                  "!",
-                ],
-                "type": "p",
+                "rendered": null,
+                "type": "img",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Log Out",
-                  "className": "log-out",
-                  "onClick": [Function],
+                  "children": <p
+                    className="log-out"
+                    onClick={[Function]}
+>
+                    Log Out
+</p>,
+                  "className": "menu hide",
                 },
                 "ref": null,
-                "rendered": "Log Out",
-                "type": "p",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Log Out",
+                    "className": "log-out",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Log Out",
+                  "type": "p",
+                },
+                "type": "div",
               },
             ],
             "type": "div",
@@ -329,19 +445,41 @@ ShallowWrapper {
 `;
 
 exports[`Header While a user is logged in userGreeting should match the snapshot if a user is logged in 1`] = `
-<div>
-  <p>
-    Welcome, 
-    Alex
-    !
-  </p>
-  <p
-    className="log-out"
+<header>
+  <button
+    className="home-button"
     onClick={[Function]}
   >
-    Log Out
-  </p>
-</div>
+    <i
+      className="fas fa-home"
+    />
+  </button>
+  <h2
+    className="page-name"
+  >
+    Confirm
+  </h2>
+  <div
+    className="menu-wrapper"
+  >
+    <img
+      alt="profile"
+      className="profile-pic"
+      onClick={[Function]}
+      src={undefined}
+    />
+    <div
+      className="menu hide"
+    >
+      <p
+        className="log-out"
+        onClick={[Function]}
+      >
+        Log Out
+      </p>
+    </div>
+  </div>
+</header>
 `;
 
 exports[`Header While a user is not logged in should match the snapshot 1`] = `
@@ -350,6 +488,16 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
     clearAccessToken={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    location={
+        Object {
+            "pathname": "/confirm",
+          }
+    }
     logOutUser={[Function]}
     loggedIn={false}
     user={
@@ -371,66 +519,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <header>
-        <Link
-                replace={false}
-                to="/"
-        >
-                <h1>
-                        Step to the Beat
-                </h1>
-        </Link>
-</header>,
+      "children": undefined,
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Link
-            replace={false}
-            to="/"
->
-            <h1>
-                        Step to the Beat
-            </h1>
-</Link>,
-          undefined,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <h1>
-              Step to the Beat
-</h1>,
-            "replace": false,
-            "to": "/",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Step to the Beat",
-            },
-            "ref": null,
-            "rendered": "Step to the Beat",
-            "type": "h1",
-          },
-          "type": [Function],
-        },
-        undefined,
-      ],
-      "type": "header",
-    },
+    "rendered": null,
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -439,66 +531,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <header>
-          <Link
-                    replace={false}
-                    to="/"
-          >
-                    <h1>
-                              Step to the Beat
-                    </h1>
-          </Link>
-</header>,
+        "children": undefined,
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Link
-              replace={false}
-              to="/"
->
-              <h1>
-                            Step to the Beat
-              </h1>
-</Link>,
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <h1>
-                Step to the Beat
-</h1>,
-              "replace": false,
-              "to": "/",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Step to the Beat",
-              },
-              "ref": null,
-              "rendered": "Step to the Beat",
-              "type": "h1",
-            },
-            "type": [Function],
-          },
-          undefined,
-        ],
-        "type": "header",
-      },
+      "rendered": null,
       "type": "div",
     },
   ],

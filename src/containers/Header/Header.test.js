@@ -10,19 +10,26 @@ describe('Header', () => {
   let mockUser = {name: 'Alex', id: 'lxbndr'}
   let mockLogOutUser = jest.fn()
   let mockClearAccessToken = jest.fn()
+  let mockHistory = { push: jest.fn() }
+  let mockLocation = { pathname: '/confirm'}
+
+  beforeEach(() => {
+    mockLoggedIn = true
+    wrapper = shallow(<Header 
+      loggedIn={mockLoggedIn}
+      user={mockUser}
+      logOutUser={mockLogOutUser}
+      clearAccessToken={mockClearAccessToken}
+      history={mockHistory}
+      location={mockLocation}
+    />)
+  })
+
+  it('should have a default state', () => {
+    expect(wrapper.state()).toEqual({menuOpen: 'hide'})
+  })
 
   describe('While a user is logged in', () => {
-
-    beforeEach(() => {
-      mockLoggedIn = true
-      wrapper = shallow(<Header 
-        loggedIn={mockLoggedIn}
-        user={mockUser}
-        logOutUser={mockLogOutUser}
-        clearAccessToken={mockClearAccessToken}
-      />)
-    })
-
     it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
@@ -36,9 +43,8 @@ describe('Header', () => {
         wrapper.find('.log-out').simulate('click')
 
         expect(mockLogOutUser).toHaveBeenCalled()
-        expect(mockClearAccessToken).toHaveBeenCalled()      })
-        // wrapper.instance().handleLogOut = jest.fn()
-        // expect(wrapper.instance().handleLogOut).toHaveBeenCalled()
+        expect(mockClearAccessToken).toHaveBeenCalled()
+      })
     })
   
   })
@@ -51,6 +57,8 @@ describe('Header', () => {
         user={mockUser}
         logOutUser={mockLogOutUser}
         clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
       />)
     })
 
@@ -66,12 +74,104 @@ describe('Header', () => {
 
   })
 
+  describe('toggleMenu', () => {
+    it('should set menuOpen to show if it is set to hide', () => {
+      wrapper.instance().toggleMenu()
+      expect(wrapper.state().menuOpen).toEqual('show')
+    })
+
+    it('should set menuOpen to hide if it is set to show', () => {
+      wrapper.state().menuOpen = 'show'
+      wrapper.instance().toggleMenu()
+      expect(wrapper.state().menuOpen).toEqual('hide')
+    })
+  })
+
+  describe('pageName', () => {
+    it('should return Confirm when the pathname is /confirm', () => {
+      expect(wrapper.instance().pageName()).toEqual('Confirm')
+    })
+
+    it('should return My Playilsts when the pathname is /saved-playlists', () => {
+      const mockLocation = {pathname: '/saved-playlists'}
+      const wrapper = shallow(<Header 
+        loggedIn={mockLoggedIn}
+        user={mockUser}
+        logOutUser={mockLogOutUser}
+        clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
+      />)
+      expect(wrapper.instance().pageName()).toEqual('My Playlists')
+    })
+
+    it('should return Select SPM when the pathname is /select-spm', () => {
+      const mockLocation = {pathname: '/select-spm'}
+      const wrapper = shallow(<Header 
+        loggedIn={mockLoggedIn}
+        user={mockUser}
+        logOutUser={mockLogOutUser}
+        clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
+      />)
+      expect(wrapper.instance().pageName()).toEqual('Select SPM')
+    })
+
+    it('should return Select Genre when the pathname is /select-genre', () => {
+      const mockLocation = {pathname: '/select-genre'}
+      const wrapper = shallow(<Header 
+        loggedIn={mockLoggedIn}
+        user={mockUser}
+        logOutUser={mockLogOutUser}
+        clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
+      />)
+      expect(wrapper.instance().pageName()).toEqual('Select Genre')
+    })
+
+    it('should return View Playlist when the pathname is /playlist', () => {
+      const mockLocation = {pathname: '/playlist'}
+      const wrapper = shallow(<Header 
+        loggedIn={mockLoggedIn}
+        user={mockUser}
+        logOutUser={mockLogOutUser}
+        clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
+      />)
+      expect(wrapper.instance().pageName()).toEqual('View Playlist')
+    })
+
+    it('should return an empty string by default', () => {
+      const mockLocation = {pathname: '/nonsense'}
+      const wrapper = shallow(<Header 
+        loggedIn={mockLoggedIn}
+        user={mockUser}
+        logOutUser={mockLogOutUser}
+        clearAccessToken={mockClearAccessToken}
+        history={mockHistory}
+        location={mockLocation}
+      />)
+      expect(wrapper.instance().pageName()).toEqual('')
+    })
+  })
+
   describe('handleLogOut', () => {
-    it('should call logOutUser and clearAccessToken when called', () => {
+    it('should call logOutUser, clearAccessToken and reirect the user to / when called', () => {
       wrapper.instance().handleLogOut()
 
       expect(mockLogOutUser).toHaveBeenCalled()
       expect(mockClearAccessToken).toHaveBeenCalled()
+      expect(mockHistory.push).toHaveBeenCalledWith('/')
+    })
+  })
+
+    describe('handleHomeButton', () => {
+    it('should redirect the user to /saved-playlists when called', () => {
+      wrapper.instance().handleHomeButton()
+      expect(mockHistory.push).toHaveBeenCalledWith('/saved-playlists')
     })
   })
 

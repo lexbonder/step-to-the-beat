@@ -8,11 +8,13 @@ describe('SelectGenre', () => {
   let wrapper;
   let mockSelectGenre = jest.fn()
   let mockSaveRecentGenre = jest.fn()
+  let mockHistory = { push: jest.fn() }
 
   beforeEach(() => {
     wrapper = shallow(<SelectGenre 
       selectGenre={mockSelectGenre}
       saveRecentGenre={mockSaveRecentGenre}
+      history={mockHistory}
     />)
   })
 
@@ -96,6 +98,13 @@ describe('SelectGenre', () => {
 
     it('should clear out whatever is in selectedGenre', () => {
       expect(wrapper.state().selectedGenre).toEqual('')
+    })
+  })
+
+  describe('handleBackButton', () => {
+    it('should redirect the user to /select-spm when called', () => {
+      wrapper.instance().handleBackButton()
+      expect(mockHistory.push).toHaveBeenCalledWith('/select-spm')
     })
   })
 

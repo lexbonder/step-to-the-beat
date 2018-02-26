@@ -96,6 +96,13 @@ describe('SelectSpm', () => {
     })
   })
 
+  describe('handleBackButton', () => {
+    it('should redirect the user to /saved-playlists', () => {
+      wrapper.instance().handleBackButton()
+      expect(mockHistory.push).toHaveBeenCalledWith('/saved-playlists')
+    })
+  })
+
   describe('MSTP', () => {
     it('should return an object with the value it has in state', () => {
       const mockState = {recentSpms: mockRecentSpms}

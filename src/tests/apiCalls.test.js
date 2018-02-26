@@ -7,7 +7,8 @@ describe('getUserName', () => {
       status: 200,
       json: () => Promise.resolve({
         display_name: 'Alex Bonder',
-        id: 'lxbndr'
+        id: 'lxbndr',
+        images: [{url:'superlongurl'}]
       })
     }))
   })
@@ -29,7 +30,8 @@ describe('getUserName', () => {
     const mockAccessToken = '12345abcde';
     const mockUser = {
       name: 'Alex',
-      id: 'lxbndr'
+      id: 'lxbndr',
+      image: 'superlongurl'
     }
     expect(getUserName(mockAccessToken)).resolves.toEqual(mockUser)
   })
@@ -136,7 +138,7 @@ describe('createNewPlaylist', () => {
 
     const expected = {
       playlistId: '12345abcde',
-      response: 'Mock Playlist created successfully'
+      response: 'Playlist Sent!'
     }
 
     expect(createNewPlaylist(mockUserId, mockAccessToken, mockPlaylistName)).resolves.toEqual(expected)

@@ -26,12 +26,19 @@ describe('Calculations', () => {
       mpmMinute: '',
       mpmSecond: '',
       result: '',
+      
       manualVisibility: 'hide',
       estimateVisibility: 'show',
-      hoverTipVisibility: 'hide',
       manualButton: '',
       estimateButton: 'focused',
-      toggleResult: 'hide'
+      
+      toggleGetButton: 'show',
+      toggleResult: 'hide',
+
+      minuteMileVisibility: 'show',
+      mileHourVisibility: 'hide',
+      minuteMileButton: 'focused',
+      mileHourButton: '' 
     }
     expect(wrapper.state()).toEqual(expectedState);
   })
@@ -152,6 +159,42 @@ describe('Calculations', () => {
       expect(wrapper.state().estimateVisibility).toEqual('show')
       expect(wrapper.state().manualButton).toEqual('')
       expect(wrapper.state().estimateButton).toEqual('focused')
+    })
+  })
+
+  describe('toggleMeasurement', () => {
+    it('should match the snapshot if event.target.name is minuteMile', () => {
+      const mockEvent = {target: {name: 'minuteMile'}}
+      wrapper.instance().toggleMeasurement(mockEvent)
+
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should set state correctly target is minuteMile', () => {
+      const mockEvent = {target: {name: 'minuteMile'}}
+      wrapper.instance().toggleMeasurement(mockEvent)
+
+      expect(wrapper.state().minuteMileVisibility).toEqual('show')
+      expect(wrapper.state().mileHourVisibility).toEqual('hide')
+      expect(wrapper.state().minuteMileButton).toEqual('focused')
+      expect(wrapper.state().mileHourButton).toEqual('')
+    })
+
+    it('should match the snapshot if event.target.name is not minuteMile', () => {
+      const mockEvent = {target: {name: 'gopher'}}
+      wrapper.instance().toggleMeasurement(mockEvent)
+
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should set state correctly target is not minuteMile', () => {
+      const mockEvent = {target: {name: 'gopher'}}
+      wrapper.instance().toggleMeasurement(mockEvent)
+
+      expect(wrapper.state().minuteMileVisibility).toEqual('hide')
+      expect(wrapper.state().mileHourVisibility).toEqual('show')
+      expect(wrapper.state().minuteMileButton).toEqual('')
+      expect(wrapper.state().mileHourButton).toEqual('focused')
     })
   })
 
