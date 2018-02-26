@@ -85,6 +85,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                  disabled={true}
                                                   onClick={[Function]}
                                         >
                                                   Get my SPM
@@ -177,6 +178,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -202,6 +204,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons 
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -295,6 +298,7 @@ ShallowWrapper {
                                                               manual-button
                                                               next-and-back-buttons
                                                               show"
+                                                        disabled={true}
                                                         onClick={[Function]}
                                           >
                                                         Get my SPM
@@ -387,6 +391,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -412,6 +417,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons 
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -498,6 +504,7 @@ ShallowWrapper {
                                                         manual-button
                                                         next-and-back-buttons
                                                         show"
+                                                      disabled={true}
                                                       onClick={[Function]}
                                     >
                                                       Get my SPM
@@ -612,6 +619,7 @@ ShallowWrapper {
                                           manual-button
                                           next-and-back-buttons
                                           show"
+                                            disabled={true}
                                             onClick={[Function]}
                       >
                                             Get my SPM
@@ -649,6 +657,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                        disabled={true}
                         onClick={[Function]}
 >
                         Get my SPM
@@ -666,6 +675,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
@@ -768,6 +778,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -793,6 +804,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons 
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -1012,6 +1024,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -1037,6 +1050,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons 
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -1081,6 +1095,7 @@ ShallowWrapper {
                                                 next-and-back-buttons
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -1144,6 +1159,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -1161,6 +1177,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -1193,6 +1210,7 @@ ShallowWrapper {
                                                 next-and-back-buttons 
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -1229,6 +1247,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -1246,6 +1265,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -1417,6 +1437,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                 >
                                                             Get my SPM
@@ -1509,6 +1530,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -1534,6 +1556,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -1627,6 +1650,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                                disabled={true}
                                                                 onClick={[Function]}
                                                 >
                                                                 Get my SPM
@@ -1719,6 +1743,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -1744,6 +1769,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons 
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -1830,6 +1856,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                         >
                                                             Get my SPM
@@ -1944,6 +1971,7 @@ ShallowWrapper {
                                             manual-button
                                             next-and-back-buttons
                                             show"
+                                                disabled={true}
                                                 onClick={[Function]}
                         >
                                                 Get my SPM
@@ -1981,6 +2009,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                          disabled={true}
                           onClick={[Function]}
 >
                           Get my SPM
@@ -1998,6 +2027,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                          "disabled": true,
                           "onClick": [Function],
                         },
                         "ref": null,
@@ -2100,6 +2130,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -2125,6 +2156,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -2344,6 +2376,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -2369,6 +2402,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons 
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -2413,6 +2447,7 @@ ShallowWrapper {
                                                   next-and-back-buttons
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -2476,6 +2511,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -2493,6 +2529,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -2525,6 +2562,7 @@ ShallowWrapper {
                                                   next-and-back-buttons 
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -2561,6 +2599,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -2578,6 +2617,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -2779,6 +2819,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                  disabled={true}
                                                   onClick={[Function]}
                                         >
                                                   Get my SPM
@@ -2871,6 +2912,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -2896,6 +2938,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons 
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -2989,6 +3032,7 @@ ShallowWrapper {
                                                               manual-button
                                                               next-and-back-buttons
                                                               show"
+                                                        disabled={true}
                                                         onClick={[Function]}
                                           >
                                                         Get my SPM
@@ -3081,6 +3125,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -3106,6 +3151,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons 
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -3192,6 +3238,7 @@ ShallowWrapper {
                                                         manual-button
                                                         next-and-back-buttons
                                                         show"
+                                                      disabled={true}
                                                       onClick={[Function]}
                                     >
                                                       Get my SPM
@@ -3306,6 +3353,7 @@ ShallowWrapper {
                                           manual-button
                                           next-and-back-buttons
                                           show"
+                                            disabled={true}
                                             onClick={[Function]}
                       >
                                             Get my SPM
@@ -3343,6 +3391,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                        disabled={true}
                         onClick={[Function]}
 >
                         Get my SPM
@@ -3360,6 +3409,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
@@ -3462,6 +3512,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -3487,6 +3538,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons 
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -3706,6 +3758,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -3731,6 +3784,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons 
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -3775,6 +3829,7 @@ ShallowWrapper {
                                                 next-and-back-buttons
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -3838,6 +3893,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -3855,6 +3911,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -3887,6 +3944,7 @@ ShallowWrapper {
                                                 next-and-back-buttons 
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -3923,6 +3981,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -3940,6 +3999,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -4111,6 +4171,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                 >
                                                             Get my SPM
@@ -4203,6 +4264,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -4228,6 +4290,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -4321,6 +4384,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                                disabled={true}
                                                                 onClick={[Function]}
                                                 >
                                                                 Get my SPM
@@ -4413,6 +4477,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -4438,6 +4503,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons 
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -4524,6 +4590,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                         >
                                                             Get my SPM
@@ -4638,6 +4705,7 @@ ShallowWrapper {
                                             manual-button
                                             next-and-back-buttons
                                             show"
+                                                disabled={true}
                                                 onClick={[Function]}
                         >
                                                 Get my SPM
@@ -4675,6 +4743,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                          disabled={true}
                           onClick={[Function]}
 >
                           Get my SPM
@@ -4692,6 +4761,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                          "disabled": true,
                           "onClick": [Function],
                         },
                         "ref": null,
@@ -4794,6 +4864,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -4819,6 +4890,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -5038,6 +5110,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -5063,6 +5136,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons 
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -5107,6 +5181,7 @@ ShallowWrapper {
                                                   next-and-back-buttons
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -5170,6 +5245,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -5187,6 +5263,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -5219,6 +5296,7 @@ ShallowWrapper {
                                                   next-and-back-buttons 
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -5255,6 +5333,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -5272,6 +5351,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -5473,6 +5553,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                  disabled={true}
                                                   onClick={[Function]}
                                         >
                                                   Get my SPM
@@ -5565,6 +5646,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -5590,6 +5672,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons 
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -5683,6 +5766,7 @@ ShallowWrapper {
                                                               manual-button
                                                               next-and-back-buttons
                                                               show"
+                                                        disabled={true}
                                                         onClick={[Function]}
                                           >
                                                         Get my SPM
@@ -5775,6 +5859,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -5800,6 +5885,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons 
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -5886,6 +5972,7 @@ ShallowWrapper {
                                                         manual-button
                                                         next-and-back-buttons
                                                         show"
+                                                      disabled={true}
                                                       onClick={[Function]}
                                     >
                                                       Get my SPM
@@ -6000,6 +6087,7 @@ ShallowWrapper {
                                           manual-button
                                           next-and-back-buttons
                                           show"
+                                            disabled={true}
                                             onClick={[Function]}
                       >
                                             Get my SPM
@@ -6037,6 +6125,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                        disabled={true}
                         onClick={[Function]}
 >
                         Get my SPM
@@ -6054,6 +6143,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
@@ -6156,6 +6246,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -6181,6 +6272,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons 
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -6400,6 +6492,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -6425,6 +6518,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons 
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -6469,6 +6563,7 @@ ShallowWrapper {
                                                 next-and-back-buttons
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -6532,6 +6627,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -6549,6 +6645,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -6581,6 +6678,7 @@ ShallowWrapper {
                                                 next-and-back-buttons 
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -6617,6 +6715,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -6634,6 +6733,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -6805,6 +6905,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                 >
                                                             Get my SPM
@@ -6897,6 +6998,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -6922,6 +7024,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -7015,6 +7118,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                                disabled={true}
                                                                 onClick={[Function]}
                                                 >
                                                                 Get my SPM
@@ -7107,6 +7211,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -7132,6 +7237,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons 
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -7218,6 +7324,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                         >
                                                             Get my SPM
@@ -7332,6 +7439,7 @@ ShallowWrapper {
                                             manual-button
                                             next-and-back-buttons
                                             show"
+                                                disabled={true}
                                                 onClick={[Function]}
                         >
                                                 Get my SPM
@@ -7369,6 +7477,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                          disabled={true}
                           onClick={[Function]}
 >
                           Get my SPM
@@ -7386,6 +7495,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                          "disabled": true,
                           "onClick": [Function],
                         },
                         "ref": null,
@@ -7488,6 +7598,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -7513,6 +7624,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -7732,6 +7844,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -7757,6 +7870,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons 
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -7801,6 +7915,7 @@ ShallowWrapper {
                                                   next-and-back-buttons
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -7864,6 +7979,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -7881,6 +7997,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -7913,6 +8030,7 @@ ShallowWrapper {
                                                   next-and-back-buttons 
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -7949,6 +8067,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -7966,6 +8085,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -8167,6 +8287,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                  disabled={true}
                                                   onClick={[Function]}
                                         >
                                                   Get my SPM
@@ -8259,6 +8380,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -8284,6 +8406,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons 
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -8377,6 +8500,7 @@ ShallowWrapper {
                                                               manual-button
                                                               next-and-back-buttons
                                                               show"
+                                                        disabled={true}
                                                         onClick={[Function]}
                                           >
                                                         Get my SPM
@@ -8469,6 +8593,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -8494,6 +8619,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons 
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -8580,6 +8706,7 @@ ShallowWrapper {
                                                         manual-button
                                                         next-and-back-buttons
                                                         show"
+                                                      disabled={true}
                                                       onClick={[Function]}
                                     >
                                                       Get my SPM
@@ -8694,6 +8821,7 @@ ShallowWrapper {
                                           manual-button
                                           next-and-back-buttons
                                           show"
+                                            disabled={true}
                                             onClick={[Function]}
                       >
                                             Get my SPM
@@ -8731,6 +8859,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                        disabled={true}
                         onClick={[Function]}
 >
                         Get my SPM
@@ -8748,6 +8877,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
@@ -8850,6 +8980,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -8875,6 +9006,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons 
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -9094,6 +9226,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -9119,6 +9252,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons 
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -9163,6 +9297,7 @@ ShallowWrapper {
                                                 next-and-back-buttons
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -9226,6 +9361,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -9243,6 +9379,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -9275,6 +9412,7 @@ ShallowWrapper {
                                                 next-and-back-buttons 
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -9311,6 +9449,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -9328,6 +9467,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -9499,6 +9639,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                 >
                                                             Get my SPM
@@ -9591,6 +9732,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -9616,6 +9758,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -9709,6 +9852,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                                disabled={true}
                                                                 onClick={[Function]}
                                                 >
                                                                 Get my SPM
@@ -9801,6 +9945,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -9826,6 +9971,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons 
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -9912,6 +10058,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                         >
                                                             Get my SPM
@@ -10026,6 +10173,7 @@ ShallowWrapper {
                                             manual-button
                                             next-and-back-buttons
                                             show"
+                                                disabled={true}
                                                 onClick={[Function]}
                         >
                                                 Get my SPM
@@ -10063,6 +10211,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                          disabled={true}
                           onClick={[Function]}
 >
                           Get my SPM
@@ -10080,6 +10229,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                          "disabled": true,
                           "onClick": [Function],
                         },
                         "ref": null,
@@ -10182,6 +10332,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -10207,6 +10358,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -10426,6 +10578,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -10451,6 +10604,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons 
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -10495,6 +10649,7 @@ ShallowWrapper {
                                                   next-and-back-buttons
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -10558,6 +10713,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -10575,6 +10731,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -10607,6 +10764,7 @@ ShallowWrapper {
                                                   next-and-back-buttons 
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -10643,6 +10801,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -10660,6 +10819,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -10861,6 +11021,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                  disabled={true}
                                                   onClick={[Function]}
                                         >
                                                   Get my SPM
@@ -10953,6 +11114,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -10978,6 +11140,7 @@ ShallowWrapper {
                                                                         next-and-back-buttons 
                                                                         show
                                                                       "
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                   >
                                                             Get my SPM
@@ -11071,6 +11234,7 @@ ShallowWrapper {
                                                               manual-button
                                                               next-and-back-buttons
                                                               show"
+                                                        disabled={true}
                                                         onClick={[Function]}
                                           >
                                                         Get my SPM
@@ -11163,6 +11327,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -11188,6 +11353,7 @@ ShallowWrapper {
                                                                               next-and-back-buttons 
                                                                               show
                                                                             "
+                                                                      disabled={true}
                                                                       onClick={[Function]}
                                                         >
                                                                       Get my SPM
@@ -11274,6 +11440,7 @@ ShallowWrapper {
                                                         manual-button
                                                         next-and-back-buttons
                                                         show"
+                                                      disabled={true}
                                                       onClick={[Function]}
                                     >
                                                       Get my SPM
@@ -11388,6 +11555,7 @@ ShallowWrapper {
                                           manual-button
                                           next-and-back-buttons
                                           show"
+                                            disabled={true}
                                             onClick={[Function]}
                       >
                                             Get my SPM
@@ -11425,6 +11593,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                        disabled={true}
                         onClick={[Function]}
 >
                         Get my SPM
@@ -11442,6 +11611,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
@@ -11544,6 +11714,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -11569,6 +11740,7 @@ ShallowWrapper {
                                                                             next-and-back-buttons 
                                                                             show
                                                                           "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                       >
                                                                         Get my SPM
@@ -11788,6 +11960,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -11813,6 +11986,7 @@ ShallowWrapper {
                                                                   next-and-back-buttons 
                                                                   show
                                                                 "
+                                                                  disabled={true}
                                                                   onClick={[Function]}
                                             >
                                                                   Get my SPM
@@ -11857,6 +12031,7 @@ ShallowWrapper {
                                                 next-and-back-buttons
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -11920,6 +12095,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -11937,6 +12113,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -11969,6 +12146,7 @@ ShallowWrapper {
                                                 next-and-back-buttons 
                                                 show
                                               "
+                                                    disabled={true}
                                                     onClick={[Function]}
                           >
                                                     Get my SPM
@@ -12005,6 +12183,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                            disabled={true}
                             onClick={[Function]}
 >
                             Get my SPM
@@ -12022,6 +12201,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                            "disabled": true,
                             "onClick": [Function],
                           },
                           "ref": null,
@@ -12193,6 +12373,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                                 >
                                                             Get my SPM
@@ -12285,6 +12466,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -12310,6 +12492,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                             >
                                                                         Get my SPM
@@ -12403,6 +12586,7 @@ ShallowWrapper {
                                                                     manual-button
                                                                     next-and-back-buttons
                                                                     show"
+                                                                disabled={true}
                                                                 onClick={[Function]}
                                                 >
                                                                 Get my SPM
@@ -12495,6 +12679,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -12520,6 +12705,7 @@ ShallowWrapper {
                                                                                       next-and-back-buttons 
                                                                                       show
                                                                                     "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                                 >
                                                                                 Get my SPM
@@ -12606,6 +12792,7 @@ ShallowWrapper {
                                                             manual-button
                                                             next-and-back-buttons
                                                             show"
+                                                            disabled={true}
                                                             onClick={[Function]}
                                         >
                                                             Get my SPM
@@ -12720,6 +12907,7 @@ ShallowWrapper {
                                             manual-button
                                             next-and-back-buttons
                                             show"
+                                                disabled={true}
                                                 onClick={[Function]}
                         >
                                                 Get my SPM
@@ -12757,6 +12945,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show"
+                          disabled={true}
                           onClick={[Function]}
 >
                           Get my SPM
@@ -12774,6 +12963,7 @@ ShallowWrapper {
                     manual-button
                     next-and-back-buttons
                     show",
+                          "disabled": true,
                           "onClick": [Function],
                         },
                         "ref": null,
@@ -12876,6 +13066,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -12901,6 +13092,7 @@ ShallowWrapper {
                                                                                   next-and-back-buttons 
                                                                                   show
                                                                                 "
+                                                                                disabled={true}
                                                                                 onClick={[Function]}
                                                             >
                                                                                 Get my SPM
@@ -13120,6 +13312,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -13145,6 +13338,7 @@ ShallowWrapper {
                                                                       next-and-back-buttons 
                                                                       show
                                                                     "
+                                                                        disabled={true}
                                                                         onClick={[Function]}
                                                 >
                                                                         Get my SPM
@@ -13189,6 +13383,7 @@ ShallowWrapper {
                                                   next-and-back-buttons
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -13252,6 +13447,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -13269,6 +13465,7 @@ ShallowWrapper {
                       next-and-back-buttons
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,
@@ -13301,6 +13498,7 @@ ShallowWrapper {
                                                   next-and-back-buttons 
                                                   show
                                                 "
+                                                        disabled={true}
                                                         onClick={[Function]}
                             >
                                                         Get my SPM
@@ -13337,6 +13535,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     "
+                              disabled={true}
                               onClick={[Function]}
 >
                               Get my SPM
@@ -13354,6 +13553,7 @@ ShallowWrapper {
                       next-and-back-buttons 
                       show
                     ",
+                              "disabled": true,
                               "onClick": [Function],
                             },
                             "ref": null,

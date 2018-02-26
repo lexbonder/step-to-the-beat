@@ -1,3 +1,11 @@
+<!-- 
+
+Default User Image URL:
+  'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png' 
+
+-->
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { userCleaner } from '../../dataCleaner';
 import { 
   saveAccessToken,
   logInUser,
@@ -38,7 +39,9 @@ export class Login extends Component {
   componentDidUpdate = async () => {
     const { accessToken } = this.props;
     try {
-      const user = await getUserName(accessToken);
+      debugger
+      const rawUser = await getUserName(accessToken);
+      const user = userCleaner(rawUser)
       this.props.saveUser(user);
       this.getContentFromFirebase(user.id);
     } catch (error) {

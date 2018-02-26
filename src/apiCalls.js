@@ -1,16 +1,12 @@
 /* eslint-disable */
+
 export const getUserName = async (accessToken) => {
   try {
     const initialFetch = await fetch('https://api.spotify.com/v1/me', {
       headers:{ Authorization: 'Bearer ' + accessToken }
     });
     if (initialFetch.status < 300) {
-      const userInfo = await initialFetch.json();
-      return {
-        name: userInfo.display_name.split(' ')[0],
-        id: userInfo.id,
-        image: userInfo.images[0].url
-      };
+      return await initialFetch.json();
     } else {
       throw new Error('Failed to get User Name')
     }
