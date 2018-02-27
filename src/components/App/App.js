@@ -18,12 +18,12 @@ export class App extends Component {
     return (
       <div className='App'>
         <Route 
-          exact path='/' 
-          component={Home} /> 
-        
-        <Route 
           path='/' 
           component={Header} />
+
+        <Route 
+          exact path='/' 
+          component={Home} /> 
         
         <Route 
           exact path='/calculations'

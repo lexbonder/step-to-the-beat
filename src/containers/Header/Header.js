@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { logOutUser, clearAccessToken } from '../../actions/actions';
+import { getUserContent } from '../../firebaseCalls';
+import {
+  logOutUser,
+  clearAccessToken,
+  saveAccessToken,
+  logInUser,
+  saveUser,
+  seedsFromFirebase,
+  genresFromFirebase, 
+  spmsFromFirebase
+} from '../../actions/actions';
+// import { logInUser, saveUser, saveAccessToken }
 import PropTypes from 'prop-types';
 import './Header.css';
 
@@ -13,16 +24,55 @@ export class Header extends Component {
     };
   }
 
-  toggleMenu = () => {
-    this.state.menuOpen === 'show'
-      ? this.setState({menuOpen: 'hide'})
-      : this.setState({menuOpen: 'show'});
+  componentDidMount = async () => {
+    const { 
+      loggedIn, 
+      saveUser, 
+      logInUser, 
+      saveAccessToken 
+    } = this.props;
+    if (!loggedIn && localStorage.currentUser) {
+      const retrieved = localStorage.getItem('currentUser')
+      const currentUser = JSON.parse(retrieved)
+      
+      logInUser()
+      saveUser(currentUser.user)
+      saveAccessToken(currentUser.accessToken)
+      
+      const userContent = await getUserContent(currentUser.user.id)
+      this.reloadUserContent(userContent)
+    }
+  }
+
+  reloadUserContent = userContent => {
+    const { 
+      history,
+      seedsFromFirebase, 
+      genresFromFirebase, 
+      spmsFromFirebase 
+    } = this.props;
+    if (userContent.val()) {
+      const { savedGenres, savedSeeds, savedSpms} = userContent.val();
+      seedsFromFirebase(savedSeeds);
+      genresFromFirebase(savedGenres);
+      spmsFromFirebase(savedSpms);
+    } 
+    history.push('/saved-playlists')
+  }
+
+  hideLogOut = () => {
+    this.setState({menuOpen: 'hide'})
+  }
+
+  showLogOut = () => {
+    this.setState({menuOpen: 'show'});
   }
 
   handleLogOut = () => {
     const {logOutUser, clearAccessToken, history} = this.props;
     logOutUser();
     clearAccessToken();
+    localStorage.removeItem('currentUser')
     history.push('/');
   }
 
@@ -52,8 +102,8 @@ export class Header extends Component {
   }
 
   userGreeting = () => {
-    const { user, loggedIn, location } = this.props;
-    if (loggedIn && location.pathname !== '/login') {
+    const { user, loggedIn, location, history } = this.props;
+    if (loggedIn) {
       return (
         <header>
           <button 
@@ -63,9 +113,11 @@ export class Header extends Component {
             <i className="fas fa-home"></i>
           </button>
           <h2 className='page-name'>{this.pageName()}</h2>
-          <div className='menu-wrapper'>
+          <div 
+              onMouseEnter={this.showLogOut}
+              onMouseLeave={this.hideLogOut}
+          className='menu-wrapper'>
             <img
-              onClick={this.toggleMenu}
               className='profile-pic'
               src={user.image}
               alt='profile'
@@ -113,7 +165,13 @@ export const MSTP = ({ loggedIn, user }) => ({
 
 export const MDTP = (dispatch) => ({
   logOutUser: () => dispatch(logOutUser()),
-  clearAccessToken: () => dispatch(clearAccessToken())
+  clearAccessToken: () => dispatch(clearAccessToken()),
+  logInUser: () => dispatch(logInUser()),
+  saveAccessToken: accessToken => dispatch(saveAccessToken(accessToken)),
+  saveUser: user => dispatch(saveUser(user)),
+  seedsFromFirebase: seeds => dispatch(seedsFromFirebase(seeds)),
+  genresFromFirebase: genres => dispatch(genresFromFirebase(genres)),
+  spmsFromFirebase: spms => dispatch(spmsFromFirebase(spms))
 });
 
 export default withRouter(connect(MSTP, MDTP)(Header));

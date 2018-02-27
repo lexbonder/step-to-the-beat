@@ -39,14 +39,20 @@ export class Login extends Component {
   componentDidUpdate = async () => {
     const { accessToken } = this.props;
     try {
-      debugger
       const rawUser = await getUserName(accessToken);
       const user = userCleaner(rawUser)
       this.props.saveUser(user);
       this.getContentFromFirebase(user.id);
+      this.saveUserInLocal(user, accessToken)
     } catch (error) {
       this.setState({errorMessage: error.message});
     }
+  }
+
+  saveUserInLocal = (user, accessToken) => {
+    const currentUser = {user, accessToken}
+    const stringified = JSON.stringify(currentUser)
+    localStorage.setItem('currentUser', stringified)
   }
 
   getContentFromFirebase = async (userId) => {
@@ -59,7 +65,7 @@ export class Login extends Component {
   }
 
   redirectUser = (userContent) => {
-    const { history } = this.props;
+    const { history, seedsFromFirebase, genresFromFirebase, spmsFromFirebase } = this.props;
     if (!userContent.val()) {
       history.push('/select-spm');
     } else {
