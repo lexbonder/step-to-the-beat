@@ -30,12 +30,16 @@ export class SelectSpm extends Component {
       return recentSpms.map((spm, index) => {
         return <li
           key={index} 
-          onClick={this.selectRecent}
-          className='spm-list-item'>
+          onClick={this.selectRecent}>
           {spm}
         </li>;
       });
-    } 
+    } else {
+      return <li
+        className='spm-list-item'>
+          No Recents
+      </li>
+    }
   }
 
   selectRecent = (event) => {
@@ -63,23 +67,24 @@ export class SelectSpm extends Component {
     history.push('/saved-playlists');
   }
 
+  handleNewSpmButtion = () => {
+    const { history } = this.props;
+    history.push('/calculations');
+  }
+
   render() {
     return (
       <div className='SelectSpm'>
-        <h2 className='recent-spms'>Your Recent SPMs</h2>
-        <div className='ul-wrapper'>
-          <ul className='spm-list'>
-            {this.getRecentSpms()}
-            <Link 
-              className='link-to-calc'
-              to='/calculations'>
-              <li className='spm-list-item'>
-                Calculate a new SPM...
-              </li>
-            </Link>
-          </ul>
-        </div>
-        <h3 className='spm-instructions'>Enter an SPM or select from above</h3>
+        <h2 className='spm-instructions'>Set your Steps Per Minute</h2>
+        <h3 className='recent-spms'>Recent SPMs</h3>
+        <ul className='spm-list'>
+          {this.getRecentSpms()}
+        </ul>
+        <button 
+          onClick={this.handleNewSpmButtion}
+          className='buttons new-spm-button'>
+            Calculate a new SPM
+        </button>
         <input
           type='number'
           name='selection'
@@ -91,13 +96,13 @@ export class SelectSpm extends Component {
         <div className='button-wrapper'>
           <button
             onClick={this.handleBackButton}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Cancel
           </button>
           <button
             disabled={!this.state.selection}
             onClick={this.handleClick}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Select a Genre
           </button>
         </div>

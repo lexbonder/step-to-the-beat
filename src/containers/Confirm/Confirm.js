@@ -74,11 +74,11 @@ export class Confirm extends Component {
         <div className='button-wrapper'>
           <button
             onClick={this.handleBackButton}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Back
           </button>
           <button 
-            className='next-and-back-buttons'
+            className='buttons'
             onClick={this.getPlaylist}>
               Get My Playlist!
           </button>

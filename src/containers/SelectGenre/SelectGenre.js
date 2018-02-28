@@ -69,14 +69,14 @@ export class SelectGenre extends Component {
         </ul>
         <div className='button-wrapper'> 
           <button
-            className='next-and-back-buttons'
+            className='buttons'
             onClick={this.handleBackButton}>
               Back
           </button>
           <button
             onClick={this.handleClick}
             disabled={!this.state.selectedGenre}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Confirm
           </button>
         </div>

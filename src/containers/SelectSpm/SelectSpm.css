@@ -9,17 +9,18 @@
   margin: 20px 0;
 }
 
+.recent-spms {
+  margin-bottom: 0;
+}
+
 .SelectSpm ul {
-  max-height: 200px;
+  max-height: 120px;
   overflow: auto;
   background-color: #999999;
   list-style: none;
   padding: 0;
-  margin: 0 30px;
-}
-
-.ul-wrapper {
-  height: 200px;
+  margin: 0 auto 30px;
+  width: 30%;
 }
 
 li {
@@ -42,12 +43,19 @@ li:active {
   border-color: #419500;
 }
 
+.spm-list-item:hover {
+  color: #373737;
+  border: 1px solid #999999;
+  background-color: #999999;
+  cursor: auto;
+}
+
 .select-spm-input {
   font-size: 30px;
   background-color: #999999;
   color: #373737;
-  width: 53%;
-  margin: auto;
+  width: 30%;
+  margin: 30px auto;
   display: block;
   text-align: center;
   border: 2px solid #8ECF32;
@@ -68,7 +76,7 @@ li:active {
   margin: 20px 0;
 }
 
-.next-and-back-buttons {
+.buttons {
   font-size: 20px;
   background-color: transparent;
   color: #63B700;
@@ -77,20 +85,25 @@ li:active {
   padding: 10px;
 }
 
-.next-and-back-buttons:hover {
+.buttons:hover {
   cursor: pointer;
   color: #85d922;
   border-color: #85d922;
 }
 
-.next-and-back-buttons:active {
+.buttons:active {
   color: #419700;
   border-color: #419700;
   background-color: #151515
 }
 
-.next-and-back-buttons:disabled {
+.buttons:disabled {
   color: #999999;
   border-color: #999999;
   background-color: #262626
+}
+
+.new-spm-button {
+  display: block;
+  margin: auto;
 }

@@ -55,7 +55,7 @@ export class SavedPlaylist extends Component {
           </h3>
         </div>
         <button 
-          className='next-and-back-buttons'
+          className='buttons'
           onClick={this.handleClick}>
             View
         </button>

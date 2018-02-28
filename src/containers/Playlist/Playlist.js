@@ -71,7 +71,7 @@ export class Playlist extends Component {
         <div className='playlist-header'>
           <h2>{this.state.playlistName}</h2>
           <button
-            className='next-and-back-buttons'
+            className='buttons'
             onClick={this.sendToSpotify}>
               Send to Spotify
           </button>
