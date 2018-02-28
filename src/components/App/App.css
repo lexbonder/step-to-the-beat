@@ -76,4 +76,9 @@ p {
     max-width: 550px;
     margin: auto;
   }
+
+  .bottom-half-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
 }

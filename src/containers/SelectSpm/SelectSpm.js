@@ -75,15 +75,14 @@ export class SelectSpm extends Component {
   render() {
     return (
       <div className='SelectSpm'>
-        <h2 className='spm-instructions'>Set your Steps Per Minute</h2>
-        <h3 className='recent-spms'>Recent SPMs</h3>
+        <h3 className='recent-spms'>Recent</h3>
         <ul className='spm-list'>
           {this.getRecentSpms()}
         </ul>
         <button 
           onClick={this.handleNewSpmButtion}
           className='buttons new-spm-button'>
-            Calculate a new SPM
+            Calculate
         </button>
         <input
           type='number'

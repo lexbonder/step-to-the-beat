@@ -1,14 +1,11 @@
 header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  justify-content: space-around;
-}
-
-.home-button,
-.page-name,
-.menu-wrapper {
-  padding: 10px;
+  grid-template-rows: 60px;
+  justify-content: center;
+  align-items: center;
   border-bottom: 5px solid #404040;
+  text-align: center;
 }
 
 .home-button:hover,
@@ -20,18 +17,6 @@ header {
 .page-name {
   color: #63B700;
   font-size: 30px;
-}
-
-.page-name {
-  margin: 0;
-}
-
-.home-button{
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  padding: 0;
-  background-color: transparent;
 }
 
 .profile-pic {

@@ -87,7 +87,7 @@ export class Header extends Component {
     case '/saved-playlists':
       return 'My Playlists';
     case '/select-spm':
-      return 'Select SPM';
+      return 'Steps Per Minute';
     case '/calculations':
       return 'Calculate SPM';
     case '/select-genre':
@@ -106,16 +106,16 @@ export class Header extends Component {
     if (loggedIn) {
       return (
         <header>
-          <button 
+          <h2 
             onClick={this.handleHomeButton}
             className='home-button'
           >
             <i className="fas fa-home"></i>
-          </button>
+          </h2>
           <h2 className='page-name'>{this.pageName()}</h2>
           <div 
-              onMouseEnter={this.showLogOut}
-              onMouseLeave={this.hideLogOut}
+          onMouseEnter={this.showLogOut}
+          onMouseLeave={this.hideLogOut}
           className='menu-wrapper'>
             <img
               className='profile-pic'

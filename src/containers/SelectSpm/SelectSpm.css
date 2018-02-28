@@ -10,7 +10,7 @@
 }
 
 .recent-spms {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .SelectSpm ul {
@@ -19,8 +19,8 @@
   background-color: #999999;
   list-style: none;
   padding: 0;
-  margin: 0 auto 30px;
-  width: 30%;
+  margin: 0 auto 40px;
+  width: 165px;
 }
 
 li {
@@ -54,8 +54,8 @@ li:active {
   font-size: 30px;
   background-color: #999999;
   color: #373737;
-  width: 30%;
-  margin: 30px auto;
+  width: 165px;
+  margin: 40px auto;
   display: block;
   text-align: center;
   border: 2px solid #8ECF32;
@@ -106,4 +106,6 @@ li:active {
 .new-spm-button {
   display: block;
   margin: auto;
+  width: 165px;
+  font-size: 25px;
 }
