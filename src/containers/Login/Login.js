@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { userCleaner } from '../../dataCleaner';
 import { 
   saveAccessToken,
   logInUser,
@@ -38,12 +39,20 @@ export class Login extends Component {
   componentDidUpdate = async () => {
     const { accessToken } = this.props;
     try {
-      const user = await getUserName(accessToken);
+      const rawUser = await getUserName(accessToken);
+      const user = userCleaner(rawUser)
       this.props.saveUser(user);
       this.getContentFromFirebase(user.id);
+      this.saveUserInLocal(user, accessToken)
     } catch (error) {
       this.setState({errorMessage: error.message});
     }
+  }
+
+  saveUserInLocal = (user, accessToken) => {
+    const currentUser = {user, accessToken}
+    const stringified = JSON.stringify(currentUser)
+    localStorage.setItem('currentUser', stringified)
   }
 
   getContentFromFirebase = async (userId) => {
@@ -56,7 +65,7 @@ export class Login extends Component {
   }
 
   redirectUser = (userContent) => {
-    const { history } = this.props;
+    const { history, seedsFromFirebase, genresFromFirebase, spmsFromFirebase } = this.props;
     if (!userContent.val()) {
       history.push('/select-spm');
     } else {

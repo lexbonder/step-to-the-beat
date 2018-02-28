@@ -28,12 +28,13 @@ describe('getUserName', () => {
 
   it('returns an object if the status is ok', async () => {
     const mockAccessToken = '12345abcde';
-    const mockUser = {
-      name: 'Alex',
-      id: 'lxbndr',
-      image: 'superlongurl'
-    }
-    expect(getUserName(mockAccessToken)).resolves.toEqual(mockUser)
+    const mockRawUser = {
+    display_name: 'Alex Bonder',
+    id: 'lxbndr',
+    images: [{
+      url: 'superlongurl'}
+    ]}
+    expect(getUserName(mockAccessToken)).resolves.toEqual(mockRawUser)
   })
 
   it('throws an error if status code is not ok', async () => {

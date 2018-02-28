@@ -53,11 +53,12 @@ ShallowWrapper {
         </h2>
         <div
                 className="menu-wrapper"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
         >
                 <img
                         alt="profile"
                         className="profile-pic"
-                        onClick={[Function]}
                         src={undefined}
                 />
                 <div
@@ -95,11 +96,12 @@ ShallowWrapper {
 </h2>,
           <div
             className="menu-wrapper"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
 >
             <img
                         alt="profile"
                         className="profile-pic"
-                        onClick={[Function]}
                         src={undefined}
             />
             <div
@@ -163,7 +165,6 @@ ShallowWrapper {
               <img
                 alt="profile"
                 className="profile-pic"
-                onClick={[Function]}
                 src={undefined}
 />,
               <div
@@ -178,6 +179,8 @@ ShallowWrapper {
 </div>,
             ],
             "className": "menu-wrapper",
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -188,7 +191,6 @@ ShallowWrapper {
               "props": Object {
                 "alt": "profile",
                 "className": "profile-pic",
-                "onClick": [Function],
                 "src": undefined,
               },
               "ref": null,
@@ -254,11 +256,12 @@ ShallowWrapper {
           </h2>
           <div
                     className="menu-wrapper"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
           >
                     <img
                               alt="profile"
                               className="profile-pic"
-                              onClick={[Function]}
                               src={undefined}
                     />
                     <div
@@ -296,11 +299,12 @@ ShallowWrapper {
 </h2>,
             <div
               className="menu-wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
 >
               <img
                             alt="profile"
                             className="profile-pic"
-                            onClick={[Function]}
                             src={undefined}
               />
               <div
@@ -364,7 +368,6 @@ ShallowWrapper {
                 <img
                   alt="profile"
                   className="profile-pic"
-                  onClick={[Function]}
                   src={undefined}
 />,
                 <div
@@ -379,6 +382,8 @@ ShallowWrapper {
 </div>,
               ],
               "className": "menu-wrapper",
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -389,7 +394,6 @@ ShallowWrapper {
                 "props": Object {
                   "alt": "profile",
                   "className": "profile-pic",
-                  "onClick": [Function],
                   "src": undefined,
                 },
                 "ref": null,
@@ -461,11 +465,12 @@ exports[`Header While a user is logged in userGreeting should match the snapshot
   </h2>
   <div
     className="menu-wrapper"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <img
       alt="profile"
       className="profile-pic"
-      onClick={[Function]}
       src={undefined}
     />
     <div

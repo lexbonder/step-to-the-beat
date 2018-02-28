@@ -39,12 +39,15 @@ export class Calculations extends Component {
   }
 
   submitSpm = () => {
-    const { recentSpms } = this.props;
+    const { recentSpms, history } = this.props;
     const { result } = this.state;
     if (!recentSpms.includes(result)) {
       this.props.saveRecentSpm(result);
     }
-    this.props.history.push('/select-spm');
+    history.push({
+      pathname: '/select-spm',
+      state: { selection: result }
+    });
   }
 
   calculateManual = (event) => {
@@ -168,6 +171,7 @@ export class Calculations extends Component {
               />
               <div className='button-wrapper'>
                 <button
+                  disabled={!this.state.manual}
                   className={`
                     manual-button
                     next-and-back-buttons
@@ -239,6 +243,12 @@ export class Calculations extends Component {
                 />
                 <div className='button-wrapper'>
                   <button
+                    disabled={
+                      !this.state.mpmSecond ||
+                      !this.state.mpmMinute ||
+                      !this.state.heightFeet ||
+                      !this.state.heightInch
+                    }
                     className={`
                       next-and-back-buttons
                       ${this.state.toggleGetButton}
@@ -260,6 +270,10 @@ export class Calculations extends Component {
                 />
                 <div className='button-wrapper'>
                   <button
+                    disabled={
+                      !this.state.mphSpeed ||
+                      !this.state.heightFeet ||
+                      !this.state.heightInch }
                     className={`
                       next-and-back-buttons 
                       ${this.state.toggleGetButton}

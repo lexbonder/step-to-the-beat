@@ -13,6 +13,13 @@ export class SelectSpm extends Component {
     };
   }
 
+  componentDidMount = () => {
+    if (this.props.location.state) {
+      const { selection } = this.props.location.state
+      this.setState({selection})
+    }
+  }
+
   componentDidUpdate = () => {
     this.getRecentSpms();
   }

@@ -1,16 +1,15 @@
 /* eslint-disable */
+import { authorize } from './authorizeSpotify';
+
 export const getUserName = async (accessToken) => {
   try {
     const initialFetch = await fetch('https://api.spotify.com/v1/me', {
       headers:{ Authorization: 'Bearer ' + accessToken }
     });
     if (initialFetch.status < 300) {
-      const userInfo = await initialFetch.json();
-      return {
-        name: userInfo.display_name.split(' ')[0],
-        id: userInfo.id,
-        image: userInfo.images[0].url
-      };
+      return await initialFetch.json();
+    } else if ( initialFetch.status === 401 ) {
+      authorize()
     } else {
       throw new Error('Failed to get User Name')
     }
@@ -26,6 +25,8 @@ export const getPlaylistData = async (bpm, genre, accessToken) => {
       });
     if (initialFetch.status < 300) {
       return await initialFetch.json();
+    } else if ( initialFetch.status === 401 ) {
+      authorize()
     } else {
       throw new Error('Failed to Retrieve Playlist Data')
     }
@@ -53,6 +54,8 @@ export const createNewPlaylist = async (userId, accessToken, playlistName) => {
         response: `Playlist Sent!`,
         playlistId: response.id
       };
+    } else if ( initialFetch.status === 401 ) {
+      authorize()
     } else {
       throw new Error('Create New Playlist in Spotify Failed')
     }
@@ -74,6 +77,8 @@ export const populatePlaylist = async (userId, playlistId, accessToken, tracks) 
     });
     if (initialFetch.status < 300) {
       return await initialFetch.status
+    } else if ( initialFetch.status === 401 ) {
+      authorize()
     } else {
       throw new Error('Add Songs to Playlist Failed')
     }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { savePlaylist, selectSeed } from '../../actions/actions';
 import { getPlaylistData } from '../../apiCalls';
-import { playlistCleaner } from '../../playlistCleaner';
+import { playlistCleaner } from '../../dataCleaner';
 import PropTypes from 'prop-types';
 import './SavedPlaylist.css';
 

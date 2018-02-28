@@ -15,7 +15,7 @@ export class SavedPlaylistContainer extends Component {
         seed={seed} 
       />);
     } else {
-      return <h1>You do not have any favorited playlists!</h1>;
+      return <h1 className='no-playlists'>You do not have any favorited playlists!</h1>;
     }  
   }
 

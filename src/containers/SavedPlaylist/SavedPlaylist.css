@@ -5,10 +5,12 @@
   margin: 10px 0;
   padding: 10px;
   position: relative;
+  border-bottom: 1px solid #151515;
 }
 
 .playlist-name {
-  color: #999999;
+  color: #ffffff;
+  font-weight: normal;
   display: inline-block;
 }
 
