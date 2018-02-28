@@ -68,7 +68,7 @@ li:active {
   margin: 20px 0;
 }
 
-.next-and-back-buttons {
+.buttons {
   font-size: 20px;
   background-color: transparent;
   color: #63B700;
@@ -77,19 +77,19 @@ li:active {
   padding: 10px;
 }
 
-.next-and-back-buttons:hover {
+.buttons:hover {
   cursor: pointer;
   color: #85d922;
   border-color: #85d922;
 }
 
-.next-and-back-buttons:active {
+.buttons:active {
   color: #419700;
   border-color: #419700;
   background-color: #151515
 }
 
-.next-and-back-buttons:disabled {
+.buttons:disabled {
   color: #999999;
   border-color: #999999;
   background-color: #262626

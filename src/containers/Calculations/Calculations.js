@@ -174,7 +174,7 @@ export class Calculations extends Component {
                   disabled={!this.state.manual}
                   className={`
                     manual-button
-                    next-and-back-buttons
+                    buttons
                     ${this.state.toggleGetButton}`}
                   onClick={this.showResult}
                 >Get my SPM</button>
@@ -250,7 +250,7 @@ export class Calculations extends Component {
                       !this.state.heightInch
                     }
                     className={`
-                      next-and-back-buttons
+                      buttons
                       ${this.state.toggleGetButton}
                     `}
                     onClick={this.showResult}
@@ -275,7 +275,7 @@ export class Calculations extends Component {
                       !this.state.heightFeet ||
                       !this.state.heightInch }
                     className={`
-                      next-and-back-buttons 
+                      buttons 
                       ${this.state.toggleGetButton}
                     `}
                     onClick={this.showResult}
@@ -294,7 +294,7 @@ export class Calculations extends Component {
             <h1>{`${this.state.result} SPM`}</h1>
           </div>
           <button
-            className='next-and-back-buttons'
+            className='buttons'
             onClick={this.submitSpm}>
             Save and Go
           </button>

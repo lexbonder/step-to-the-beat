@@ -91,13 +91,13 @@ export class SelectSpm extends Component {
         <div className='button-wrapper'>
           <button
             onClick={this.handleBackButton}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Cancel
           </button>
           <button
             disabled={!this.state.selection}
             onClick={this.handleClick}
-            className='next-and-back-buttons'>
+            className='buttons'>
               Select a Genre
           </button>
         </div>

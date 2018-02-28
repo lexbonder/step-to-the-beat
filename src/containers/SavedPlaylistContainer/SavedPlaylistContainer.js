@@ -27,7 +27,7 @@ export class SavedPlaylistContainer extends Component {
     return (
       <div className='SavedPlaylistContainer'>
         <button 
-          className='next-and-back-buttons new-playlist'
+          className='buttons new-playlist'
           onClick={this.handleClick}>
             Get New Playlist
         </button>
