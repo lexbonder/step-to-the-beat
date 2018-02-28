@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { saveRecentSpm } from '../../actions/actions';
+import { saveRecentSpm, selectSpm } from '../../actions/actions';
 import PropTypes from 'prop-types';
 
 import './Calculations.css';
@@ -41,13 +41,11 @@ export class Calculations extends Component {
   submitSpm = () => {
     const { recentSpms, history } = this.props;
     const { result } = this.state;
+    this.props.selectSpm(result);
     if (!recentSpms.includes(result)) {
       this.props.saveRecentSpm(result);
     }
-    history.push({
-      pathname: '/select-spm',
-      state: { selection: result }
-    });
+    history.push('/select-genre');
   }
 
   calculateManual = (event) => {
@@ -104,7 +102,7 @@ export class Calculations extends Component {
   }
 
   toggleMeasurement = (event) => {
-    if (event.target.name === 'minuteMile') {
+    if (event.target.value === 'minuteMile') {
       this.setState({
         minuteMileVisibility: 'show',
         mileHourVisibility: 'hide',
@@ -126,6 +124,12 @@ export class Calculations extends Component {
       toggleResult: 'show',
       toggleGetButton: 'hide'
     });
+  }
+
+  handleBackButton = (event) => {
+    event.preventDefault()
+    const { history } = this.props;
+    history.push('/select-spm');
   }
 
   render() {
@@ -167,9 +171,16 @@ export class Calculations extends Component {
                 className='manual-input'
                 onChange={this.handleChange}
                 value={this.state.manual}
-                placeholder='30'
               />
               <div className='button-wrapper'>
+                <button
+                  onClick={this.handleBackButton}
+                  className={`
+                    buttons 
+                    ${this.state.toggleGetButton}
+                  `}>
+                    Cancel
+                </button>
                 <button
                   disabled={!this.state.manual}
                   className={`
@@ -187,101 +198,119 @@ export class Calculations extends Component {
           <article className={`estimate ${this.state.estimateVisibility}`}>
             <h4 className='instructions'>
               Enter your height and speed to estimate your SPM
-              <br />
-              <br />
-              <span className='disclaimer'>
-                (Manual calculation is more accurate)
-              </span>
             </h4>
-            
-            <form className='height'>
-              <h4><input
-                name='heightFeet'
-                type='number'
-                onChange={this.handleChange}
-                value={this.state.heightFeet}
-                placeholder='5'
-              />{`Feet`}
-              <input
-                name='heightInch'
-                type='number'
-                onChange={this.handleChange}
-                value={this.state.heightInch}
-                placeholder='4'
-              />{`Inches`}</h4>
-            </form>
-            
-            <button
-              name='minuteMile'
-              className={`minute-mile-button ${this.state.minuteMileButton}`}
-              onClick={this.toggleMeasurement}
-            >Minutes/Mile</button>
-            <button
-              name='mileHour'
-              className={`mile-hour-button ${this.state.mileHourButton}`}
-              onClick={this.toggleMeasurement}
-            >Miles/Hour</button>
-            <div className='speeds'>
-              <form
-                className={`mile-minute-box ${this.state.minuteMileVisibility}`}
-                onSubmit={this.calculateMinutePerMile}
-              >
-                <input
-                  name='mpmMinute'
-                  type='number'
-                  onChange={this.handleChange}
-                  value={this.state.mpmMinute}
-                  placeholder='Min'
-                />
-                <h2 className='colon'>:</h2>
-                <input
-                  name='mpmSecond'
-                  type='number'
-                  onChange={this.handleChange}
-                  value={this.state.mpmSecond}
-                  placeholder='Sec'
-                />
-                <div className='button-wrapper'>
-                  <button
-                    disabled={
-                      !this.state.mpmSecond ||
-                      !this.state.mpmMinute ||
-                      !this.state.heightFeet ||
-                      !this.state.heightInch
-                    }
-                    className={`
-                      buttons
-                      ${this.state.toggleGetButton}
-                    `}
-                    onClick={this.showResult}
-                  >Get my SPM</button>
+            <h4 className='disclaimer'>
+              (Manual calculation is more accurate)
+            </h4>
+            <div className='bottom-half-wrapper'>
+              <div className='height-wrapper'>
+                <h3 className='input-headers'>Height</h3>
+                <form className='height'>
+                  <h4>{`Feet`}</h4>
+                  <h4>{`Inches`}</h4>
+                  <input
+                    name='heightFeet'
+                    type='number'
+                    onChange={this.handleChange}
+                    value={this.state.heightFeet}
+                    placeholder='Ft.'
+                  />
+                  <input
+                    name='heightInch'
+                    type='number'
+                    onChange={this.handleChange}
+                    value={this.state.heightInch}
+                    placeholder='In.'
+                  />
+                </form>
+              </div>
+              <div className='speed-wrapper'>
+                <div className='speed-header'>
+                  <h3>Speed</h3>
+                  <select className='speed-units' onChange={this.toggleMeasurement}>
+                    <option value='minuteMile'>Minutes per Mile</option>
+                    <option>Miles per Hour</option>
+                  </select>
                 </div>
-              </form>
-              <form
-                className={`mile-hour-box ${this.state.mileHourVisibility}`}
-                onSubmit={this.calculateMilePerHour}
-              >
-                <input
-                  name='mphSpeed'
-                  type='number'
-                  onChange={this.handleChange}
-                  value={this.state.mphSpeed}
-                  placeholder='MPH'
-                />
-                <div className='button-wrapper'>
-                  <button
-                    disabled={
-                      !this.state.mphSpeed ||
-                      !this.state.heightFeet ||
-                      !this.state.heightInch }
-                    className={`
-                      buttons 
-                      ${this.state.toggleGetButton}
-                    `}
-                    onClick={this.showResult}
-                  >Get my SPM</button>
+                <div className='speeds'>
+                  <form
+                    className={`mile-minute-box ${this.state.minuteMileVisibility}`}
+                    onSubmit={this.calculateMinutePerMile}
+                  >
+                    <input
+                      name='mpmMinute'
+                      type='number'
+                      onChange={this.handleChange}
+                      value={this.state.mpmMinute}
+                      placeholder='Min'
+                    />
+                    <h2 className='colon'>:</h2>
+                    <input
+                      name='mpmSecond'
+                      type='number'
+                      onChange={this.handleChange}
+                      value={this.state.mpmSecond}
+                      placeholder='Sec'
+                    />
+                    <div className='button-wrapper'>
+                      <button
+                        onClick={this.handleBackButton}
+                        className={`
+                          buttons 
+                          ${this.state.toggleGetButton}
+                        `}>
+                          Cancel
+                      </button>
+                      <button
+                        disabled={
+                          !this.state.mpmSecond ||
+                          !this.state.mpmMinute ||
+                          !this.state.heightFeet ||
+                          !this.state.heightInch
+                        }
+                        className={`
+                          buttons
+                          ${this.state.toggleGetButton}
+                        `}
+                        onClick={this.showResult}
+                      >Get my SPM</button>
+                    </div>
+                  </form>
+                  <form
+                    className={`mile-hour-box ${this.state.mileHourVisibility}`}
+                    onSubmit={this.calculateMilePerHour}
+                  >
+                    <input
+                      name='mphSpeed'
+                      type='number'
+                      onChange={this.handleChange}
+                      value={this.state.mphSpeed}
+                      placeholder='MPH'
+                    />
+                    <div className='button-wrapper'>
+                      <button
+                        onClick={this.handleBackButton}
+                        className={`
+                          buttons 
+                          ${this.state.toggleGetButton}
+                        `}>
+                          Cancel
+                      </button>
+                      <button
+                        disabled={
+                          !this.state.mphSpeed ||
+                          !this.state.heightFeet ||
+                          !this.state.heightInch }
+                        className={`
+                          buttons 
+                          ${this.state.toggleGetButton}
+                        `}
+                        onClick={this.showResult}
+                      >Get my SPM</button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </article>
         </div>
@@ -317,7 +346,8 @@ Calculations.propTypes = {
 export const MSTP = ({recentSpms}) => ({recentSpms});
 
 export const MDTP = dispatch => ({
-  saveRecentSpm: spm => dispatch(saveRecentSpm(spm))
+  saveRecentSpm: spm => dispatch(saveRecentSpm(spm)),
+  selectSpm: spm => dispatch(selectSpm(spm))
 });
 
 export default withRouter(connect(MSTP, MDTP)(Calculations));
