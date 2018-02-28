@@ -12,6 +12,11 @@ describe('Header', () => {
   let mockClearAccessToken = jest.fn()
   let mockHistory = { push: jest.fn() }
   let mockLocation = { pathname: '/confirm'}
+  window.localStorage = {
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+    removeItem: jest.fn()
+  }
 
   beforeEach(() => {
     mockLoggedIn = true
@@ -74,15 +79,16 @@ describe('Header', () => {
 
   })
 
-  describe('toggleMenu', () => {
-    it('should set menuOpen to show if it is set to hide', () => {
-      wrapper.instance().toggleMenu()
+  describe('showLogOut', () => {
+    it('should set menuOpen to show', () => {
+      wrapper.instance().showLogOut()
       expect(wrapper.state().menuOpen).toEqual('show')
     })
+  })
 
+  describe('hideLogOut', () => {
     it('should set menuOpen to hide if it is set to show', () => {
-      wrapper.state().menuOpen = 'show'
-      wrapper.instance().toggleMenu()
+      wrapper.instance().hideLogOut()
       expect(wrapper.state().menuOpen).toEqual('hide')
     })
   })

@@ -39,12 +39,15 @@ export class Calculations extends Component {
   }
 
   submitSpm = () => {
-    const { recentSpms } = this.props;
+    const { recentSpms, history } = this.props;
     const { result } = this.state;
     if (!recentSpms.includes(result)) {
       this.props.saveRecentSpm(result);
     }
-    this.props.history.push('/select-spm');
+    history.push({
+      pathname: '/select-spm',
+      state: { selection: result }
+    });
   }
 
   calculateManual = (event) => {

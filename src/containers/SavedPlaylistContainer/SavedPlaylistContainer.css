@@ -6,3 +6,9 @@
 .SavedPlaylistContainer .new-playlist {
   margin: 10px auto;
 }
+
+.no-playlists {
+  color: #63B700;
+  text-align: center;
+  margin: 20px;
+}
