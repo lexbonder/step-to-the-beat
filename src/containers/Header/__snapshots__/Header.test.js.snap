@@ -38,14 +38,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <header>
-        <button
+        <h2
                 className="home-button"
                 onClick={[Function]}
         >
                 <i
                         className="fas fa-home"
                 />
-        </button>
+        </h2>
         <h2
                 className="page-name"
         >
@@ -81,14 +81,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
+          <h2
             className="home-button"
             onClick={[Function]}
 >
             <i
                         className="fas fa-home"
             />
-</button>,
+</h2>,
           <h2
             className="page-name"
 >
@@ -142,7 +142,7 @@ ShallowWrapper {
             "rendered": null,
             "type": "i",
           },
-          "type": "button",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -241,14 +241,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <header>
-          <button
+          <h2
                     className="home-button"
                     onClick={[Function]}
           >
                     <i
                               className="fas fa-home"
                     />
-          </button>
+          </h2>
           <h2
                     className="page-name"
           >
@@ -284,14 +284,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
+            <h2
               className="home-button"
               onClick={[Function]}
 >
               <i
                             className="fas fa-home"
               />
-</button>,
+</h2>,
             <h2
               className="page-name"
 >
@@ -345,7 +345,7 @@ ShallowWrapper {
               "rendered": null,
               "type": "i",
             },
-            "type": "button",
+            "type": "h2",
           },
           Object {
             "instance": null,
@@ -450,14 +450,14 @@ ShallowWrapper {
 
 exports[`Header While a user is logged in userGreeting should match the snapshot if a user is logged in 1`] = `
 <header>
-  <button
+  <h2
     className="home-button"
     onClick={[Function]}
   >
     <i
       className="fas fa-home"
     />
-  </button>
+  </h2>
   <h2
     className="page-name"
   >

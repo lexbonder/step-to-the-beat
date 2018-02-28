@@ -55,7 +55,7 @@ ShallowWrapper {
           </h3>
 </div>,
         <button
-          className="next-and-back-buttons"
+          className="buttons"
           onClick={[Function]}
 >
           View
@@ -128,7 +128,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "View",
-          "className": "next-and-back-buttons",
+          "className": "buttons",
           "onClick": [Function],
         },
         "ref": null,
@@ -160,7 +160,7 @@ ShallowWrapper {
             </h3>
 </div>,
           <button
-            className="next-and-back-buttons"
+            className="buttons"
             onClick={[Function]}
 >
             View
@@ -233,7 +233,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "View",
-            "className": "next-and-back-buttons",
+            "className": "buttons",
             "onClick": [Function],
           },
           "ref": null,

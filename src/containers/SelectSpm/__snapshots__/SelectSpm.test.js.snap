@@ -1,15 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SelectSpm getRecentSpms should match the snapshot if there are no SPMs 1`] = `
+<li
+  className="spm-list-item"
+>
+  No Recents
+</li>
+`;
+
 exports[`SelectSpm getRecentSpms should match the snapshot if there are recent SPMs 1`] = `
 Array [
   <li
-    className="spm-list-item"
     onClick={[Function]}
 >
     148
 </li>,
   <li
-    className="spm-list-item"
     onClick={[Function]}
 >
     160
@@ -49,47 +55,31 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
+        <h3
           className="recent-spms"
 >
-          Your Recent SPMs
-</h2>,
-        <div
-          className="ul-wrapper"
->
-          <ul
-                    className="spm-list"
-          >
-                    <li
-                              className="spm-list-item"
-                              onClick={[Function]}
-                    >
-                              148
-                    </li>
-                    <li
-                              className="spm-list-item"
-                              onClick={[Function]}
-                    >
-                              160
-                    </li>
-                    <Link
-                              className="link-to-calc"
-                              replace={false}
-                              to="/calculations"
-                    >
-                              <li
-                                        className="spm-list-item"
-                              >
-                                        Calculate a new SPM...
-                              </li>
-                    </Link>
-          </ul>
-</div>,
-        <h3
-          className="spm-instructions"
->
-          Enter an SPM or select from above
+          Recent
 </h3>,
+        <ul
+          className="spm-list"
+>
+          <li
+                    onClick={[Function]}
+          >
+                    148
+          </li>
+          <li
+                    onClick={[Function]}
+          >
+                    160
+          </li>
+</ul>,
+        <button
+          className="buttons new-spm-button"
+          onClick={[Function]}
+>
+          Calculate
+</button>,
         <input
           className="select-spm-input"
           name="selection"
@@ -102,13 +92,13 @@ ShallowWrapper {
           className="button-wrapper"
 >
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     onClick={[Function]}
           >
                     Cancel
           </button>
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     disabled={true}
                     onClick={[Function]}
           >
@@ -125,155 +115,73 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Your Recent SPMs",
+          "children": "Recent",
           "className": "recent-spms",
         },
         "ref": null,
-        "rendered": "Your Recent SPMs",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <ul
-            className="spm-list"
->
-            <li
-                        className="spm-list-item"
-                        onClick={[Function]}
-            >
-                        148
-            </li>
-            <li
-                        className="spm-list-item"
-                        onClick={[Function]}
-            >
-                        160
-            </li>
-            <Link
-                        className="link-to-calc"
-                        replace={false}
-                        to="/calculations"
-            >
-                        <li
-                                    className="spm-list-item"
-                        >
-                                    Calculate a new SPM...
-                        </li>
-            </Link>
-</ul>,
-          "className": "ul-wrapper",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              Array [
-                <li
-                  className="spm-list-item"
-                  onClick={[Function]}
->
-                  148
-</li>,
-                <li
-                  className="spm-list-item"
-                  onClick={[Function]}
->
-                  160
-</li>,
-              ],
-              <Link
-                className="link-to-calc"
-                replace={false}
-                to="/calculations"
->
-                <li
-                                className="spm-list-item"
-                >
-                                Calculate a new SPM...
-                </li>
-</Link>,
-            ],
-            "className": "spm-list",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "host",
-              "props": Object {
-                "children": 148,
-                "className": "spm-list-item",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": 148,
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "host",
-              "props": Object {
-                "children": 160,
-                "className": "spm-list-item",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": 160,
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <li
-                  className="spm-list-item"
->
-                  Calculate a new SPM...
-</li>,
-                "className": "link-to-calc",
-                "replace": false,
-                "to": "/calculations",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Calculate a new SPM...",
-                  "className": "spm-list-item",
-                },
-                "ref": null,
-                "rendered": "Calculate a new SPM...",
-                "type": "li",
-              },
-              "type": [Function],
-            },
-          ],
-          "type": "ul",
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Enter an SPM or select from above",
-          "className": "spm-instructions",
-        },
-        "ref": null,
-        "rendered": "Enter an SPM or select from above",
+        "rendered": "Recent",
         "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              onClick={[Function]}
+>
+              148
+</li>,
+            <li
+              onClick={[Function]}
+>
+              160
+</li>,
+          ],
+          "className": "spm-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": 148,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": 148,
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": 160,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": 160,
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Calculate",
+          "className": "buttons new-spm-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Calculate",
+        "type": "button",
       },
       Object {
         "instance": null,
@@ -298,13 +206,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               onClick={[Function]}
 >
               Cancel
 </button>,
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               disabled={true}
               onClick={[Function]}
 >
@@ -321,7 +229,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Cancel",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -334,7 +242,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Select a Genre",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "disabled": true,
               "onClick": [Function],
             },
@@ -355,47 +263,31 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
+          <h3
             className="recent-spms"
 >
-            Your Recent SPMs
-</h2>,
-          <div
-            className="ul-wrapper"
->
-            <ul
-                        className="spm-list"
-            >
-                        <li
-                                    className="spm-list-item"
-                                    onClick={[Function]}
-                        >
-                                    148
-                        </li>
-                        <li
-                                    className="spm-list-item"
-                                    onClick={[Function]}
-                        >
-                                    160
-                        </li>
-                        <Link
-                                    className="link-to-calc"
-                                    replace={false}
-                                    to="/calculations"
-                        >
-                                    <li
-                                                className="spm-list-item"
-                                    >
-                                                Calculate a new SPM...
-                                    </li>
-                        </Link>
-            </ul>
-</div>,
-          <h3
-            className="spm-instructions"
->
-            Enter an SPM or select from above
+            Recent
 </h3>,
+          <ul
+            className="spm-list"
+>
+            <li
+                        onClick={[Function]}
+            >
+                        148
+            </li>
+            <li
+                        onClick={[Function]}
+            >
+                        160
+            </li>
+</ul>,
+          <button
+            className="buttons new-spm-button"
+            onClick={[Function]}
+>
+            Calculate
+</button>,
           <input
             className="select-spm-input"
             name="selection"
@@ -408,13 +300,13 @@ ShallowWrapper {
             className="button-wrapper"
 >
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         onClick={[Function]}
             >
                         Cancel
             </button>
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         disabled={true}
                         onClick={[Function]}
             >
@@ -431,155 +323,73 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Your Recent SPMs",
+            "children": "Recent",
             "className": "recent-spms",
           },
           "ref": null,
-          "rendered": "Your Recent SPMs",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <ul
-              className="spm-list"
->
-              <li
-                            className="spm-list-item"
-                            onClick={[Function]}
-              >
-                            148
-              </li>
-              <li
-                            className="spm-list-item"
-                            onClick={[Function]}
-              >
-                            160
-              </li>
-              <Link
-                            className="link-to-calc"
-                            replace={false}
-                            to="/calculations"
-              >
-                            <li
-                                          className="spm-list-item"
-                            >
-                                          Calculate a new SPM...
-                            </li>
-              </Link>
-</ul>,
-            "className": "ul-wrapper",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                Array [
-                  <li
-                    className="spm-list-item"
-                    onClick={[Function]}
->
-                    148
-</li>,
-                  <li
-                    className="spm-list-item"
-                    onClick={[Function]}
->
-                    160
-</li>,
-                ],
-                <Link
-                  className="link-to-calc"
-                  replace={false}
-                  to="/calculations"
->
-                  <li
-                                    className="spm-list-item"
-                  >
-                                    Calculate a new SPM...
-                  </li>
-</Link>,
-              ],
-              "className": "spm-list",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "0",
-                "nodeType": "host",
-                "props": Object {
-                  "children": 148,
-                  "className": "spm-list-item",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": 148,
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": "1",
-                "nodeType": "host",
-                "props": Object {
-                  "children": 160,
-                  "className": "spm-list-item",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": 160,
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": <li
-                    className="spm-list-item"
->
-                    Calculate a new SPM...
-</li>,
-                  "className": "link-to-calc",
-                  "replace": false,
-                  "to": "/calculations",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Calculate a new SPM...",
-                    "className": "spm-list-item",
-                  },
-                  "ref": null,
-                  "rendered": "Calculate a new SPM...",
-                  "type": "li",
-                },
-                "type": [Function],
-              },
-            ],
-            "type": "ul",
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Enter an SPM or select from above",
-            "className": "spm-instructions",
-          },
-          "ref": null,
-          "rendered": "Enter an SPM or select from above",
+          "rendered": "Recent",
           "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                onClick={[Function]}
+>
+                148
+</li>,
+              <li
+                onClick={[Function]}
+>
+                160
+</li>,
+            ],
+            "className": "spm-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": 148,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": 148,
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": 160,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": 160,
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Calculate",
+            "className": "buttons new-spm-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Calculate",
+          "type": "button",
         },
         Object {
           "instance": null,
@@ -604,13 +414,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 onClick={[Function]}
 >
                 Cancel
 </button>,
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 disabled={true}
                 onClick={[Function]}
 >
@@ -627,7 +437,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Cancel",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "onClick": [Function],
               },
               "ref": null,
@@ -640,7 +450,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Select a Genre",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "disabled": true,
                 "onClick": [Function],
               },

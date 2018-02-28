@@ -39,9 +39,9 @@ export class Calculations extends Component {
   }
 
   submitSpm = () => {
-    const { recentSpms, history } = this.props;
+    const { recentSpms, history, selectSpm } = this.props;
     const { result } = this.state;
-    this.props.selectSpm(result);
+    selectSpm(result);
     if (!recentSpms.includes(result)) {
       this.props.saveRecentSpm(result);
     }

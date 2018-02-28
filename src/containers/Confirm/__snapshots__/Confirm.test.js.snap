@@ -82,13 +82,13 @@ ShallowWrapper {
           className="button-wrapper"
 >
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     onClick={[Function]}
           >
                     Back
           </button>
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     onClick={[Function]}
           >
                     Get My Playlist!
@@ -162,13 +162,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               onClick={[Function]}
 >
               Back
 </button>,
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               onClick={[Function]}
 >
               Get My Playlist!
@@ -184,7 +184,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Back",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -197,7 +197,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Get My Playlist!",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -236,13 +236,13 @@ ShallowWrapper {
             className="button-wrapper"
 >
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         onClick={[Function]}
             >
                         Back
             </button>
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         onClick={[Function]}
             >
                         Get My Playlist!
@@ -316,13 +316,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 onClick={[Function]}
 >
                 Back
 </button>,
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 onClick={[Function]}
 >
                 Get My Playlist!
@@ -338,7 +338,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Back",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "onClick": [Function],
               },
               "ref": null,
@@ -351,7 +351,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Get My Playlist!",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "onClick": [Function],
               },
               "ref": null,

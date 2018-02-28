@@ -675,13 +675,13 @@ ShallowWrapper {
           className="button-wrapper"
 >
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     onClick={[Function]}
           >
                     Back
           </button>
           <button
-                    className="next-and-back-buttons"
+                    className="buttons"
                     disabled={true}
                     onClick={[Function]}
           >
@@ -2870,13 +2870,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               onClick={[Function]}
 >
               Back
 </button>,
             <button
-              className="next-and-back-buttons"
+              className="buttons"
               disabled={true}
               onClick={[Function]}
 >
@@ -2893,7 +2893,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Back",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -2906,7 +2906,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Confirm",
-              "className": "next-and-back-buttons",
+              "className": "buttons",
               "disabled": true,
               "onClick": [Function],
             },
@@ -3570,13 +3570,13 @@ ShallowWrapper {
             className="button-wrapper"
 >
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         onClick={[Function]}
             >
                         Back
             </button>
             <button
-                        className="next-and-back-buttons"
+                        className="buttons"
                         disabled={true}
                         onClick={[Function]}
             >
@@ -5765,13 +5765,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 onClick={[Function]}
 >
                 Back
 </button>,
               <button
-                className="next-and-back-buttons"
+                className="buttons"
                 disabled={true}
                 onClick={[Function]}
 >
@@ -5788,7 +5788,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Back",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "onClick": [Function],
               },
               "ref": null,
@@ -5801,7 +5801,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Confirm",
-                "className": "next-and-back-buttons",
+                "className": "buttons",
                 "disabled": true,
                 "onClick": [Function],
               },

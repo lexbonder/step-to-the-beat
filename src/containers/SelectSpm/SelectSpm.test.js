@@ -44,14 +44,14 @@ describe('SelectSpm', () => {
       expect(wrapper.instance().getRecentSpms()).toMatchSnapshot()
     })
 
-    it('should return undefined if there are no SPMs', () => {
+    it('should match the snapshot if there are no SPMs', () => {
       const wrapper = shallow(<SelectSpm
         recentSpms={[]}
         saveRecentSpm={mockSaveRecentSpm}
         selectSpm={mockSelectSpm}
         history={mockHistory}
       />)
-      expect(wrapper.instance().getRecentSpms()).toEqual(undefined)
+      expect(wrapper.instance().getRecentSpms()).toMatchSnapshot()
     })
   })
 

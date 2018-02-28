@@ -14,7 +14,7 @@ export class SelectSpm extends Component {
   }
 
   componentDidMount = () => {
-    if (this.props.location.state) {
+    if (this.props.location) {
       const { selection } = this.props.location.state
       this.setState({selection})
     }
