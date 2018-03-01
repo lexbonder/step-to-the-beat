@@ -1,5 +1,5 @@
 .SelectSpm {
-  margin: auto;
+  margin: 25% auto;
 }
 
 .recent-spms,
@@ -105,7 +105,7 @@ li:active {
 
 .new-spm-button {
   display: block;
-  margin: auto;
+  margin: 10% auto;
   width: 165px;
   font-size: 25px;
 }
