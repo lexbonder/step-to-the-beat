@@ -32,15 +32,15 @@ export class Header extends Component {
       saveAccessToken 
     } = this.props;
     if (!loggedIn && localStorage.currentUser) {
-      const retrieved = localStorage.getItem('currentUser')
-      const currentUser = JSON.parse(retrieved)
+      const retrieved = localStorage.getItem('currentUser');
+      const currentUser = JSON.parse(retrieved);
       
-      logInUser()
-      saveUser(currentUser.user)
-      saveAccessToken(currentUser.accessToken)
+      logInUser();
+      saveUser(currentUser.user);
+      saveAccessToken(currentUser.accessToken);
       
-      const userContent = await getUserContent(currentUser.user.id)
-      this.reloadUserContent(userContent)
+      const userContent = await getUserContent(currentUser.user.id);
+      this.reloadUserContent(userContent);
     }
   }
 
@@ -57,11 +57,11 @@ export class Header extends Component {
       genresFromFirebase(savedGenres);
       spmsFromFirebase(savedSpms);
     } 
-    history.push('/saved-playlists')
+    history.push('/saved-playlists');
   }
 
   hideLogOut = () => {
-    this.setState({menuOpen: 'hide'})
+    this.setState({menuOpen: 'hide'});
   }
 
   showLogOut = () => {
@@ -72,7 +72,7 @@ export class Header extends Component {
     const {logOutUser, clearAccessToken, history} = this.props;
     logOutUser();
     clearAccessToken();
-    localStorage.removeItem('currentUser')
+    localStorage.removeItem('currentUser');
     history.push('/');
   }
 
@@ -102,7 +102,7 @@ export class Header extends Component {
   }
 
   userGreeting = () => {
-    const { user, loggedIn, location, history } = this.props;
+    const { user, loggedIn } = this.props;
     if (loggedIn) {
       return (
         <header>
@@ -114,16 +114,19 @@ export class Header extends Component {
           </h2>
           <h2 className='page-name'>{this.pageName()}</h2>
           <div 
-          onMouseEnter={this.showLogOut}
-          onMouseLeave={this.hideLogOut}
-          className='menu-wrapper'>
+            className='menu-wrapper'>
             <img
               className='profile-pic'
               src={user.image}
               alt='profile'
             />
-            <div className={`menu ${this.state.menuOpen}`}>
-              <p className='log-out' onClick={this.handleLogOut}>Log Out</p>
+            <div 
+              className='menu'
+              onMouseEnter={this.showLogOut}
+              onMouseLeave={this.hideLogOut}>
+              <p 
+                className={`log-out ${this.state.menuOpen}`}
+                onClick={this.handleLogOut}>Log Out</p>
             </div>
           </div>
         </header>
@@ -155,7 +158,10 @@ Header.propTypes = {
   }),
   location: shape({
     pathname: string
-  })
+  }),
+  seedsFromFirebase: func,
+  genresFromFirebase: func,
+  spmsFromFirebase: func
 };
 
 export const MSTP = ({ loggedIn, user }) => ({

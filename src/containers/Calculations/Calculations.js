@@ -39,9 +39,9 @@ export class Calculations extends Component {
   }
 
   submitSpm = () => {
-    const { recentSpms, history } = this.props;
+    const { recentSpms, history, selectSpm } = this.props;
     const { result } = this.state;
-    this.props.selectSpm(result);
+    selectSpm(result);
     if (!recentSpms.includes(result)) {
       this.props.saveRecentSpm(result);
     }
@@ -127,7 +127,7 @@ export class Calculations extends Component {
   }
 
   handleBackButton = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const { history } = this.props;
     history.push('/select-spm');
   }
@@ -227,14 +227,19 @@ export class Calculations extends Component {
               <div className='speed-wrapper'>
                 <div className='speed-header'>
                   <h3>Speed</h3>
-                  <select className='speed-units' onChange={this.toggleMeasurement}>
+                  <select
+                    className='speed-units'
+                    onChange={this.toggleMeasurement}>
                     <option value='minuteMile'>Minutes per Mile</option>
                     <option>Miles per Hour</option>
                   </select>
                 </div>
                 <div className='speeds'>
                   <form
-                    className={`mile-minute-box ${this.state.minuteMileVisibility}`}
+                    className={`
+                      mile-minute-box 
+                      ${this.state.minuteMileVisibility}
+                    `}
                     onSubmit={this.calculateMinutePerMile}
                   >
                     <input
@@ -340,7 +345,8 @@ Calculations.propTypes = {
   saveRecentSpm: func,
   history: shape({
     push: func
-  })
+  }),
+  selectSpm: func
 };
 
 export const MSTP = ({recentSpms}) => ({recentSpms});

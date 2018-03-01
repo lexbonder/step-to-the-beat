@@ -2,17 +2,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Calculations, MSTP, MDTP } from './Calculations';
-import { saveRecentSpm } from '../../actions/actions';
+import { saveRecentSpm, selectSpm } from '../../actions/actions';
 
 describe('Calculations', () => {
   let wrapper;
   let mockSaveRecentSpm = jest.fn()
+  let mockSelectSpm = jest.fn()
   let mockHistory = {push: jest.fn()}
 
   beforeEach( () => {
     wrapper = shallow(<Calculations
       recentSpms={[]}
       saveRecentSpm={mockSaveRecentSpm}
+      selectSpm={mockSelectSpm}
       history={mockHistory}
     />)
   })
@@ -56,6 +58,7 @@ describe('Calculations', () => {
       const wrapper = shallow(<Calculations
         recentSpms={[25]}
         saveRecentSpm={mockSaveRecentSpm}
+        selectSpm={mockSelectSpm}
         history={mockHistory}
       />)
       wrapper.state().result = 25
@@ -64,10 +67,10 @@ describe('Calculations', () => {
       expect(mockSaveRecentSpm).not.toHaveBeenCalled()
     })
 
-    it('should redirect the user to /select-spm', () => {
+    it('should redirect the user to /select-genre', () => {
       wrapper.instance().submitSpm()
 
-      expect(mockHistory.push).toHaveBeenCalledWith('/select-spm')
+      expect(mockHistory.push).toHaveBeenCalledWith('/select-genre')
     })
 
     it('should call saveRecentSpm with whatever is saved in this.state.result and call this.props.history.push', () => {
@@ -171,7 +174,7 @@ describe('Calculations', () => {
     })
 
     it('should set state correctly target is minuteMile', () => {
-      const mockEvent = {target: {name: 'minuteMile'}}
+      const mockEvent = {target: {value: 'minuteMile'}}
       wrapper.instance().toggleMeasurement(mockEvent)
 
       expect(wrapper.state().minuteMileVisibility).toEqual('show')

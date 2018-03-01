@@ -18,6 +18,10 @@ body {
   background-color: #373737;
 }
 
+main {
+  margin-top: 80px;
+}
+
 .App {
   max-width: 700px;
   margin: auto;
@@ -80,5 +84,12 @@ p {
   .bottom-half-wrapper {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+@media (min-width: 700px) {
+  header,
+  .playlist-header {
+    width: 700px;
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { selectSpm, saveRecentSpm } from '../../actions/actions';
 import PropTypes from 'prop-types';
 import './SelectSpm.css';
@@ -11,13 +11,6 @@ export class SelectSpm extends Component {
     this.state = {
       selection: ''
     };
-  }
-
-  componentDidMount = () => {
-    if (this.props.location.state) {
-      const { selection } = this.props.location.state
-      this.setState({selection})
-    }
   }
 
   componentDidUpdate = () => {
@@ -38,7 +31,7 @@ export class SelectSpm extends Component {
       return <li
         className='spm-list-item'>
           No Recents
-      </li>
+      </li>;
     }
   }
 

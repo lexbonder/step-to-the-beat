@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SavedPlaylistContainer savedPlaylistsToRender should match the snapshot if there are no recentSeeds 1`] = `
-<h1>
+<h1
+  className="no-playlists"
+>
   You do not have any favorited playlists!
 </h1>
 `;
@@ -64,7 +66,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
-          className="next-and-back-buttons new-playlist"
+          className="buttons new-playlist"
           onClick={[Function]}
 >
           Get New Playlist
@@ -98,7 +100,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Get New Playlist",
-          "className": "next-and-back-buttons new-playlist",
+          "className": "buttons new-playlist",
           "onClick": [Function],
         },
         "ref": null,
@@ -173,7 +175,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="next-and-back-buttons new-playlist"
+            className="buttons new-playlist"
             onClick={[Function]}
 >
             Get New Playlist
@@ -207,7 +209,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Get New Playlist",
-            "className": "next-and-back-buttons new-playlist",
+            "className": "buttons new-playlist",
             "onClick": [Function],
           },
           "ref": null,

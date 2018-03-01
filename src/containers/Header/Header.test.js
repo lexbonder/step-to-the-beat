@@ -111,7 +111,7 @@ describe('Header', () => {
       expect(wrapper.instance().pageName()).toEqual('My Playlists')
     })
 
-    it('should return Select SPM when the pathname is /select-spm', () => {
+    it('should return Steps Per Minute when the pathname is /select-spm', () => {
       const mockLocation = {pathname: '/select-spm'}
       const wrapper = shallow(<Header 
         loggedIn={mockLoggedIn}
@@ -121,7 +121,7 @@ describe('Header', () => {
         history={mockHistory}
         location={mockLocation}
       />)
-      expect(wrapper.instance().pageName()).toEqual('Select SPM')
+      expect(wrapper.instance().pageName()).toEqual('Steps Per Minute')
     })
 
     it('should return Select Genre when the pathname is /select-genre', () => {

@@ -6,6 +6,10 @@ header {
   align-items: center;
   border-bottom: 5px solid #404040;
   text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #373737;
 }
 
 .home-button:hover,
@@ -32,8 +36,9 @@ header {
 
 .menu {
   position: absolute;
-  right: 40%;
-  top: 60px;
+  right: 35%;
+  top: 0px;
+  padding-top: 50px;
   width: 82px;
 }
 
