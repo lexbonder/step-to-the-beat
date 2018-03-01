@@ -68,6 +68,7 @@ p {
   }
 
   .SelectSpm {
+    margin: 25% auto;
     max-width: 550px;
   }
 
@@ -84,6 +85,10 @@ p {
   .bottom-half-wrapper {
     display: flex;
     justify-content: space-around;
+  }
+
+  .new-spm-button {
+    margin: 25% auto;
   }
 }
 
