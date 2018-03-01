@@ -114,16 +114,19 @@ export class Header extends Component {
           </h2>
           <h2 className='page-name'>{this.pageName()}</h2>
           <div 
-            onMouseEnter={this.showLogOut}
-            onMouseLeave={this.hideLogOut}
             className='menu-wrapper'>
             <img
               className='profile-pic'
               src={user.image}
               alt='profile'
             />
-            <div className={`menu ${this.state.menuOpen}`}>
-              <p className='log-out' onClick={this.handleLogOut}>Log Out</p>
+            <div 
+              className='menu'
+              onMouseEnter={this.showLogOut}
+              onMouseLeave={this.hideLogOut}>
+              <p 
+                className={`log-out ${this.state.menuOpen}`}
+                onClick={this.handleLogOut}>Log Out</p>
             </div>
           </div>
         </header>

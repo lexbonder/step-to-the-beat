@@ -14,12 +14,19 @@
 }
 
 .playlist-header {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 5px solid #404040;
   padding: 10px;
+  position: fixed;
+  top: 65px;
+  width: 100vw;
+  background-color: #373737;
+}
+
+.playlist {
+  margin-top: 145px;
 }
 
 .playlist-header h2, 

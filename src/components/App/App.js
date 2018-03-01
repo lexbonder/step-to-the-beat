@@ -20,33 +20,34 @@ export class App extends Component {
         <Route 
           path='/' 
           component={Header} />
-
-        <Route 
-          exact path='/' 
-          component={Home} /> 
-        
-        <Route 
-          exact path='/calculations'
-          component={Calculations} />
-        <Route 
-          exact path='/saved-playlists' 
-          component={SavedPlaylistContainer} />
-        <Route
-          exact path='/select-spm' 
-          component={SelectSpm} />
-        <Route
-          exact path='/select-genre'
-          component={SelectGenre} />
-        <Route
-          exact path='/confirm' 
-          component={Confirm} />
-        <Route
-          exact path='/playlist' 
-          component={Playlist} />
-        
-        <Route 
-          exact path='/login' 
-          component={Login} />
+        <main>
+          <Route 
+            exact path='/' 
+            component={Home} /> 
+          
+          <Route 
+            exact path='/calculations'
+            component={Calculations} />
+          <Route 
+            exact path='/saved-playlists' 
+            component={SavedPlaylistContainer} />
+          <Route
+            exact path='/select-spm' 
+            component={SelectSpm} />
+          <Route
+            exact path='/select-genre'
+            component={SelectGenre} />
+          <Route
+            exact path='/confirm' 
+            component={Confirm} />
+          <Route
+            exact path='/playlist' 
+            component={Playlist} />
+          
+          <Route 
+            exact path='/login' 
+            component={Login} />
+          </main>
       </div>
     );
   }

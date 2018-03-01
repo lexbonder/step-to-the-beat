@@ -10,7 +10,6 @@ export class Playlist extends Component {
     super();
     this.state = {
       playlistName: '',
-      playlistResponse: '',
       errorStatus: '',
       trackUris: []
     };
@@ -58,7 +57,9 @@ export class Playlist extends Component {
         createNewPlaylist(user.id, accessToken, playlistName);
       const { response, playlistId } = playlistResponse;
       populatePlaylist(user.id, playlistId, accessToken, trackUris);
-      this.setState({playlistResponse: response});
+      const sendButton = document.querySelector('.send')
+      sendButton.innerText = 'Playlist Sent!'
+      sendButton.setAttribute('disabled', true)
     } catch (error) {
       this.setState({errorStatus: error.message});
     }
@@ -67,11 +68,10 @@ export class Playlist extends Component {
   render() {
     return (
       <div>
-        <h2 className='response'>{this.state.playlistResponse}</h2>
         <div className='playlist-header'>
           <h2>{this.state.playlistName}</h2>
           <button
-            className='buttons'
+            className='buttons send'
             onClick={this.sendToSpotify}>
               Send to Spotify
           </button>
