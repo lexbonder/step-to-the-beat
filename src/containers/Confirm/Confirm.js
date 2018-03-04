@@ -21,7 +21,7 @@ export class Confirm extends Component {
   componentDidMount = () => {
     const { newSeed, history } = this.props;
     if (newSeed.genre) {
-      this.props.saveRecentSeed(newSeed);
+      this.props.saveRecentSeed({...newSeed, id: Date.now()});
       const { genre, spm } = newSeed;
       const capitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
       this.setState({

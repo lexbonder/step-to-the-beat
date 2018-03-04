@@ -8,7 +8,7 @@ jest.mock('../../apiCalls')
 
 describe('SavedPlaylist', () => {
   let wrapper;
-  let mockSeed = {spm: 148, genre: 'ska'}
+  let mockSeed = {spm: 148, genre: 'ska', id: 123}
   let mockUser = {name: 'Alex', id: 'lxbndr', image: 'superlongurl'}
   let mockAccessToken = '12345abcde';
   let mockSavePlaylist = jest.fn()
@@ -68,6 +68,13 @@ describe('SavedPlaylist', () => {
       await wrapper.instance().handleClick()
       await wrapper.instance().handleClick()
       expect(wrapper.state().errorState).not.toEqual('')
+    })
+  })
+
+  describe('handleDeleteButton', () => {
+    it('should call removeSeed with its seed ID', () => {
+      wrapper.instance().handleDeleteButton()
+      expect(mockHandleDeleteButton).toHaveBeenCalledWith(123)
     })
   })
 

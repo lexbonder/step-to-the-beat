@@ -7,8 +7,13 @@ import './SavedPlaylistContainer.css';
 
 export class SavedPlaylistContainer extends Component {
   
+  componentDidUpdate = () => {
+    this.savedPlaylistsToRender()
+  }
+
   savedPlaylistsToRender = () => {
     const { recentSeeds } = this.props;
+    console.log(recentSeeds)
     if (recentSeeds.length) {
       return recentSeeds.map((seed, index) => <SavedPlaylist
         key={index} 

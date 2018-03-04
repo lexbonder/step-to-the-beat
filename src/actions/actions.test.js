@@ -130,13 +130,23 @@ describe('Actions', () => {
 
   describe('recentSeedReducer', () => {
     it('saveRecentSeed should return an object with the type SAVE_RECENT_SEED and a seed object', () => {
-      const seed = {spm: 148, genre: 'ska'}
+      const seed = {spm: 148, genre: 'ska', id: 5}
       const expected = {
         type: 'SAVE_RECENT_SEED',
         seed
       }
       
       expect(actions.saveRecentSeed(seed)).toEqual(expected)
+    })
+
+    it('deleteSeed should return an object with the type DELETE_SEED and an id', () => {
+      const id = 12345;
+      const expected = {
+        type: 'DELETE_SEED',
+        id
+      }
+
+      expect(actions.deleteSeed(id)).toEqual(expected)
     })
 
     it('seedsFromFirebase should return an object with the type SEEDS_FROM_FIREBASE and an seeds object', () => {
