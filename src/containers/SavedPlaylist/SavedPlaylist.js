@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { savePlaylist, selectSeed, deleteSeed } from '../../actions/actions';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
+import { deleteFirebaseSeed } from '../../firebaseCalls';
 import PropTypes from 'prop-types';
 import './SavedPlaylist.css';
 
@@ -30,7 +31,8 @@ export class SavedPlaylist extends Component {
   }
 
   handleDeleteButton = () => {
-    const {deleteSeed, seed} = this.props;
+    const {deleteSeed, seed, user} = this.props;
+    deleteFirebaseSeed(user.id, seed.id)
     deleteSeed(seed.id)
   }
 
