@@ -48,16 +48,16 @@ export class SavedPlaylist extends Component {
             {seed.spm} SPM &bull; {seed.genre}
           </h3>
         </div>
-        <button
-          id={seed.id}
-          onClick={this.handleDeleteButton}
-          className='buttons delete'>
-          delete</button>
         <button 
           className='buttons'
           onClick={this.handleClick}>
             View
         </button>
+        <button
+          id={seed.id}
+          onClick={this.handleDeleteButton}
+          className='buttons delete'>
+          X</button>
       </div>
     );
   }

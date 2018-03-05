@@ -1,10 +1,8 @@
 .saved-playlist {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 100px 65px;
   align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
   padding: 10px;
-  position: relative;
   border-bottom: 1px solid #151515;
 }
 
@@ -16,4 +14,28 @@
 
 .playlist-details {
   color: #555555;
+}
+
+.delete {
+  width: 47px;
+  border-radius: 100%;
+  color: red;
+  border-color: red;
+}
+
+.delete {
+  width: 47px;
+  border-radius: 100%;
+  color: #FF4A19;
+  border-color: #FF4A19;
+}
+
+.delete:hover {
+  color: #FF6C3B;
+  border-color: #FF6C3B;
+}
+
+.delete:active {
+  color: #DD4907;
+  border-color: #DD4907
 }
