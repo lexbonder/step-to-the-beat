@@ -2,6 +2,8 @@
 
 exports[`Playlist playlistToRender should match the snapshot 1`] = `[Function]`;
 
+exports[`Playlist sendToSpotify should match the snapshot if the playlist is created in spotify 1`] = `Promise {}`;
+
 exports[`Playlist should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -44,9 +46,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="response"
-/>,
         <div
           className="playlist-header"
 >
@@ -54,7 +53,7 @@ ShallowWrapper {
                     Alex's 148 SPM, ska playlist
           </h2>
           <button
-                    className="buttons"
+                    className="buttons send"
                     onClick={[Function]}
           >
                     Send to Spotify
@@ -88,24 +87,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "",
-          "className": "response",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
             <h2>
               Alex's 148 SPM, ska playlist
 </h2>,
             <button
-              className="buttons"
+              className="buttons send"
               onClick={[Function]}
 >
               Send to Spotify
@@ -132,7 +119,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Send to Spotify",
-              "className": "buttons",
+              "className": "buttons send",
               "onClick": [Function],
             },
             "ref": null,
@@ -230,9 +217,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="response"
-/>,
           <div
             className="playlist-header"
 >
@@ -240,7 +224,7 @@ ShallowWrapper {
                         Alex's 148 SPM, ska playlist
             </h2>
             <button
-                        className="buttons"
+                        className="buttons send"
                         onClick={[Function]}
             >
                         Send to Spotify
@@ -274,24 +258,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "",
-            "className": "response",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
               <h2>
                 Alex's 148 SPM, ska playlist
 </h2>,
               <button
-                className="buttons"
+                className="buttons send"
                 onClick={[Function]}
 >
                 Send to Spotify
@@ -318,7 +290,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Send to Spotify",
-                "className": "buttons",
+                "className": "buttons send",
                 "onClick": [Function],
               },
               "ref": null,

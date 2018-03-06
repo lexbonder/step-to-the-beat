@@ -55,11 +55,11 @@ export class Playlist extends Component {
     try {
       const playlistResponse = await 
         createNewPlaylist(user.id, accessToken, playlistName);
-      const { response, playlistId } = playlistResponse;
+      const { playlistId } = playlistResponse;
       populatePlaylist(user.id, playlistId, accessToken, trackUris);
-      const sendButton = document.querySelector('.send')
-      sendButton.innerText = 'Playlist Sent!'
-      sendButton.setAttribute('disabled', true)
+      const sendButton = document.querySelector('.send');
+      sendButton.innerText = 'Playlist Sent!';
+      sendButton.setAttribute('disabled', true);
     } catch (error) {
       this.setState({errorStatus: error.message});
     }

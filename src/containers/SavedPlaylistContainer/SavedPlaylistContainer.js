@@ -8,7 +8,7 @@ import './SavedPlaylistContainer.css';
 export class SavedPlaylistContainer extends Component {
   
   componentDidUpdate = () => {
-    this.savedPlaylistsToRender()
+    this.savedPlaylistsToRender();
   }
 
   savedPlaylistsToRender = () => {

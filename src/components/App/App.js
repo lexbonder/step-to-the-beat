@@ -47,7 +47,7 @@ export class App extends Component {
           <Route 
             exact path='/login' 
             component={Login} />
-          </main>
+        </main>
       </div>
     );
   }

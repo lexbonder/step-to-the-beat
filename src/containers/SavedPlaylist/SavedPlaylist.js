@@ -12,7 +12,7 @@ export class SavedPlaylist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorState: '',
+      errorState: ''
     };
   }
 
@@ -32,8 +32,8 @@ export class SavedPlaylist extends Component {
 
   handleDeleteButton = () => {
     const {deleteSeed, seed, user} = this.props;
-    deleteFirebaseSeed(user.id, seed.id)
-    deleteSeed(seed.id)
+    deleteFirebaseSeed(user.id, seed.id);
+    deleteSeed(seed.id);
   }
 
   render() {
@@ -77,7 +77,8 @@ SavedPlaylist.propTypes = {
   seed: shape({
     spm: number,
     genre: string
-  })
+  }),
+  deleteSeed: func
 };
 
 export const MSTP = ({accessToken, user}) => ({accessToken, user});

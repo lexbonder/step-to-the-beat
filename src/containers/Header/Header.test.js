@@ -31,7 +31,7 @@ describe('Header', () => {
   })
 
   it('should have a default state', () => {
-    expect(wrapper.state()).toEqual({menuOpen: 'hide'})
+    expect(wrapper.state()).toEqual({menuOpen: 'hide', errorState: ''})
   })
 
   describe('While a user is logged in', () => {

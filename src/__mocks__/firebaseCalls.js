@@ -15,3 +15,7 @@ export const getUserContent = jest.fn()
       savedSpms: [148, 160]
     }))
   }))
+
+export const seedToFirebase = jest.fn()
+
+export const deleteFirebaseSeed = jest.fn()

@@ -178,7 +178,10 @@ ShallowWrapper {
                                                   className="speeds"
                                         >
                                                   <form
-                                                            className="mile-minute-box show"
+                                                            className="
+                                                                        mile-minute-box 
+                                                                        show
+                                                                      "
                                                             onSubmit={[Function]}
                                                   >
                                                             <input
@@ -440,7 +443,10 @@ ShallowWrapper {
                                                         className="speeds"
                                           >
                                                         <form
-                                                                      className="mile-minute-box show"
+                                                                      className="
+                                                                              mile-minute-box 
+                                                                              show
+                                                                            "
                                                                       onSubmit={[Function]}
                                                         >
                                                                       <input
@@ -912,7 +918,10 @@ ShallowWrapper {
                                                       className="speeds"
                                     >
                                                       <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                            mile-minute-box 
+                                                                            show
+                                                                          "
                                                                         onSubmit={[Function]}
                                                       >
                                                                         <input
@@ -1091,7 +1100,10 @@ ShallowWrapper {
                                             className="speeds"
                       >
                                             <form
-                                                                  className="mile-minute-box show"
+                                                                  className="
+                                                                  mile-minute-box 
+                                                                  show
+                                                                "
                                                                   onSubmit={[Function]}
                                             >
                                                                   <input
@@ -1350,7 +1362,10 @@ ShallowWrapper {
                           className="speeds"
 >
                           <form
-                                                    className="mile-minute-box show"
+                                                    className="
+                                                mile-minute-box 
+                                                show
+                                              "
                                                     onSubmit={[Function]}
                           >
                                                     <input
@@ -1531,7 +1546,10 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <form
-                              className="mile-minute-box show"
+                              className="
+                      mile-minute-box 
+                      show
+                    "
                               onSubmit={[Function]}
 >
                               <input
@@ -1666,7 +1684,10 @@ ShallowWrapper {
                                   </button>
 </div>,
                               ],
-                              "className": "mile-minute-box show",
+                              "className": "
+                      mile-minute-box 
+                      show
+                    ",
                               "onSubmit": [Function],
                             },
                             "ref": null,
@@ -2166,7 +2187,10 @@ ShallowWrapper {
                                                             className="speeds"
                                                 >
                                                             <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                         onSubmit={[Function]}
                                                             >
                                                                         <input
@@ -2428,7 +2452,10 @@ ShallowWrapper {
                                                                 className="speeds"
                                                 >
                                                                 <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                      mile-minute-box 
+                                                                                      show
+                                                                                    "
                                                                                 onSubmit={[Function]}
                                                                 >
                                                                                 <input
@@ -2900,7 +2927,10 @@ ShallowWrapper {
                                                             className="speeds"
                                         >
                                                             <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                                 onSubmit={[Function]}
                                                             >
                                                                                 <input
@@ -3079,7 +3109,10 @@ ShallowWrapper {
                                                 className="speeds"
                         >
                                                 <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                      mile-minute-box 
+                                                                      show
+                                                                    "
                                                                         onSubmit={[Function]}
                                                 >
                                                                         <input
@@ -3338,7 +3371,10 @@ ShallowWrapper {
                             className="speeds"
 >
                             <form
-                                                        className="mile-minute-box show"
+                                                        className="
+                                                  mile-minute-box 
+                                                  show
+                                                "
                                                         onSubmit={[Function]}
                             >
                                                         <input
@@ -3519,7 +3555,10 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <form
-                                className="mile-minute-box show"
+                                className="
+                      mile-minute-box 
+                      show
+                    "
                                 onSubmit={[Function]}
 >
                                 <input
@@ -3654,7 +3693,10 @@ ShallowWrapper {
                                     </button>
 </div>,
                                 ],
-                                "className": "mile-minute-box show",
+                                "className": "
+                      mile-minute-box 
+                      show
+                    ",
                                 "onSubmit": [Function],
                               },
                               "ref": null,
@@ -4185,7 +4227,10 @@ ShallowWrapper {
                                                   className="speeds"
                                         >
                                                   <form
-                                                            className="mile-minute-box show"
+                                                            className="
+                                                                        mile-minute-box 
+                                                                        show
+                                                                      "
                                                             onSubmit={[Function]}
                                                   >
                                                             <input
@@ -4447,7 +4492,10 @@ ShallowWrapper {
                                                         className="speeds"
                                           >
                                                         <form
-                                                                      className="mile-minute-box show"
+                                                                      className="
+                                                                              mile-minute-box 
+                                                                              show
+                                                                            "
                                                                       onSubmit={[Function]}
                                                         >
                                                                       <input
@@ -4919,7 +4967,10 @@ ShallowWrapper {
                                                       className="speeds"
                                     >
                                                       <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                            mile-minute-box 
+                                                                            show
+                                                                          "
                                                                         onSubmit={[Function]}
                                                       >
                                                                         <input
@@ -5098,7 +5149,10 @@ ShallowWrapper {
                                             className="speeds"
                       >
                                             <form
-                                                                  className="mile-minute-box show"
+                                                                  className="
+                                                                  mile-minute-box 
+                                                                  show
+                                                                "
                                                                   onSubmit={[Function]}
                                             >
                                                                   <input
@@ -5357,7 +5411,10 @@ ShallowWrapper {
                           className="speeds"
 >
                           <form
-                                                    className="mile-minute-box show"
+                                                    className="
+                                                mile-minute-box 
+                                                show
+                                              "
                                                     onSubmit={[Function]}
                           >
                                                     <input
@@ -5538,7 +5595,10 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <form
-                              className="mile-minute-box show"
+                              className="
+                      mile-minute-box 
+                      show
+                    "
                               onSubmit={[Function]}
 >
                               <input
@@ -5673,7 +5733,10 @@ ShallowWrapper {
                                   </button>
 </div>,
                               ],
-                              "className": "mile-minute-box show",
+                              "className": "
+                      mile-minute-box 
+                      show
+                    ",
                               "onSubmit": [Function],
                             },
                             "ref": null,
@@ -6173,7 +6236,10 @@ ShallowWrapper {
                                                             className="speeds"
                                                 >
                                                             <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                         onSubmit={[Function]}
                                                             >
                                                                         <input
@@ -6435,7 +6501,10 @@ ShallowWrapper {
                                                                 className="speeds"
                                                 >
                                                                 <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                      mile-minute-box 
+                                                                                      show
+                                                                                    "
                                                                                 onSubmit={[Function]}
                                                                 >
                                                                                 <input
@@ -6907,7 +6976,10 @@ ShallowWrapper {
                                                             className="speeds"
                                         >
                                                             <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                                 onSubmit={[Function]}
                                                             >
                                                                                 <input
@@ -7086,7 +7158,10 @@ ShallowWrapper {
                                                 className="speeds"
                         >
                                                 <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                      mile-minute-box 
+                                                                      show
+                                                                    "
                                                                         onSubmit={[Function]}
                                                 >
                                                                         <input
@@ -7345,7 +7420,10 @@ ShallowWrapper {
                             className="speeds"
 >
                             <form
-                                                        className="mile-minute-box show"
+                                                        className="
+                                                  mile-minute-box 
+                                                  show
+                                                "
                                                         onSubmit={[Function]}
                             >
                                                         <input
@@ -7526,7 +7604,10 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <form
-                                className="mile-minute-box show"
+                                className="
+                      mile-minute-box 
+                      show
+                    "
                                 onSubmit={[Function]}
 >
                                 <input
@@ -7661,7 +7742,10 @@ ShallowWrapper {
                                     </button>
 </div>,
                                 ],
-                                "className": "mile-minute-box show",
+                                "className": "
+                      mile-minute-box 
+                      show
+                    ",
                                 "onSubmit": [Function],
                               },
                               "ref": null,
@@ -8192,7 +8276,10 @@ ShallowWrapper {
                                                   className="speeds"
                                         >
                                                   <form
-                                                            className="mile-minute-box show"
+                                                            className="
+                                                                        mile-minute-box 
+                                                                        show
+                                                                      "
                                                             onSubmit={[Function]}
                                                   >
                                                             <input
@@ -8454,7 +8541,10 @@ ShallowWrapper {
                                                         className="speeds"
                                           >
                                                         <form
-                                                                      className="mile-minute-box show"
+                                                                      className="
+                                                                              mile-minute-box 
+                                                                              show
+                                                                            "
                                                                       onSubmit={[Function]}
                                                         >
                                                                       <input
@@ -8926,7 +9016,10 @@ ShallowWrapper {
                                                       className="speeds"
                                     >
                                                       <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                            mile-minute-box 
+                                                                            show
+                                                                          "
                                                                         onSubmit={[Function]}
                                                       >
                                                                         <input
@@ -9105,7 +9198,10 @@ ShallowWrapper {
                                             className="speeds"
                       >
                                             <form
-                                                                  className="mile-minute-box show"
+                                                                  className="
+                                                                  mile-minute-box 
+                                                                  show
+                                                                "
                                                                   onSubmit={[Function]}
                                             >
                                                                   <input
@@ -9364,7 +9460,10 @@ ShallowWrapper {
                           className="speeds"
 >
                           <form
-                                                    className="mile-minute-box show"
+                                                    className="
+                                                mile-minute-box 
+                                                show
+                                              "
                                                     onSubmit={[Function]}
                           >
                                                     <input
@@ -9545,7 +9644,10 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <form
-                              className="mile-minute-box show"
+                              className="
+                      mile-minute-box 
+                      show
+                    "
                               onSubmit={[Function]}
 >
                               <input
@@ -9680,7 +9782,10 @@ ShallowWrapper {
                                   </button>
 </div>,
                               ],
-                              "className": "mile-minute-box show",
+                              "className": "
+                      mile-minute-box 
+                      show
+                    ",
                               "onSubmit": [Function],
                             },
                             "ref": null,
@@ -10180,7 +10285,10 @@ ShallowWrapper {
                                                             className="speeds"
                                                 >
                                                             <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                         onSubmit={[Function]}
                                                             >
                                                                         <input
@@ -10442,7 +10550,10 @@ ShallowWrapper {
                                                                 className="speeds"
                                                 >
                                                                 <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                      mile-minute-box 
+                                                                                      show
+                                                                                    "
                                                                                 onSubmit={[Function]}
                                                                 >
                                                                                 <input
@@ -10914,7 +11025,10 @@ ShallowWrapper {
                                                             className="speeds"
                                         >
                                                             <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                                 onSubmit={[Function]}
                                                             >
                                                                                 <input
@@ -11093,7 +11207,10 @@ ShallowWrapper {
                                                 className="speeds"
                         >
                                                 <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                      mile-minute-box 
+                                                                      show
+                                                                    "
                                                                         onSubmit={[Function]}
                                                 >
                                                                         <input
@@ -11352,7 +11469,10 @@ ShallowWrapper {
                             className="speeds"
 >
                             <form
-                                                        className="mile-minute-box show"
+                                                        className="
+                                                  mile-minute-box 
+                                                  show
+                                                "
                                                         onSubmit={[Function]}
                             >
                                                         <input
@@ -11533,7 +11653,10 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <form
-                                className="mile-minute-box show"
+                                className="
+                      mile-minute-box 
+                      show
+                    "
                                 onSubmit={[Function]}
 >
                                 <input
@@ -11668,7 +11791,10 @@ ShallowWrapper {
                                     </button>
 </div>,
                                 ],
-                                "className": "mile-minute-box show",
+                                "className": "
+                      mile-minute-box 
+                      show
+                    ",
                                 "onSubmit": [Function],
                               },
                               "ref": null,
@@ -12199,7 +12325,10 @@ ShallowWrapper {
                                                   className="speeds"
                                         >
                                                   <form
-                                                            className="mile-minute-box show"
+                                                            className="
+                                                                        mile-minute-box 
+                                                                        show
+                                                                      "
                                                             onSubmit={[Function]}
                                                   >
                                                             <input
@@ -12461,7 +12590,10 @@ ShallowWrapper {
                                                         className="speeds"
                                           >
                                                         <form
-                                                                      className="mile-minute-box show"
+                                                                      className="
+                                                                              mile-minute-box 
+                                                                              show
+                                                                            "
                                                                       onSubmit={[Function]}
                                                         >
                                                                       <input
@@ -12933,7 +13065,10 @@ ShallowWrapper {
                                                       className="speeds"
                                     >
                                                       <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                            mile-minute-box 
+                                                                            show
+                                                                          "
                                                                         onSubmit={[Function]}
                                                       >
                                                                         <input
@@ -13112,7 +13247,10 @@ ShallowWrapper {
                                             className="speeds"
                       >
                                             <form
-                                                                  className="mile-minute-box show"
+                                                                  className="
+                                                                  mile-minute-box 
+                                                                  show
+                                                                "
                                                                   onSubmit={[Function]}
                                             >
                                                                   <input
@@ -13371,7 +13509,10 @@ ShallowWrapper {
                           className="speeds"
 >
                           <form
-                                                    className="mile-minute-box show"
+                                                    className="
+                                                mile-minute-box 
+                                                show
+                                              "
                                                     onSubmit={[Function]}
                           >
                                                     <input
@@ -13552,7 +13693,10 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <form
-                              className="mile-minute-box show"
+                              className="
+                      mile-minute-box 
+                      show
+                    "
                               onSubmit={[Function]}
 >
                               <input
@@ -13687,7 +13831,10 @@ ShallowWrapper {
                                   </button>
 </div>,
                               ],
-                              "className": "mile-minute-box show",
+                              "className": "
+                      mile-minute-box 
+                      show
+                    ",
                               "onSubmit": [Function],
                             },
                             "ref": null,
@@ -14187,7 +14334,10 @@ ShallowWrapper {
                                                             className="speeds"
                                                 >
                                                             <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                         onSubmit={[Function]}
                                                             >
                                                                         <input
@@ -14449,7 +14599,10 @@ ShallowWrapper {
                                                                 className="speeds"
                                                 >
                                                                 <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                      mile-minute-box 
+                                                                                      show
+                                                                                    "
                                                                                 onSubmit={[Function]}
                                                                 >
                                                                                 <input
@@ -14921,7 +15074,10 @@ ShallowWrapper {
                                                             className="speeds"
                                         >
                                                             <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                                 onSubmit={[Function]}
                                                             >
                                                                                 <input
@@ -15100,7 +15256,10 @@ ShallowWrapper {
                                                 className="speeds"
                         >
                                                 <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                      mile-minute-box 
+                                                                      show
+                                                                    "
                                                                         onSubmit={[Function]}
                                                 >
                                                                         <input
@@ -15359,7 +15518,10 @@ ShallowWrapper {
                             className="speeds"
 >
                             <form
-                                                        className="mile-minute-box show"
+                                                        className="
+                                                  mile-minute-box 
+                                                  show
+                                                "
                                                         onSubmit={[Function]}
                             >
                                                         <input
@@ -15540,7 +15702,10 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <form
-                                className="mile-minute-box show"
+                                className="
+                      mile-minute-box 
+                      show
+                    "
                                 onSubmit={[Function]}
 >
                                 <input
@@ -15675,7 +15840,10 @@ ShallowWrapper {
                                     </button>
 </div>,
                                 ],
-                                "className": "mile-minute-box show",
+                                "className": "
+                      mile-minute-box 
+                      show
+                    ",
                                 "onSubmit": [Function],
                               },
                               "ref": null,
@@ -16206,7 +16374,10 @@ ShallowWrapper {
                                                   className="speeds"
                                         >
                                                   <form
-                                                            className="mile-minute-box show"
+                                                            className="
+                                                                        mile-minute-box 
+                                                                        show
+                                                                      "
                                                             onSubmit={[Function]}
                                                   >
                                                             <input
@@ -16468,7 +16639,10 @@ ShallowWrapper {
                                                         className="speeds"
                                           >
                                                         <form
-                                                                      className="mile-minute-box show"
+                                                                      className="
+                                                                              mile-minute-box 
+                                                                              show
+                                                                            "
                                                                       onSubmit={[Function]}
                                                         >
                                                                       <input
@@ -16940,7 +17114,10 @@ ShallowWrapper {
                                                       className="speeds"
                                     >
                                                       <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                            mile-minute-box 
+                                                                            show
+                                                                          "
                                                                         onSubmit={[Function]}
                                                       >
                                                                         <input
@@ -17119,7 +17296,10 @@ ShallowWrapper {
                                             className="speeds"
                       >
                                             <form
-                                                                  className="mile-minute-box show"
+                                                                  className="
+                                                                  mile-minute-box 
+                                                                  show
+                                                                "
                                                                   onSubmit={[Function]}
                                             >
                                                                   <input
@@ -17378,7 +17558,10 @@ ShallowWrapper {
                           className="speeds"
 >
                           <form
-                                                    className="mile-minute-box show"
+                                                    className="
+                                                mile-minute-box 
+                                                show
+                                              "
                                                     onSubmit={[Function]}
                           >
                                                     <input
@@ -17559,7 +17742,10 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <form
-                              className="mile-minute-box show"
+                              className="
+                      mile-minute-box 
+                      show
+                    "
                               onSubmit={[Function]}
 >
                               <input
@@ -17694,7 +17880,10 @@ ShallowWrapper {
                                   </button>
 </div>,
                               ],
-                              "className": "mile-minute-box show",
+                              "className": "
+                      mile-minute-box 
+                      show
+                    ",
                               "onSubmit": [Function],
                             },
                             "ref": null,
@@ -18194,7 +18383,10 @@ ShallowWrapper {
                                                             className="speeds"
                                                 >
                                                             <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                         onSubmit={[Function]}
                                                             >
                                                                         <input
@@ -18456,7 +18648,10 @@ ShallowWrapper {
                                                                 className="speeds"
                                                 >
                                                                 <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                      mile-minute-box 
+                                                                                      show
+                                                                                    "
                                                                                 onSubmit={[Function]}
                                                                 >
                                                                                 <input
@@ -18928,7 +19123,10 @@ ShallowWrapper {
                                                             className="speeds"
                                         >
                                                             <form
-                                                                                className="mile-minute-box show"
+                                                                                className="
+                                                                                  mile-minute-box 
+                                                                                  show
+                                                                                "
                                                                                 onSubmit={[Function]}
                                                             >
                                                                                 <input
@@ -19107,7 +19305,10 @@ ShallowWrapper {
                                                 className="speeds"
                         >
                                                 <form
-                                                                        className="mile-minute-box show"
+                                                                        className="
+                                                                      mile-minute-box 
+                                                                      show
+                                                                    "
                                                                         onSubmit={[Function]}
                                                 >
                                                                         <input
@@ -19366,7 +19567,10 @@ ShallowWrapper {
                             className="speeds"
 >
                             <form
-                                                        className="mile-minute-box show"
+                                                        className="
+                                                  mile-minute-box 
+                                                  show
+                                                "
                                                         onSubmit={[Function]}
                             >
                                                         <input
@@ -19547,7 +19751,10 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <form
-                                className="mile-minute-box show"
+                                className="
+                      mile-minute-box 
+                      show
+                    "
                                 onSubmit={[Function]}
 >
                                 <input
@@ -19682,7 +19889,10 @@ ShallowWrapper {
                                     </button>
 </div>,
                                 ],
-                                "className": "mile-minute-box show",
+                                "className": "
+                      mile-minute-box 
+                      show
+                    ",
                                 "onSubmit": [Function],
                               },
                               "ref": null,

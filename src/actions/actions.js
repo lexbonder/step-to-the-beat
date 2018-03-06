@@ -79,7 +79,7 @@ export const saveRecentSeed = seed => ({
 export const deleteSeed = id => ({
   type: 'DELETE_SEED',
   id
-})
+});
 
 export const seedsFromFirebase = seeds => ({
   type: 'SEEDS_FROM_FIREBASE',
