@@ -54,7 +54,7 @@ p {
 .error {
   text-align: center;
   color: black;
-  background-color: red;
+  background-color: #FF4A19;
 }
 
 @media (min-width: 500px) {

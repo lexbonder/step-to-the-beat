@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
 import { savePlaylist, saveRecentSeed } from '../../actions/actions';
-import { userContentToFirebase } from '../../firebaseCalls';
+import { userContentToFirebase, seedToFirebase } from '../../firebaseCalls';
 import PropTypes from 'prop-types';
 import './Confirm.css';
 
@@ -21,7 +21,7 @@ export class Confirm extends Component {
   componentDidMount = () => {
     const { newSeed, history } = this.props;
     if (newSeed.genre) {
-      this.props.saveRecentSeed(newSeed);
+      this.props.saveRecentSeed({...newSeed, id: Date.now()});
       const { genre, spm } = newSeed;
       const capitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
       this.setState({
@@ -47,7 +47,8 @@ export class Confirm extends Component {
       const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
       const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
       this.props.savePlaylist(cleanedPlaylist);
-      userContentToFirebase(user.id, recentSpms, recentGenres, recentSeeds);
+      recentSeeds.forEach(seed => seedToFirebase(user.id, seed))
+      userContentToFirebase(user.id, recentSpms, recentGenres);
       history.push('/playlist');
     } catch (error) {
       this.setState({

@@ -3,7 +3,7 @@ export const recentSpmsReducer = (state = [], action) => {
   case 'SAVE_RECENT_SPM':
     return [...state, action.spm];
   case 'SPMS_FROM_FIREBASE':
-    return action.spms;
+    return action.spms || [];
   default:
     return state;
   }

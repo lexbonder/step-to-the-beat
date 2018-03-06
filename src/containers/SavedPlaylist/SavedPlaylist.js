@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { savePlaylist, selectSeed } from '../../actions/actions';
+import { savePlaylist, selectSeed, deleteSeed } from '../../actions/actions';
 import { getPlaylistData } from '../../apiCalls';
 import { playlistCleaner } from '../../dataCleaner';
+import { deleteFirebaseSeed } from '../../firebaseCalls';
 import PropTypes from 'prop-types';
 import './SavedPlaylist.css';
 
@@ -12,20 +13,7 @@ export class SavedPlaylist extends Component {
     super(props);
     this.state = {
       errorState: '',
-      spm: '',
-      genre: '',
-      playlistName: ''
     };
-  }
-
-  componentDidMount = () => {
-    const { user, seed } = this.props;
-    const {spm, genre} = seed;
-    this.setState({
-      spm,
-      genre,
-      playlistName: `${user.name}'s ${spm} SPM, ${genre} playlist`
-    });
   }
 
   handleClick = async () => {
@@ -42,16 +30,22 @@ export class SavedPlaylist extends Component {
     }
   }
 
+  handleDeleteButton = () => {
+    const {deleteSeed, seed, user} = this.props;
+    deleteFirebaseSeed(user.id, seed.id)
+    deleteSeed(seed.id)
+  }
+
   render() {
-    const {playlistName, spm, genre} = this.state;
+    const {seed, user} = this.props;
     return (
       <div className='saved-playlist'>
         <div>
           <h2 className='playlist-name'>
-            {playlistName}
+            {`${user.name}'s ${seed.spm} SPM, ${seed.genre} playlist`}
           </h2>
           <h3 className='playlist-details'>
-            {spm} SPM &bull; {genre}
+            {seed.spm} SPM &bull; {seed.genre}
           </h3>
         </div>
         <button 
@@ -59,6 +53,11 @@ export class SavedPlaylist extends Component {
           onClick={this.handleClick}>
             View
         </button>
+        <button
+          id={seed.id}
+          onClick={this.handleDeleteButton}
+          className='buttons delete'>
+          X</button>
       </div>
     );
   }
@@ -85,7 +84,8 @@ export const MSTP = ({accessToken, user}) => ({accessToken, user});
 
 export const MDTP = dispatch => ({
   savePlaylist: playlist => dispatch(savePlaylist(playlist)),
-  selectSeed: seed => dispatch(selectSeed(seed))
+  selectSeed: seed => dispatch(selectSeed(seed)),
+  deleteSeed: id => dispatch(deleteSeed(id))
 });
 
 export default withRouter(connect(MSTP, MDTP)(SavedPlaylist));

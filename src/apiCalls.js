@@ -10,6 +10,7 @@ export const getUserName = async (accessToken) => {
       return await initialFetch.json();
     } else if ( initialFetch.status === 401 ) {
       authorize()
+      throw new Error('Your session with spotify timed out, try again')
     } else {
       throw new Error('Failed to get User Name')
     }
@@ -27,6 +28,7 @@ export const getPlaylistData = async (bpm, genre, accessToken) => {
       return await initialFetch.json();
     } else if ( initialFetch.status === 401 ) {
       authorize()
+      throw new Error('Your session with spotify timed out, try again')
     } else {
       throw new Error('Failed to Retrieve Playlist Data')
     }
@@ -56,6 +58,7 @@ export const createNewPlaylist = async (userId, accessToken, playlistName) => {
       };
     } else if ( initialFetch.status === 401 ) {
       authorize()
+      throw new Error('Your session with spotify timed out, try again')
     } else {
       throw new Error('Create New Playlist in Spotify Failed')
     }
@@ -79,6 +82,7 @@ export const populatePlaylist = async (userId, playlistId, accessToken, tracks) 
       return await initialFetch.status
     } else if ( initialFetch.status === 401 ) {
       authorize()
+      throw new Error('Your session with spotify timed out, try again')
     } else {
       throw new Error('Add Songs to Playlist Failed')
     }

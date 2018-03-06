@@ -53,7 +53,9 @@ export class Header extends Component {
     } = this.props;
     if (userContent.val()) {
       const { savedGenres, savedSeeds, savedSpms} = userContent.val();
-      seedsFromFirebase(savedSeeds);
+      if (savedSeeds) {
+      seedsFromFirebase(Object.values(savedSeeds));
+      }
       genresFromFirebase(savedGenres);
       spmsFromFirebase(savedSpms);
     } 

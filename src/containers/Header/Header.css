@@ -1,6 +1,6 @@
 header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 65px 1fr 65px;
   grid-template-rows: 60px;
   justify-content: center;
   align-items: center;
@@ -36,8 +36,8 @@ header {
 
 .menu {
   position: absolute;
-  right: 35%;
-  top: 0px;
+  right: 0;
+  top: 0;
   padding-top: 50px;
   width: 82px;
 }
