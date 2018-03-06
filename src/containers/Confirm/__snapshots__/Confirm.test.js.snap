@@ -14,6 +14,7 @@ ShallowWrapper {
     newSeed={
         Object {
             "genre": "ska",
+            "id": 0,
             "spm": 148,
           }
     }
@@ -27,11 +28,8 @@ ShallowWrapper {
         Array [
             Object {
               "genre": "ska",
+              "id": 0,
               "spm": 148,
-            },
-            Object {
-              "genre": "rock",
-              "spm": 160,
             },
           ]
     }

@@ -22,46 +22,48 @@ ShallowWrapper {
           component={[Function]}
           path="/"
 />,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/calculations"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/saved-playlists"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/select-spm"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/select-genre"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/confirm"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/playlist"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/login"
-/>,
+        <main>
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/calculations"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/saved-playlists"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/select-spm"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/select-genre"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/confirm"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/playlist"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/login"
+          />
+</main>,
       ],
       "className": "App",
     },
@@ -82,106 +84,159 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/",
+          "children": Array [
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/calculations"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/saved-playlists"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/select-spm"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/select-genre"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/confirm"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/playlist"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+/>,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/calculations",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/saved-playlists",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/select-spm",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/select-genre",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/confirm",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/playlist",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/login",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/calculations",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/saved-playlists",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/select-spm",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/select-genre",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/confirm",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/playlist",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/login",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "main",
       },
     ],
     "type": "div",
@@ -197,46 +252,48 @@ ShallowWrapper {
             component={[Function]}
             path="/"
 />,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/calculations"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/saved-playlists"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/select-spm"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/select-genre"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/confirm"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/playlist"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/login"
-/>,
+          <main>
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/calculations"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/saved-playlists"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/select-spm"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/select-genre"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/confirm"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/playlist"
+            />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/login"
+            />
+</main>,
         ],
         "className": "App",
       },
@@ -257,106 +314,159 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/",
+            "children": Array [
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/calculations"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/saved-playlists"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/select-spm"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/select-genre"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/confirm"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/playlist"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/calculations",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/saved-playlists",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/select-spm",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/select-genre",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/confirm",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/playlist",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/login",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/calculations",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/saved-playlists",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/select-spm",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/select-genre",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/confirm",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/playlist",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/login",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "main",
         },
       ],
       "type": "div",

@@ -53,8 +53,6 @@ ShallowWrapper {
         </h2>
         <div
                 className="menu-wrapper"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
         >
                 <img
                         alt="profile"
@@ -62,10 +60,12 @@ ShallowWrapper {
                         src={undefined}
                 />
                 <div
-                        className="menu hide"
+                        className="menu"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                 >
                         <p
-                                className="log-out"
+                                className="log-out hide"
                                 onClick={[Function]}
                         >
                                 Log Out
@@ -96,8 +96,6 @@ ShallowWrapper {
 </h2>,
           <div
             className="menu-wrapper"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
 >
             <img
                         alt="profile"
@@ -105,10 +103,12 @@ ShallowWrapper {
                         src={undefined}
             />
             <div
-                        className="menu hide"
+                        className="menu"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
             >
                         <p
-                                    className="log-out"
+                                    className="log-out hide"
                                     onClick={[Function]}
                         >
                                     Log Out
@@ -168,10 +168,12 @@ ShallowWrapper {
                 src={undefined}
 />,
               <div
-                className="menu hide"
+                className="menu"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
 >
                 <p
-                                className="log-out"
+                                className="log-out hide"
                                 onClick={[Function]}
                 >
                                 Log Out
@@ -179,8 +181,6 @@ ShallowWrapper {
 </div>,
             ],
             "className": "menu-wrapper",
-            "onMouseEnter": [Function],
-            "onMouseLeave": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -203,12 +203,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <p
-                  className="log-out"
+                  className="log-out hide"
                   onClick={[Function]}
 >
                   Log Out
 </p>,
-                "className": "menu hide",
+                "className": "menu",
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
               },
               "ref": null,
               "rendered": Object {
@@ -217,7 +219,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Log Out",
-                  "className": "log-out",
+                  "className": "log-out hide",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -256,8 +258,6 @@ ShallowWrapper {
           </h2>
           <div
                     className="menu-wrapper"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
           >
                     <img
                               alt="profile"
@@ -265,10 +265,12 @@ ShallowWrapper {
                               src={undefined}
                     />
                     <div
-                              className="menu hide"
+                              className="menu"
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
                     >
                               <p
-                                        className="log-out"
+                                        className="log-out hide"
                                         onClick={[Function]}
                               >
                                         Log Out
@@ -299,8 +301,6 @@ ShallowWrapper {
 </h2>,
             <div
               className="menu-wrapper"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
 >
               <img
                             alt="profile"
@@ -308,10 +308,12 @@ ShallowWrapper {
                             src={undefined}
               />
               <div
-                            className="menu hide"
+                            className="menu"
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
               >
                             <p
-                                          className="log-out"
+                                          className="log-out hide"
                                           onClick={[Function]}
                             >
                                           Log Out
@@ -371,10 +373,12 @@ ShallowWrapper {
                   src={undefined}
 />,
                 <div
-                  className="menu hide"
+                  className="menu"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
 >
                   <p
-                                    className="log-out"
+                                    className="log-out hide"
                                     onClick={[Function]}
                   >
                                     Log Out
@@ -382,8 +386,6 @@ ShallowWrapper {
 </div>,
               ],
               "className": "menu-wrapper",
-              "onMouseEnter": [Function],
-              "onMouseLeave": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -406,12 +408,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <p
-                    className="log-out"
+                    className="log-out hide"
                     onClick={[Function]}
 >
                     Log Out
 </p>,
-                  "className": "menu hide",
+                  "className": "menu",
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
                 },
                 "ref": null,
                 "rendered": Object {
@@ -420,7 +424,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Log Out",
-                    "className": "log-out",
+                    "className": "log-out hide",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -465,8 +469,6 @@ exports[`Header While a user is logged in userGreeting should match the snapshot
   </h2>
   <div
     className="menu-wrapper"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <img
       alt="profile"
@@ -474,10 +476,12 @@ exports[`Header While a user is logged in userGreeting should match the snapshot
       src={undefined}
     />
     <div
-      className="menu hide"
+      className="menu"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <p
-        className="log-out"
+        className="log-out hide"
         onClick={[Function]}
       >
         Log Out

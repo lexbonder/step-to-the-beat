@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedPlaylist
     accessToken="12345abcde"
+    deleteSeed={[Function]}
     history={
         Object {
             "push": [Function],
@@ -15,6 +16,7 @@ ShallowWrapper {
     seed={
         Object {
             "genre": "ska",
+            "id": 123,
             "spm": 148,
           }
     }
@@ -59,6 +61,13 @@ ShallowWrapper {
           onClick={[Function]}
 >
           View
+</button>,
+        <button
+          className="buttons delete"
+          id={123}
+          onClick={[Function]}
+>
+          X
 </button>,
       ],
       "className": "saved-playlist",
@@ -135,6 +144,20 @@ ShallowWrapper {
         "rendered": "View",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "X",
+          "className": "buttons delete",
+          "id": 123,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "X",
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -164,6 +187,13 @@ ShallowWrapper {
             onClick={[Function]}
 >
             View
+</button>,
+          <button
+            className="buttons delete"
+            id={123}
+            onClick={[Function]}
+>
+            X
 </button>,
         ],
         "className": "saved-playlist",
@@ -238,6 +268,20 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "View",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "X",
+            "className": "buttons delete",
+            "id": 123,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "X",
           "type": "button",
         },
       ],

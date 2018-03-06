@@ -2,9 +2,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SavedPlaylist, MSTP, MDTP } from './SavedPlaylist';
-import { savePlaylist, selectSeed } from '../../actions/actions';
+import { savePlaylist, selectSeed, deleteSeed } from '../../actions/actions';
+import * as firebaseCalls from '../../firebaseCalls';
 
 jest.mock('../../apiCalls')
+jest.mock('../../firebaseCalls')
 
 describe('SavedPlaylist', () => {
   let wrapper;
@@ -14,6 +16,7 @@ describe('SavedPlaylist', () => {
   let mockSavePlaylist = jest.fn()
   let mockSelectSeed = jest.fn()
   let mockHistory = { push: jest.fn() }
+  let mockDeleteSeed = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(<SavedPlaylist
@@ -23,6 +26,7 @@ describe('SavedPlaylist', () => {
       savePlaylist={mockSavePlaylist}
       selectSeed={mockSelectSeed}
       history={mockHistory} 
+      deleteSeed={mockDeleteSeed}
     />)
   })
 
@@ -30,16 +34,11 @@ describe('SavedPlaylist', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  describe('componentDidMount', () => {
-    it('should set genre playlistName and spm after mounting', () => {
-      const expectedState = {
-        errorState: '',
-        genre: 'ska',
-        playlistName: `Alex's 148 SPM, ska playlist`,
-        spm: 148,
-      }
-      expect(wrapper.state()).toEqual(expectedState)
-    })
+  it('should have a default state', () => {
+    const expectedState = {
+      errorState: ''
+    }
+    expect(wrapper.state()).toEqual(expectedState)
   })
 
   describe('handleClick', () => {
@@ -72,9 +71,14 @@ describe('SavedPlaylist', () => {
   })
 
   describe('handleDeleteButton', () => {
-    it('should call removeSeed with its seed ID', () => {
+    it('should call deleteSeed with its seed ID', () => {
       wrapper.instance().handleDeleteButton()
-      expect(mockHandleDeleteButton).toHaveBeenCalledWith(123)
+      expect(mockDeleteSeed).toHaveBeenCalledWith(123)
+    })
+
+    it('should call deleteFirebaseSeed with the userId and seed ID', () => {
+      wrapper.instance().handleDeleteButton()
+      expect(firebaseCalls.deleteFirebaseSeed).toHaveBeenCalledWith('lxbndr', 123)
     })
   })
 
@@ -119,6 +123,11 @@ describe('SavedPlaylist', () => {
     it('should call dispatch when selectSeed is called', () => {
       result.selectSeed(mockSeed)
       expect(mockDispatch).toHaveBeenCalledWith(selectSeed(mockSeed))
+    })
+
+    it('should call dispatch when deleteSeed is called', () => {
+      result.deleteSeed(mockSeed.id)
+      expect(mockDispatch).toHaveBeenCalledWith(deleteSeed(mockSeed.id))
     })
   })
 })

@@ -47,7 +47,7 @@ export class Confirm extends Component {
       const rawPlaylistData = await getPlaylistData(spm, genre, accessToken);
       const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
       this.props.savePlaylist(cleanedPlaylist);
-      recentSeeds.forEach(seed => seedToFirebase(user.id, seed))
+      recentSeeds.forEach(seed => seedToFirebase(user.id, seed));
       userContentToFirebase(user.id, recentSpms, recentGenres);
       history.push('/playlist');
     } catch (error) {

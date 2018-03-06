@@ -12,7 +12,6 @@ import {
   genresFromFirebase, 
   spmsFromFirebase
 } from '../../actions/actions';
-// import { logInUser, saveUser, saveAccessToken }
 import PropTypes from 'prop-types';
 import './Header.css';
 
@@ -20,7 +19,8 @@ export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: 'hide'
+      menuOpen: 'hide',
+      errorState: ''
     };
   }
 
@@ -38,9 +38,12 @@ export class Header extends Component {
       logInUser();
       saveUser(currentUser.user);
       saveAccessToken(currentUser.accessToken);
-      
-      const userContent = await getUserContent(currentUser.user.id);
-      this.reloadUserContent(userContent);
+      try {
+        const userContent = await getUserContent(currentUser.user.id);
+        this.reloadUserContent(userContent);
+      } catch (error) {
+        this.setState({errorState: error.message});
+      }
     }
   }
 
@@ -54,7 +57,7 @@ export class Header extends Component {
     if (userContent.val()) {
       const { savedGenres, savedSeeds, savedSpms} = userContent.val();
       if (savedSeeds) {
-      seedsFromFirebase(Object.values(savedSeeds));
+        seedsFromFirebase(Object.values(savedSeeds));
       }
       genresFromFirebase(savedGenres);
       spmsFromFirebase(savedSpms);

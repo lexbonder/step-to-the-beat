@@ -4,7 +4,7 @@ exports[`SavedPlaylistContainer savedPlaylistsToRender should match the snapshot
 <h1
   className="no-playlists"
 >
-  You do not have any favorited playlists!
+  You do not have any favorite playlists!
 </h1>
 `;
 

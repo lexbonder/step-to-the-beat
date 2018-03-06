@@ -2,20 +2,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Confirm, MSTP, MDTP } from './Confirm';
-import { savePlaylist, saveRecentSeed } from '../../actions/actions'; 
+import { savePlaylist, saveRecentSeed } from '../../actions/actions';
+import * as firebaseCalls from '../../firebaseCalls'; 
 
 jest.mock('../../apiCalls');
 jest.mock('../../firebaseCalls');
 
 describe('Confirm', () => {
   let wrapper
-  let mockNewSeed = {spm: 148, genre: 'ska'}
+  let mockNewSeed = {spm: 148, genre: 'ska', id: 0}
   let mockUser = {name: 'Alex', id: 'lxbndr'}
   let mockRecentSpms = [148, 160]
   let mockRecentGenres = ['ska', 'rock']
   let mockRecentSeeds = [
-    {spm: 148, genre: 'ska'},
-    {spm: 160, genre: 'rock'}
+    {spm: 148, genre: 'ska', id: 0},
   ]
   let mockAccessToken = '12345abcde'
   let mockSavePlaylist = jest.fn()
@@ -23,6 +23,7 @@ describe('Confirm', () => {
   let mockHistory = {push: jest.fn()}
 
   beforeEach(() => {
+    Date.now = jest.fn().mockImplementation(() => 0) 
     wrapper = shallow(<Confirm 
       newSeed={mockNewSeed}
       user={mockUser}
@@ -42,7 +43,7 @@ describe('Confirm', () => {
 
   describe('componentDidMount', () => {
     it('should call save recent seed with a newSeed object when the component mounts', () => {
-      expect(mockSaveRecentSeed).toHaveBeenCalledWith({spm: 148, genre: 'ska'})
+      expect(mockSaveRecentSeed).toHaveBeenCalledWith({spm: 148, genre: 'ska', id: 0})
     })
 
     it('should set the genre and spm into state', () => {
@@ -78,6 +79,20 @@ describe('Confirm', () => {
       }]
       await wrapper.instance().getPlaylist()
       expect(mockSavePlaylist).toHaveBeenCalledWith(mockCleanedPlaylist)
+    })
+
+    it('calls seedToFirebase with a user ID and seed', async () => {
+      const expected = ['lxbndr', {genre: 'ska', id: 0, spm: 148}]
+
+      await wrapper.instance().getPlaylist()
+      expect(firebaseCalls.seedToFirebase).toHaveBeenCalledWith(...expected)
+    })
+
+    it('calls userContentToFirebase with a userId, recentSpms, and recentGenres', async () => {
+      const expected = ['lxbndr', [148, 160], ['ska', 'rock']]
+
+      await wrapper.instance().getPlaylist()
+      expect(firebaseCalls.userContentToFirebase).toHaveBeenCalledWith(...expected)
     })
 
     it('redirects the user to /playlist', async () => {

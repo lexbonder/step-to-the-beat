@@ -2,6 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Playlist, MSTP } from './Playlist';
+import * as apiCalls from '../../apiCalls';
 
 jest.mock('../../apiCalls')
 
@@ -40,7 +41,6 @@ describe('Playlist', () => {
     it('should set the playlistName and trackUris into state on mount', () => {
       const mockState = {
         playlistName: 'Alex\'s 148 SPM, ska playlist',
-        playlistResponse: '',
         errorStatus: '',
         trackUris: ['spotify:tracks:1234abcd']
       }
@@ -69,9 +69,18 @@ describe('Playlist', () => {
   })
 
   describe('sendToSpotify', () => {
-    it('should set the state of playlistResponse to be a success message if the playlist is created in spotify', async () => {
-      await wrapper.instance().sendToSpotify()
-      expect(wrapper.state().playlistResponse).toEqual(`Alex's 148 SPM, ska playlist created successfully`)
+    it('should match the snapshot if the playlist is created in spotify', () => {
+      expect(wrapper.instance().sendToSpotify()).toMatchSnapshot()
+    })
+
+    it('should call createNewPlaylist with a user ID, accessToken, and a playlist name', () => {
+      wrapper.instance().sendToSpotify()
+      expect(apiCalls.createNewPlaylist).toHaveBeenCalledWith('lxbndr', '12345abcde', 'Alex\'s 148 SPM, ska playlist')
+    })
+
+    it('should call populatePlaylist with a user ID, plylist ID, accessToken, and trackUris', () => {
+      wrapper.instance().sendToSpotify()
+      expect(apiCalls.populatePlaylist).toHaveBeenCalledWith('lxbndr', '12345abcde', '12345abcde', ['spotify:tracks:1234abcd'])
     })
 
     it('should set the state of errorStatus to display an error if playlist creation fails', async () => {
