@@ -38,8 +38,10 @@ export class Playlist extends Component {
           id={track.uri}
           onChange={this.saveChecked}
         />
-        <h4 className='song-title'>{track.title}</h4>
-        <h4 className='song-artist'>{track.artist}</h4>
+        <div>
+          <h4 className='song-title'>{track.title}</h4>
+          <h4 className='song-artist'>{track.artist}</h4>
+        </div>
       </div>
     ));
   }
@@ -56,7 +58,7 @@ export class Playlist extends Component {
     }
   }
 
-  saveChecked = () => {
+  saveChecked = (event) => {
     const allCheckboxes = document.querySelectorAll('.checkbox');
     let selectedTracks = []
     allCheckboxes.forEach( checkbox => {
@@ -69,39 +71,49 @@ export class Playlist extends Component {
 
   sendToSpotify = async () => {
     const { user, accessToken } = this.props;
-    const { playlistName, trackUris } = this.state;
+    const { playlistName, selectedTracks } = this.state;
     try {
       const playlistResponse = await 
         createNewPlaylist(user.id, accessToken, playlistName);
       const { playlistId } = playlistResponse;
-      populatePlaylist(user.id, playlistId, accessToken, trackUris);
-      const sendButton = document.querySelector('.send');
-      sendButton.innerText = 'Playlist Sent!';
-      sendButton.setAttribute('disabled', true);
+      populatePlaylist(user.id, playlistId, accessToken, selectedTracks);
+      this.changeButton()
     } catch (error) {
       this.setState({errorStatus: error.message});
     }
   }
 
+  changeButton = () => {
+    const sendButton = document.querySelector('.send');
+    sendButton.innerText = 'Playlist Sent!';
+    sendButton.setAttribute('disabled', true);
+  }
+
   render() {
+    const { playlistName, selectedTracks, trackUris } = this.state;
     return (
       <div>
         <div className='playlist-header'>
-          <h2>{this.state.playlistName}</h2>
-          <input
-            type='checkbox'
-            id='select-all' 
-            onClick={this.toggleSelectAll}
-          />
-          <p>Select All</p>
-          <h2>{`${this.state.selectedTracks.length} of ${this.state.trackUris.length} selected.`}</h2>
-          <button
-            className='buttons send'
-            onClick={this.sendToSpotify}>
-              Send to Spotify
-          </button>
-        </div>
-        <div className='selected-header'>
+          <div className='playlist-header-top'>
+            <h2>{playlistName}</h2>
+            <button
+              disabled={!selectedTracks.length || selectedTracks.length > 100}
+              className='buttons send'
+              onClick={this.sendToSpotify}>
+                Send to Spotify
+            </button>
+          </div>
+          <div className='playlist-header-bottom'>
+            <div className='select-all-box'>
+              <p>All</p>
+              <input
+                type='checkbox'
+                id='select-all' 
+                onClick={this.toggleSelectAll}
+              />
+            </div>
+            <h2>{`${selectedTracks.length} of ${trackUris.length} selected (max 100)`}</h2>
+          </div>
         </div>
         <div className='playlist'>
           {this.playlistToRender()}

@@ -14,9 +14,9 @@
 }
 
 .playlist-header {
-  display: flex;
+  /*display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;*/
   border-bottom: 5px solid #404040;
   padding: 10px;
   position: fixed;
@@ -25,15 +25,33 @@
   background-color: #373737;
 }
 
+.playlist-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .playlist {
-  margin-top: 145px;
+  margin-top: 170px;
 }
 
-.playlist-header h2, 
-.response {
+.playlist-header h2 {
   color: #63B700;
+  padding-left: 10px;
 }
 
-.response {
-  text-align: center;
+#select-all {
+  display: inline-block;
+}
+
+.playlist-header-bottom,
+.track {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 30px auto;
+
+}
+
+.select-all-box {
+  padding-left: 10px;
 }
