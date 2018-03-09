@@ -49,15 +49,40 @@ ShallowWrapper {
         <div
           className="playlist-header"
 >
-          <h2>
-                    Alex's 148 SPM, ska playlist
-          </h2>
-          <button
-                    className="buttons send"
-                    onClick={[Function]}
+          <div
+                    className="playlist-header-top"
           >
-                    Send to Spotify
-          </button>
+                    <h2>
+                              Alex's 148 SPM, ska playlist
+                    </h2>
+                    <button
+                              className="buttons send"
+                              disabled={true}
+                              onClick={[Function]}
+                    >
+                              Send to Spotify
+                    </button>
+          </div>
+          <div
+                    className="playlist-header-bottom"
+          >
+                    <div
+                              className="select-all-box"
+                    >
+                              <p>
+                                        All
+                              </p>
+                              <input
+                                        id="select-all"
+                                        onClick={[Function]}
+                                        type="checkbox"
+                              />
+                    </div>
+                    <h2>
+                              0 of 1
+                                            selected (max 100)
+                    </h2>
+          </div>
 </div>,
         <div
           className="playlist"
@@ -66,17 +91,32 @@ ShallowWrapper {
                     className="track"
                     id="1234abcd"
           >
-                    <h4
-                              className="song-title"
-                    >
-                              Dont You?
-                    </h4>
-                    <h4
-                              className="song-artist"
-                    >
-                              I Fight Dragons
-                    </h4>
+                    <input
+                              className="checkbox"
+                              id="spotify:tracks:1234abcd"
+                              onChange={[Function]}
+                              type="checkbox"
+                    />
+                    <div>
+                              <h4
+                                        className="song-title"
+                              >
+                                        Dont You?
+                              </h4>
+                              <h4
+                                        className="song-artist"
+                              >
+                                        I Fight Dragons
+                              </h4>
+                    </div>
           </div>
+          <button
+                    className="buttons more-songs"
+                    disabled={false}
+                    onClick={[Function]}
+          >
+                    Get More Songs
+          </button>
 </div>,
       ],
     },
@@ -88,15 +128,40 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2>
-              Alex's 148 SPM, ska playlist
-</h2>,
-            <button
-              className="buttons send"
-              onClick={[Function]}
+            <div
+              className="playlist-header-top"
 >
-              Send to Spotify
-</button>,
+              <h2>
+                            Alex's 148 SPM, ska playlist
+              </h2>
+              <button
+                            className="buttons send"
+                            disabled={true}
+                            onClick={[Function]}
+              >
+                            Send to Spotify
+              </button>
+</div>,
+            <div
+              className="playlist-header-bottom"
+>
+              <div
+                            className="select-all-box"
+              >
+                            <p>
+                                          All
+                            </p>
+                            <input
+                                          id="select-all"
+                                          onClick={[Function]}
+                                          type="checkbox"
+                            />
+              </div>
+              <h2>
+                            0 of 1
+                                          selected (max 100)
+              </h2>
+</div>,
           ],
           "className": "playlist-header",
         },
@@ -107,24 +172,138 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Alex's 148 SPM, ska playlist",
+              "children": Array [
+                <h2>
+                  Alex's 148 SPM, ska playlist
+</h2>,
+                <button
+                  className="buttons send"
+                  disabled={true}
+                  onClick={[Function]}
+>
+                  Send to Spotify
+</button>,
+              ],
+              "className": "playlist-header-top",
             },
             "ref": null,
-            "rendered": "Alex's 148 SPM, ska playlist",
-            "type": "h2",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Alex's 148 SPM, ska playlist",
+                },
+                "ref": null,
+                "rendered": "Alex's 148 SPM, ska playlist",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Send to Spotify",
+                  "className": "buttons send",
+                  "disabled": true,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Send to Spotify",
+                "type": "button",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Send to Spotify",
-              "className": "buttons send",
-              "onClick": [Function],
+              "children": Array [
+                <div
+                  className="select-all-box"
+>
+                  <p>
+                                    All
+                  </p>
+                  <input
+                                    id="select-all"
+                                    onClick={[Function]}
+                                    type="checkbox"
+                  />
+</div>,
+                <h2>
+                  0 of 1
+                                selected (max 100)
+</h2>,
+              ],
+              "className": "playlist-header-bottom",
             },
             "ref": null,
-            "rendered": "Send to Spotify",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      All
+</p>,
+                    <input
+                      id="select-all"
+                      onClick={[Function]}
+                      type="checkbox"
+/>,
+                  ],
+                  "className": "select-all-box",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "All",
+                    },
+                    "ref": null,
+                    "rendered": "All",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "id": "select-all",
+                      "onClick": [Function],
+                      "type": "checkbox",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "0 of 1
+              selected (max 100)",
+                },
+                "ref": null,
+                "rendered": "0 of 1
+              selected (max 100)",
+                "type": "h2",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
@@ -135,21 +314,38 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
-              className="track"
-              id="1234abcd"
+            Array [
+              <div
+                className="track"
+                id="1234abcd"
 >
-              <h4
-                            className="song-title"
-              >
-                            Dont You?
-              </h4>
-              <h4
-                            className="song-artist"
-              >
-                            I Fight Dragons
-              </h4>
+                <input
+                                className="checkbox"
+                                id="spotify:tracks:1234abcd"
+                                onChange={[Function]}
+                                type="checkbox"
+                />
+                <div>
+                                <h4
+                                                className="song-title"
+                                >
+                                                Dont You?
+                                </h4>
+                                <h4
+                                                className="song-artist"
+                                >
+                                                I Fight Dragons
+                                </h4>
+                </div>
 </div>,
+            ],
+            <button
+              className="buttons more-songs"
+              disabled={false}
+              onClick={[Function]}
+>
+              Get More Songs
+</button>,
           ],
           "className": "playlist",
         },
@@ -161,16 +357,24 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h4
-                  className="song-title"
->
-                  Dont You?
-</h4>,
-                <h4
-                  className="song-artist"
->
-                  I Fight Dragons
-</h4>,
+                <input
+                  className="checkbox"
+                  id="spotify:tracks:1234abcd"
+                  onChange={[Function]}
+                  type="checkbox"
+/>,
+                <div>
+                  <h4
+                                    className="song-title"
+                  >
+                                    Dont You?
+                  </h4>
+                  <h4
+                                    className="song-artist"
+                  >
+                                    I Fight Dragons
+                  </h4>
+</div>,
               ],
               "className": "track",
               "id": "1234abcd",
@@ -182,27 +386,78 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Dont You?",
-                  "className": "song-title",
+                  "className": "checkbox",
+                  "id": "spotify:tracks:1234abcd",
+                  "onChange": [Function],
+                  "type": "checkbox",
                 },
                 "ref": null,
-                "rendered": "Dont You?",
-                "type": "h4",
+                "rendered": null,
+                "type": "input",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "I Fight Dragons",
-                  "className": "song-artist",
+                  "children": Array [
+                    <h4
+                      className="song-title"
+>
+                      Dont You?
+</h4>,
+                    <h4
+                      className="song-artist"
+>
+                      I Fight Dragons
+</h4>,
+                  ],
                 },
                 "ref": null,
-                "rendered": "I Fight Dragons",
-                "type": "h4",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Dont You?",
+                      "className": "song-title",
+                    },
+                    "ref": null,
+                    "rendered": "Dont You?",
+                    "type": "h4",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "I Fight Dragons",
+                      "className": "song-artist",
+                    },
+                    "ref": null,
+                    "rendered": "I Fight Dragons",
+                    "type": "h4",
+                  },
+                ],
+                "type": "div",
               },
             ],
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Get More Songs",
+              "className": "buttons more-songs",
+              "disabled": false,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Get More Songs",
+            "type": "button",
           },
         ],
         "type": "div",
@@ -220,15 +475,40 @@ ShallowWrapper {
           <div
             className="playlist-header"
 >
-            <h2>
-                        Alex's 148 SPM, ska playlist
-            </h2>
-            <button
-                        className="buttons send"
-                        onClick={[Function]}
+            <div
+                        className="playlist-header-top"
             >
-                        Send to Spotify
-            </button>
+                        <h2>
+                                    Alex's 148 SPM, ska playlist
+                        </h2>
+                        <button
+                                    className="buttons send"
+                                    disabled={true}
+                                    onClick={[Function]}
+                        >
+                                    Send to Spotify
+                        </button>
+            </div>
+            <div
+                        className="playlist-header-bottom"
+            >
+                        <div
+                                    className="select-all-box"
+                        >
+                                    <p>
+                                                All
+                                    </p>
+                                    <input
+                                                id="select-all"
+                                                onClick={[Function]}
+                                                type="checkbox"
+                                    />
+                        </div>
+                        <h2>
+                                    0 of 1
+                                                  selected (max 100)
+                        </h2>
+            </div>
 </div>,
           <div
             className="playlist"
@@ -237,17 +517,32 @@ ShallowWrapper {
                         className="track"
                         id="1234abcd"
             >
-                        <h4
-                                    className="song-title"
-                        >
-                                    Dont You?
-                        </h4>
-                        <h4
-                                    className="song-artist"
-                        >
-                                    I Fight Dragons
-                        </h4>
+                        <input
+                                    className="checkbox"
+                                    id="spotify:tracks:1234abcd"
+                                    onChange={[Function]}
+                                    type="checkbox"
+                        />
+                        <div>
+                                    <h4
+                                                className="song-title"
+                                    >
+                                                Dont You?
+                                    </h4>
+                                    <h4
+                                                className="song-artist"
+                                    >
+                                                I Fight Dragons
+                                    </h4>
+                        </div>
             </div>
+            <button
+                        className="buttons more-songs"
+                        disabled={false}
+                        onClick={[Function]}
+            >
+                        Get More Songs
+            </button>
 </div>,
         ],
       },
@@ -259,15 +554,40 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2>
-                Alex's 148 SPM, ska playlist
-</h2>,
-              <button
-                className="buttons send"
-                onClick={[Function]}
+              <div
+                className="playlist-header-top"
 >
-                Send to Spotify
-</button>,
+                <h2>
+                                Alex's 148 SPM, ska playlist
+                </h2>
+                <button
+                                className="buttons send"
+                                disabled={true}
+                                onClick={[Function]}
+                >
+                                Send to Spotify
+                </button>
+</div>,
+              <div
+                className="playlist-header-bottom"
+>
+                <div
+                                className="select-all-box"
+                >
+                                <p>
+                                                All
+                                </p>
+                                <input
+                                                id="select-all"
+                                                onClick={[Function]}
+                                                type="checkbox"
+                                />
+                </div>
+                <h2>
+                                0 of 1
+                                              selected (max 100)
+                </h2>
+</div>,
             ],
             "className": "playlist-header",
           },
@@ -278,24 +598,138 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Alex's 148 SPM, ska playlist",
+                "children": Array [
+                  <h2>
+                    Alex's 148 SPM, ska playlist
+</h2>,
+                  <button
+                    className="buttons send"
+                    disabled={true}
+                    onClick={[Function]}
+>
+                    Send to Spotify
+</button>,
+                ],
+                "className": "playlist-header-top",
               },
               "ref": null,
-              "rendered": "Alex's 148 SPM, ska playlist",
-              "type": "h2",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Alex's 148 SPM, ska playlist",
+                  },
+                  "ref": null,
+                  "rendered": "Alex's 148 SPM, ska playlist",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Send to Spotify",
+                    "className": "buttons send",
+                    "disabled": true,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Send to Spotify",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Send to Spotify",
-                "className": "buttons send",
-                "onClick": [Function],
+                "children": Array [
+                  <div
+                    className="select-all-box"
+>
+                    <p>
+                                        All
+                    </p>
+                    <input
+                                        id="select-all"
+                                        onClick={[Function]}
+                                        type="checkbox"
+                    />
+</div>,
+                  <h2>
+                    0 of 1
+                                  selected (max 100)
+</h2>,
+                ],
+                "className": "playlist-header-bottom",
               },
               "ref": null,
-              "rendered": "Send to Spotify",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        All
+</p>,
+                      <input
+                        id="select-all"
+                        onClick={[Function]}
+                        type="checkbox"
+/>,
+                    ],
+                    "className": "select-all-box",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "All",
+                      },
+                      "ref": null,
+                      "rendered": "All",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "id": "select-all",
+                        "onClick": [Function],
+                        "type": "checkbox",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "0 of 1
+              selected (max 100)",
+                  },
+                  "ref": null,
+                  "rendered": "0 of 1
+              selected (max 100)",
+                  "type": "h2",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
@@ -306,21 +740,38 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
-                className="track"
-                id="1234abcd"
+              Array [
+                <div
+                  className="track"
+                  id="1234abcd"
 >
-                <h4
-                                className="song-title"
-                >
-                                Dont You?
-                </h4>
-                <h4
-                                className="song-artist"
-                >
-                                I Fight Dragons
-                </h4>
+                  <input
+                                    className="checkbox"
+                                    id="spotify:tracks:1234abcd"
+                                    onChange={[Function]}
+                                    type="checkbox"
+                  />
+                  <div>
+                                    <h4
+                                                      className="song-title"
+                                    >
+                                                      Dont You?
+                                    </h4>
+                                    <h4
+                                                      className="song-artist"
+                                    >
+                                                      I Fight Dragons
+                                    </h4>
+                  </div>
 </div>,
+              ],
+              <button
+                className="buttons more-songs"
+                disabled={false}
+                onClick={[Function]}
+>
+                Get More Songs
+</button>,
             ],
             "className": "playlist",
           },
@@ -332,16 +783,24 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h4
-                    className="song-title"
->
-                    Dont You?
-</h4>,
-                  <h4
-                    className="song-artist"
->
-                    I Fight Dragons
-</h4>,
+                  <input
+                    className="checkbox"
+                    id="spotify:tracks:1234abcd"
+                    onChange={[Function]}
+                    type="checkbox"
+/>,
+                  <div>
+                    <h4
+                                        className="song-title"
+                    >
+                                        Dont You?
+                    </h4>
+                    <h4
+                                        className="song-artist"
+                    >
+                                        I Fight Dragons
+                    </h4>
+</div>,
                 ],
                 "className": "track",
                 "id": "1234abcd",
@@ -353,27 +812,78 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Dont You?",
-                    "className": "song-title",
+                    "className": "checkbox",
+                    "id": "spotify:tracks:1234abcd",
+                    "onChange": [Function],
+                    "type": "checkbox",
                   },
                   "ref": null,
-                  "rendered": "Dont You?",
-                  "type": "h4",
+                  "rendered": null,
+                  "type": "input",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "I Fight Dragons",
-                    "className": "song-artist",
+                    "children": Array [
+                      <h4
+                        className="song-title"
+>
+                        Dont You?
+</h4>,
+                      <h4
+                        className="song-artist"
+>
+                        I Fight Dragons
+</h4>,
+                    ],
                   },
                   "ref": null,
-                  "rendered": "I Fight Dragons",
-                  "type": "h4",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Dont You?",
+                        "className": "song-title",
+                      },
+                      "ref": null,
+                      "rendered": "Dont You?",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "I Fight Dragons",
+                        "className": "song-artist",
+                      },
+                      "ref": null,
+                      "rendered": "I Fight Dragons",
+                      "type": "h4",
+                    },
+                  ],
+                  "type": "div",
                 },
               ],
               "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Get More Songs",
+                "className": "buttons more-songs",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Get More Songs",
+              "type": "button",
             },
           ],
           "type": "div",

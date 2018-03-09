@@ -92,3 +92,8 @@ export const savePlaylist = playlist => ({
   type: 'SAVE_PLAYLIST',
   playlist
 });
+
+export const addToPlaylist = playlist => ({
+  type: 'ADD_TO_PLAYLIST',
+  playlist
+});

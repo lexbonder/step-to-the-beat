@@ -21,19 +21,38 @@ describe('playlistReducer', () => {
     expect(playlistReducer(undefined, mockAction)).toEqual(mockPlaylist)
   })
 
-  it('should remove an item from the playlist if the id matches and the type is REMOVE_FROM_PLAYLIST', () => {
+  it('should add more tracks into the existing playlist when the type is ADD_TO_PLAYLIST', () => {
     const mockState = [{
       artist: 'I Fight Dragons',
       title: 'Dont You?',
       id: '12345abcde',
       uri: 'spotify:track:12345abcde'
     }]
-
+    const mockPlaylist = [{
+      artist: 'a',
+      title: 'b',
+      id: '1a',
+      uri: 'spotify:track:1a'
+    }]
     const mockAction = {
-      type: 'REMOVE_FROM_PLAYLIST',
-      id: '12345abcde'
+      type: 'ADD_TO_PLAYLIST',
+      playlist: mockPlaylist
     }
+    const expected = [
+      {
+        artist: 'I Fight Dragons',
+        title: 'Dont You?',
+        id: '12345abcde',
+        uri: 'spotify:track:12345abcde'
+      },
+      {
+        artist: 'a',
+        title: 'b',
+        id: '1a',
+        uri: 'spotify:track:1a'
+      }
+    ];
 
-    expect(playlistReducer(mockState, mockAction)).toEqual([])
+    expect(playlistReducer(mockState, mockAction)).toEqual(expected)
   })
 })
