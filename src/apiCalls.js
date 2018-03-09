@@ -19,10 +19,10 @@ export const getUserName = async (accessToken) => {
   }
 };
 
-export const getPlaylistData = async (bpm, genre, accessToken) => {
+export const getPlaylistData = async (bpm, genre, accessToken, limit = 20) => {
   try {
-    const initialFetch = await fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${genre}&target_tempo=${bpm}`,
-      { headers: { Authorization: 'Bearer ' + accessToken }
+    const initialFetch = await fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${genre}&target_tempo=${bpm}&limit=${limit}`,
+      { headers: { Authorization: 'Bearer ' + accessToken, }
       });
     if (initialFetch.status < 300) {
       return await initialFetch.json();

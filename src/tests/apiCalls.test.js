@@ -67,7 +67,7 @@ describe('getPlaylistData', () => {
     const mockBpm = 148
     const mockAccessToken = '12345abcde'
 
-    const expected = [`https://api.spotify.com/v1/recommendations?seed_genres=${mockGenre}&target_tempo=${mockBpm}`,
+    const expected = [`https://api.spotify.com/v1/recommendations?seed_genres=${mockGenre}&target_tempo=${mockBpm}&limit=20`,
       { headers: { Authorization: 'Bearer ' + mockAccessToken }}
     ]
 

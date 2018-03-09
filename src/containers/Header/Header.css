@@ -10,6 +10,7 @@ header {
   top: 0;
   width: 100vw;
   background-color: #373737;
+  z-index: 1;
 }
 
 .home-button:hover,

@@ -178,5 +178,20 @@ describe('Actions', () => {
 
       expect(actions.savePlaylist(playlist)).toEqual(expected)
     })
+
+    it('addToPlaylist should return an object with the type ADD_TO_PLAYLIST and a playlist object', () => {
+      const playlist = [{
+        artist: 'LinkinPark',
+        title: 'One Step Closer',
+        id: '56789',
+        uri: 'spotify:tracks:56789'
+      }]
+      const expected = {
+        type: 'ADD_TO_PLAYLIST',
+        playlist
+      }
+
+      expect(actions.addToPlaylist(playlist)).toEqual(expected)
+    })
   })
 })

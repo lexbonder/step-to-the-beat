@@ -1,7 +1,8 @@
 /* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Playlist, MSTP } from './Playlist';
+import { savePlaylist } from '../../actions/actions';
+import { Playlist, MSTP, MDTP } from './Playlist';
 import * as apiCalls from '../../apiCalls';
 
 jest.mock('../../apiCalls')
@@ -42,7 +43,8 @@ describe('Playlist', () => {
       const mockState = {
         playlistName: 'Alex\'s 148 SPM, ska playlist',
         errorStatus: '',
-        trackUris: ['spotify:tracks:1234abcd']
+        page: 2,
+        selectedTracks: [],
       }
       expect(wrapper.state()).toEqual(mockState)
     })
@@ -78,9 +80,9 @@ describe('Playlist', () => {
       expect(apiCalls.createNewPlaylist).toHaveBeenCalledWith('lxbndr', '12345abcde', 'Alex\'s 148 SPM, ska playlist')
     })
 
-    it('should call populatePlaylist with a user ID, plylist ID, accessToken, and trackUris', () => {
+    it('should call populatePlaylist with a user ID, plylist ID, accessToken, and selectedSongs', () => {
       wrapper.instance().sendToSpotify()
-      expect(apiCalls.populatePlaylist).toHaveBeenCalledWith('lxbndr', '12345abcde', '12345abcde', ['spotify:tracks:1234abcd'])
+      expect(apiCalls.populatePlaylist).toHaveBeenCalledWith('lxbndr', '12345abcde', '12345abcde', [])
     })
 
     it('should set the state of errorStatus to display an error if playlist creation fails', async () => {
@@ -97,6 +99,25 @@ describe('Playlist', () => {
   //   })
   // })
 
+  describe('getMoreSongs', () => {
+    it('should call getPlaylistData with a spm, genre, accessToken, and limit of 40', async () => {
+      await wrapper.instance().getMoreSongs()
+      expect(apiCalls.getPlaylistData).toHaveBeenCalledWith(148, 'ska', '12345abcde', 40)
+    })
+
+    it('should call getPlaylistData with a spm, genre, accessToken, and limit of 60 when called twice', async () => {
+      await wrapper.instance().getMoreSongs()
+      await wrapper.instance().getMoreSongs()
+      expect(apiCalls.getPlaylistData).toHaveBeenCalledWith(148, 'ska', '12345abcde', 60)
+    })
+
+    it('should increment the page in state', async () => {
+      expect(wrapper.state().page).toEqual(2)
+      await wrapper.instance().getMoreSongs()
+      expect(wrapper.state().page).toEqual(3)
+    })
+  })
+
   describe('MSTP', () => {
     it('should return an object with values matching whatever is in state', () => {
       const mockState = {
@@ -111,6 +132,16 @@ describe('Playlist', () => {
       expect(mapped.newSeed).toEqual(mockNewSeed)
       expect(mapped.user).toEqual(mockUser)
       expect(mapped.accessToken).toEqual(mockAccessToken)
+    })
+  })
+
+  describe('MDTP', () => {
+    it('should call dispatch when addToPlaylist is called', () => {
+      const mockPlaylist = [{song: 'name'}]
+      const mockDispatch = jest.fn();
+      const result = MDTP(mockDispatch);
+      result.savePlaylist(mockPlaylist);
+      expect(mockDispatch).toHaveBeenCalledWith(savePlaylist(mockPlaylist))
     })
   })
 })
