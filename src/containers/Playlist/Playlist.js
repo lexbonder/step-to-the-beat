@@ -118,8 +118,6 @@ export class Playlist extends Component {
     const { page } = this.state;
     if (document.body.offsetHeight - 611 === window.scrollY &&
       this.state.page <= 5) {
-      console.log(window.scrollY)
-      console.log(document.body.offsetHeight - 611)
       try {
         const rawPlaylistData = await getPlaylistData(
           newSeed.spm, newSeed.genre, accessToken, page * 20
