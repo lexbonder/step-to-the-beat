@@ -14,9 +14,6 @@
 }
 
 .playlist-header {
-  /*display: flex;
-  align-items: center;
-  justify-content: space-between;*/
   border-bottom: 5px solid #404040;
   padding: 10px;
   position: fixed;

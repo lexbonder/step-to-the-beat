@@ -23,7 +23,7 @@ export class Playlist extends Component {
   }
   
   componentDidMount = () => {
-    window.addEventListener('scroll', this.getMoreSongs)
+    window.addEventListener('scroll', this.getMoreSongs);
     const { user, newSeed } = this.props;
     const { spm, genre } = newSeed;
     const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
@@ -31,12 +31,12 @@ export class Playlist extends Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.getMoreSongs)
+    window.removeEventListener('scroll', this.getMoreSongs);
   }
 
   playlistToRender = () => {
     const { playlist } = this.props;
-    const { selectedTracks } = this.state
+    const { selectedTracks } = this.state;
     return playlist.map(track => (
       <div
         onClick={() => this.selectTrack(track.uri)}
@@ -44,8 +44,8 @@ export class Playlist extends Component {
         className={`
           track 
           ${selectedTracks.includes(track.uri)
-            ? 'selected'
-            : ''
+          ? 'selected'
+          : ''
           }`
         }
         id={track.id}
@@ -65,9 +65,9 @@ export class Playlist extends Component {
   }
 
   selectTrack = (uri) => {
-    const selected = document.getElementById(uri)
+    const selected = document.getElementById(uri);
     selected.checked = !selected.checked;
-    this.saveChecked()
+    this.saveChecked();
   }
 
   toggleSelectAll = event => {
@@ -118,6 +118,8 @@ export class Playlist extends Component {
     const { page } = this.state;
     if (document.body.offsetHeight - 611 === window.scrollY &&
       this.state.page <= 5) {
+      console.log(window.scrollY)
+      console.log(document.body.offsetHeight - 611)
       try {
         const rawPlaylistData = await getPlaylistData(
           newSeed.spm, newSeed.genre, accessToken, page * 20
