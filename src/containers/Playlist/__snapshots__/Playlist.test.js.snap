@@ -88,13 +88,16 @@ ShallowWrapper {
           className="playlist"
 >
           <div
-                    className="track"
+                    className="
+                    track 
+                    "
                     id="1234abcd"
+                    onClick={[Function]}
           >
                     <input
                               className="checkbox"
                               id="spotify:tracks:1234abcd"
-                              onChange={[Function]}
+                              onClick={[Function]}
                               type="checkbox"
                     />
                     <div>
@@ -110,13 +113,6 @@ ShallowWrapper {
                               </h4>
                     </div>
           </div>
-          <button
-                    className="buttons more-songs"
-                    disabled={false}
-                    onClick={[Function]}
-          >
-                    Get More Songs
-          </button>
 </div>,
       ],
     },
@@ -314,38 +310,32 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [
-              <div
-                className="track"
-                id="1234abcd"
->
-                <input
-                                className="checkbox"
-                                id="spotify:tracks:1234abcd"
-                                onChange={[Function]}
-                                type="checkbox"
-                />
-                <div>
-                                <h4
-                                                className="song-title"
-                                >
-                                                Dont You?
-                                </h4>
-                                <h4
-                                                className="song-artist"
-                                >
-                                                I Fight Dragons
-                                </h4>
-                </div>
-</div>,
-            ],
-            <button
-              className="buttons more-songs"
-              disabled={false}
+            <div
+              className="
+          track 
+          "
+              id="1234abcd"
               onClick={[Function]}
 >
-              Get More Songs
-</button>,
+              <input
+                            className="checkbox"
+                            id="spotify:tracks:1234abcd"
+                            onClick={[Function]}
+                            type="checkbox"
+              />
+              <div>
+                            <h4
+                                          className="song-title"
+                            >
+                                          Dont You?
+                            </h4>
+                            <h4
+                                          className="song-artist"
+                            >
+                                          I Fight Dragons
+                            </h4>
+              </div>
+</div>,
           ],
           "className": "playlist",
         },
@@ -360,7 +350,7 @@ ShallowWrapper {
                 <input
                   className="checkbox"
                   id="spotify:tracks:1234abcd"
-                  onChange={[Function]}
+                  onClick={[Function]}
                   type="checkbox"
 />,
                 <div>
@@ -376,8 +366,11 @@ ShallowWrapper {
                   </h4>
 </div>,
               ],
-              "className": "track",
+              "className": "
+          track 
+          ",
               "id": "1234abcd",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -388,7 +381,7 @@ ShallowWrapper {
                 "props": Object {
                   "className": "checkbox",
                   "id": "spotify:tracks:1234abcd",
-                  "onChange": [Function],
+                  "onClick": [Function],
                   "type": "checkbox",
                 },
                 "ref": null,
@@ -445,20 +438,6 @@ ShallowWrapper {
             ],
             "type": "div",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Get More Songs",
-              "className": "buttons more-songs",
-              "disabled": false,
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Get More Songs",
-            "type": "button",
-          },
         ],
         "type": "div",
       },
@@ -514,13 +493,16 @@ ShallowWrapper {
             className="playlist"
 >
             <div
-                        className="track"
+                        className="
+                      track 
+                      "
                         id="1234abcd"
+                        onClick={[Function]}
             >
                         <input
                                     className="checkbox"
                                     id="spotify:tracks:1234abcd"
-                                    onChange={[Function]}
+                                    onClick={[Function]}
                                     type="checkbox"
                         />
                         <div>
@@ -536,13 +518,6 @@ ShallowWrapper {
                                     </h4>
                         </div>
             </div>
-            <button
-                        className="buttons more-songs"
-                        disabled={false}
-                        onClick={[Function]}
-            >
-                        Get More Songs
-            </button>
 </div>,
         ],
       },
@@ -740,38 +715,32 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              Array [
-                <div
-                  className="track"
-                  id="1234abcd"
->
-                  <input
-                                    className="checkbox"
-                                    id="spotify:tracks:1234abcd"
-                                    onChange={[Function]}
-                                    type="checkbox"
-                  />
-                  <div>
-                                    <h4
-                                                      className="song-title"
-                                    >
-                                                      Dont You?
-                                    </h4>
-                                    <h4
-                                                      className="song-artist"
-                                    >
-                                                      I Fight Dragons
-                                    </h4>
-                  </div>
-</div>,
-              ],
-              <button
-                className="buttons more-songs"
-                disabled={false}
+              <div
+                className="
+          track 
+          "
+                id="1234abcd"
                 onClick={[Function]}
 >
-                Get More Songs
-</button>,
+                <input
+                                className="checkbox"
+                                id="spotify:tracks:1234abcd"
+                                onClick={[Function]}
+                                type="checkbox"
+                />
+                <div>
+                                <h4
+                                                className="song-title"
+                                >
+                                                Dont You?
+                                </h4>
+                                <h4
+                                                className="song-artist"
+                                >
+                                                I Fight Dragons
+                                </h4>
+                </div>
+</div>,
             ],
             "className": "playlist",
           },
@@ -786,7 +755,7 @@ ShallowWrapper {
                   <input
                     className="checkbox"
                     id="spotify:tracks:1234abcd"
-                    onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
 />,
                   <div>
@@ -802,8 +771,11 @@ ShallowWrapper {
                     </h4>
 </div>,
                 ],
-                "className": "track",
+                "className": "
+          track 
+          ",
                 "id": "1234abcd",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -814,7 +786,7 @@ ShallowWrapper {
                   "props": Object {
                     "className": "checkbox",
                     "id": "spotify:tracks:1234abcd",
-                    "onChange": [Function],
+                    "onClick": [Function],
                     "type": "checkbox",
                   },
                   "ref": null,
@@ -870,20 +842,6 @@ ShallowWrapper {
                 },
               ],
               "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Get More Songs",
-                "className": "buttons more-songs",
-                "disabled": false,
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Get More Songs",
-              "type": "button",
             },
           ],
           "type": "div",

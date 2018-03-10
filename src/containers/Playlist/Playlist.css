@@ -1,6 +1,6 @@
 .track {
   padding: 20px;
-  border-bottom: 1px solid #151515;
+  border-bottom: 2px solid #151515;
 }
 
 .song-title {
@@ -14,9 +14,6 @@
 }
 
 .playlist-header {
-  /*display: flex;
-  align-items: center;
-  justify-content: space-between;*/
   border-bottom: 5px solid #404040;
   padding: 10px;
   position: fixed;
@@ -33,6 +30,7 @@
 
 .playlist {
   margin-top: 170px;
+  padding: 0 3px;
 }
 
 .playlist-header h2 {
@@ -54,4 +52,9 @@
 
 .select-all-box {
   padding-left: 10px;
+}
+
+.selected {
+  background-color: #151515;
+  box-shadow: 0 0 5px #63B700;
 }

@@ -23,25 +23,38 @@ export class Playlist extends Component {
   }
   
   componentDidMount = () => {
+    window.addEventListener('scroll', this.getMoreSongs);
     const { user, newSeed } = this.props;
     const { spm, genre } = newSeed;
     const playlistName = `${user.name}'s ${spm} SPM, ${genre} playlist`;
     this.setState({ playlistName });
   }
 
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.getMoreSongs);
+  }
+
   playlistToRender = () => {
     const { playlist } = this.props;
+    const { selectedTracks } = this.state;
     return playlist.map(track => (
       <div
+        onClick={() => this.selectTrack(track.uri)}
         key={track.id}
-        className='track'
+        className={`
+          track 
+          ${selectedTracks.includes(track.uri)
+          ? 'selected'
+          : ''
+          }`
+        }
         id={track.id}
       >
         <input
           type='checkbox'
           className='checkbox'
           id={track.uri}
-          onChange={this.saveChecked}
+          onClick={() => this.selectTrack(track.uri)}
         />
         <div>
           <h4 className='song-title'>{track.title}</h4>
@@ -49,6 +62,12 @@ export class Playlist extends Component {
         </div>
       </div>
     ));
+  }
+
+  selectTrack = (uri) => {
+    const selected = document.getElementById(uri);
+    selected.checked = !selected.checked;
+    this.saveChecked();
   }
 
   toggleSelectAll = event => {
@@ -97,16 +116,21 @@ export class Playlist extends Component {
   getMoreSongs = async () => {
     const { newSeed, accessToken } = this.props;
     const { page } = this.state;
-    try {
-      const rawPlaylistData = await getPlaylistData(
-        newSeed.spm, newSeed.genre, accessToken, page * 20
-      );
-      const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
-      const nextPage = page + 1;
-      this.setState({page: nextPage});
-      this.props.savePlaylist(cleanedPlaylist);
-    } catch (error) {
-      this.setState({errorStatus: error.message});
+    if (document.body.offsetHeight - 611 === window.scrollY &&
+      this.state.page <= 5) {
+      console.log(window.scrollY)
+      console.log(document.body.offsetHeight - 611)
+      try {
+        const rawPlaylistData = await getPlaylistData(
+          newSeed.spm, newSeed.genre, accessToken, page * 20
+        );
+        const cleanedPlaylist = playlistCleaner(rawPlaylistData.tracks);
+        const nextPage = page + 1;
+        this.setState({page: nextPage});
+        this.props.savePlaylist(cleanedPlaylist);
+      } catch (error) {
+        this.setState({errorStatus: error.message});
+      }
     }
   }
 
@@ -140,10 +164,11 @@ export class Playlist extends Component {
         </div>
         <div className='playlist'>
           {this.playlistToRender()}
-          <button
+          {/*<button
             className='buttons more-songs'
             disabled={this.state.page > 5}
-            onClick={this.getMoreSongs}>Get More Songs</button>
+            onClick={this.getMoreSongs}>Get More Songs
+          </button>*/}
         </div>
       </div>
     );
