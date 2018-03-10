@@ -33,6 +33,7 @@ export class Playlist extends Component {
     const { playlist } = this.props;
     return playlist.map(track => (
       <div
+        onClick={() => this.selectTrack(track.uri)}
         key={track.id}
         className='track'
         id={track.id}
@@ -41,7 +42,7 @@ export class Playlist extends Component {
           type='checkbox'
           className='checkbox'
           id={track.uri}
-          onChange={this.saveChecked}
+          onClick={() => this.selectTrack(track.uri)}
         />
         <div>
           <h4 className='song-title'>{track.title}</h4>
@@ -49,6 +50,12 @@ export class Playlist extends Component {
         </div>
       </div>
     ));
+  }
+
+  selectTrack = (uri) => {
+    const selected = document.getElementById(uri)
+    selected.checked = !selected.checked;
+    this.saveChecked()
   }
 
   toggleSelectAll = event => {
