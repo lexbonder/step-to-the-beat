@@ -116,8 +116,9 @@ export class Playlist extends Component {
   getMoreSongs = async () => {
     const { newSeed, accessToken } = this.props;
     const { page } = this.state;
-    if (document.body.offsetHeight - 611 === window.scrollY &&
-      this.state.page <= 5) {
+    const height = document.documentElement.offsetHeight;
+    const offset = document.documentElement.scrollTop + window.innerHeight;
+    if (height === offset && page <= 5) {
       try {
         const rawPlaylistData = await getPlaylistData(
           newSeed.spm, newSeed.genre, accessToken, page * 20
