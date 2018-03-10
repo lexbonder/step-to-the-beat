@@ -57,6 +57,12 @@ p {
   background-color: #FF4A19;
 }
 
+@media (min-width: 351px) {
+  .playlist {
+    margin-top: 195px;
+  }
+}
+
 @media (min-width: 500px) {
   .Home {
     height: 50vh;
@@ -92,9 +98,16 @@ p {
   }
 }
 
+@media (min-width: 553px) {
+  .playlist {
+    margin-top: 170px;
+  }
+}
+
 @media (min-width: 700px) {
   header,
   .playlist-header {
     width: 700px;
   }
+
 }
