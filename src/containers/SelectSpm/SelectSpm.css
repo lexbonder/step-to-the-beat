@@ -30,6 +30,7 @@ li {
   border: 1px solid #999999;
   font-size: 22px;
   padding: 10px;
+  text-align: center;
 }
 
 li:hover {
@@ -53,7 +54,7 @@ li:active {
 }
 
 .select-spm-input {
-  font-size: 30px;
+  font-size: 40px;
   background-color: #999999;
   color: #262626;
   width: 165px;
@@ -66,6 +67,7 @@ li:active {
 
 .select-spm-input::placeholder {
   color: #666666;
+  font-size: 30px;
 }
 
 .button-wrapper {

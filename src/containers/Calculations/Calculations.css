@@ -107,7 +107,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .speed-header h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .speed-units {
