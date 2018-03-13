@@ -176,7 +176,7 @@ export class Calculations extends Component {
                 <button
                   onClick={this.handleBackButton}
                   className={`
-                    buttons 
+                    buttons back-buttons
                     ${this.state.toggleGetButton}
                   `}>
                     Cancel
@@ -261,7 +261,7 @@ export class Calculations extends Component {
                       <button
                         onClick={this.handleBackButton}
                         className={`
-                          buttons 
+                          buttons back-buttons
                           ${this.state.toggleGetButton}
                         `}>
                           Cancel
@@ -296,7 +296,7 @@ export class Calculations extends Component {
                       <button
                         onClick={this.handleBackButton}
                         className={`
-                          buttons 
+                          buttons back-buttons
                           ${this.state.toggleGetButton}
                         `}>
                           Cancel
@@ -324,7 +324,7 @@ export class Calculations extends Component {
 
         <article className={`result button-wrapper ${this.state.toggleResult}`}>
           <div>
-            <h2>Your beat is:</h2>
+            <h2>Your SPM is:</h2>
             <h1>{`${this.state.result} SPM`}</h1>
           </div>
           <button

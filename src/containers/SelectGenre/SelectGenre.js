@@ -69,7 +69,7 @@ export class SelectGenre extends Component {
         </ul>
         <div className='button-wrapper'> 
           <button
-            className='buttons'
+            className='buttons back-buttons'
             onClick={this.handleBackButton}>
               Back
           </button>

@@ -21,9 +21,9 @@
 
 .Calculations .minute-mile-button,
 .Calculations .mile-hour-button {
-  border: 1px solid #373737;
+  border: 1px solid #262626;
   font-size: 20px;
-  color: #373737;
+  color: #262626;
   background-color: #999999;
 }
 
@@ -34,7 +34,7 @@
 
 .Calculations button.focused {
   background-color: #999999;
-  color: #373737;
+  color: #262626;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -50,7 +50,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 65px;
   font-size: 30px;
   margin: 10px;
-  border: 1px solid #373737;
+  border: 1px solid #262626;
   border-radius: 5px; 
 }
 
@@ -86,7 +86,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .colon {
-  color: #373737;
+  color: #262626;
   display: inline
 }
 
@@ -111,7 +111,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .speed-units {
-  border: 1px solid #373737;
+  border: 1px solid #262626;
   background-color: #bbbbbb;
 }
 
@@ -133,7 +133,7 @@ ol li {
 }
 
 ol li:hover {
-  color: #373737;
+  color: #262626;
   background-color: #999999;
   border: none;
   cursor: auto;
@@ -147,5 +147,5 @@ article.result.show {
 }
 
 .result h1 {
-  color: #63B700;
+  color: #4E9AF5;
 }

@@ -1,9 +1,8 @@
 /* Colors
-Dark Green = #63B700
-Light Green = #8ECF32
+Dark Green = #4E9AF5
 Light Gray = #999999
 Medium Gray = #404040
-Dark Gray = #373737
+Dark Gray = #262626
 */
 
 * {
@@ -15,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #373737;
+  background-color: #262626;
 }
 
 main {
@@ -32,7 +31,7 @@ h1, h2, h3, h4, p {
 }
 
 h4 {
-  color: #373737;
+  color: #262626;
 }
 
 a {
@@ -74,7 +73,6 @@ p {
   }
 
   .SelectSpm {
-    margin: 25% auto;
     max-width: 550px;
   }
 
