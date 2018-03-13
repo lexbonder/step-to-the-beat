@@ -57,7 +57,7 @@ li:active {
   background-color: #999999;
   color: #262626;
   width: 165px;
-  margin: 0 auto 50px;
+  margin: auto;
   display: block;
   text-align: center;
   border: 2px solid #4E9AF5;
