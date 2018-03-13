@@ -9,7 +9,7 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #373737;
+  background-color: #262626;
   z-index: 1;
 }
 
@@ -20,7 +20,7 @@ header {
 
 .home-button,
 .page-name {
-  color: #63B700;
+  color: #4E9AF5;
   font-size: 30px;
 }
 
@@ -50,7 +50,8 @@ header {
   text-decoration: underline;
 }
 
-.log-out:hover {
+.log-out:hover,
+.log-out:after {
   background-color: #BBBBBB;
   color: #626262;
   cursor: pointer;

@@ -75,9 +75,9 @@ export class Login extends Component {
       history.push('/select-spm');
     } else {
       const { savedGenres, savedSeeds, savedSpms} = userContent.val();
-      seedsFromFirebase(savedSeeds);
-      genresFromFirebase(savedGenres);
-      spmsFromFirebase(savedSpms);
+      seedsFromFirebase(savedSeeds || []);
+      genresFromFirebase(savedGenres || []);
+      spmsFromFirebase(savedSpms || []);
       history.push('/saved-playlists');
     } 
   }

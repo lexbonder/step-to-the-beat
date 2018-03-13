@@ -19,7 +19,7 @@
   position: fixed;
   top: 65px;
   width: 100vw;
-  background-color: #373737;
+  background-color: #262626;
 }
 
 .playlist-header-top {
@@ -34,7 +34,8 @@
 }
 
 .playlist-header h2 {
-  color: #63B700;
+  color: #4E9AF5;
+  font-weight: 200;
   padding-left: 10px;
 }
 
@@ -56,5 +57,9 @@
 
 .selected {
   background-color: #151515;
-  box-shadow: 0 0 5px #63B700;
+  box-shadow: 0 0 5px #4E9AF5;
+}
+
+button.send {
+  margin-left: 5px;
 }

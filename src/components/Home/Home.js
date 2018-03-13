@@ -23,7 +23,7 @@ const Home = () => {
         <br/>
         and give you a playlist that runs to your beat.
       </p>
-      <button className='log-in' onClick={authorize}>
+      <button className='log-in buttons' onClick={authorize}>
         Login with Spotify to begin
       </button>
     </div>

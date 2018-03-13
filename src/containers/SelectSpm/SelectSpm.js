@@ -20,18 +20,22 @@ export class SelectSpm extends Component {
   getRecentSpms = () => {
     const { recentSpms } = this.props;
     if (recentSpms && recentSpms.length) {
-      return recentSpms.map((spm, index) => {
-        return <li
-          key={index} 
-          onClick={this.selectRecent}>
-          {spm}
-        </li>;
-      });
-    } else {
-      return <li
-        className='spm-list-item'>
-          No Recents
-      </li>;
+      return (
+        <div>
+          <h3 className='recent-spms'>Past SPM's</h3>
+          <ul className='spm-list'>
+            {
+              recentSpms.map((spm, index) => {
+              return <li
+                key={index} 
+                onClick={this.selectRecent}>
+                  {spm}
+                </li>
+              })
+            }
+          </ul>
+        </div>
+      )
     }
   }
 
@@ -68,15 +72,8 @@ export class SelectSpm extends Component {
   render() {
     return (
       <div className='SelectSpm'>
-        <h3 className='recent-spms'>Recent</h3>
-        <ul className='spm-list'>
-          {this.getRecentSpms()}
-        </ul>
-        <button 
-          onClick={this.handleNewSpmButtion}
-          className='buttons new-spm-button'>
-            Calculate
-        </button>
+        {this.getRecentSpms()}
+        <h3 className='enter-spm'>Your Steps Per Minute</h3>
         <input
           type='number'
           name='selection'
@@ -85,12 +82,12 @@ export class SelectSpm extends Component {
           placeholder='Enter SPM'
           onChange={this.handleChange}
         />
+        <button 
+          onClick={this.handleNewSpmButtion}
+          className='buttons new-spm-button'>
+            Calculate
+        </button>
         <div className='button-wrapper'>
-          <button
-            onClick={this.handleBackButton}
-            className='buttons'>
-              Cancel
-          </button>
           <button
             disabled={!this.state.selection}
             onClick={this.handleClick}
