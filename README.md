@@ -30,9 +30,6 @@ This project uses [Google Firebase](https://firebase.google.com/docs/)
 
 ## Screenshots
 
-![Landing Page](screenshots/landing-page.png)
-![Playlist View](screenshots/playlist.png)
-
 ## Media Credit
 
 Default user image: https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png 
