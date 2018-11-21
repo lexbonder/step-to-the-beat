@@ -100,18 +100,23 @@ describe('Playlist', () => {
   // })
 
   describe('getMoreSongs', () => {
-    it.skip('should call getPlaylistData with a spm, genre, accessToken, and limit of 40', async () => {
+    beforeEach(() => {
+      // Mock user action of scrolling to bottom of page
+      window.innerHeight = 0;
+    })
+
+    it('should call getPlaylistData with a spm, genre, accessToken, and limit of 40', async () => {
       await wrapper.instance().getMoreSongs()
       expect(apiCalls.getPlaylistData).toHaveBeenCalledWith(148, 'ska', '12345abcde', 40)
     })
 
-    it.skip('should call getPlaylistData with a spm, genre, accessToken, and limit of 60 when called twice', async () => {
+    it('should call getPlaylistData with a spm, genre, accessToken, and limit of 60 when called twice', async () => {
       await wrapper.instance().getMoreSongs()
       await wrapper.instance().getMoreSongs()
       expect(apiCalls.getPlaylistData).toHaveBeenCalledWith(148, 'ska', '12345abcde', 60)
     })
 
-    it.skip('should increment the page in state', async () => {
+    it('should increment the page in state', async () => {
       expect(wrapper.state().page).toEqual(2)
       await wrapper.instance().getMoreSongs()
       expect(wrapper.state().page).toEqual(3)

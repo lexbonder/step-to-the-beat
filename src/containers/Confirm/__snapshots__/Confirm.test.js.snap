@@ -2,7 +2,6 @@
 
 exports[`Confirm should match the snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Confirm
     accessToken="12345abcde"
@@ -52,6 +51,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -80,7 +80,7 @@ ShallowWrapper {
           className="button-wrapper"
 >
           <button
-                    className="buttons"
+                    className="buttons back-buttons"
                     onClick={[Function]}
           >
                     Back
@@ -160,7 +160,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="buttons"
+              className="buttons back-buttons"
               onClick={[Function]}
 >
               Back
@@ -182,7 +182,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Back",
-              "className": "buttons",
+              "className": "buttons back-buttons",
               "onClick": [Function],
             },
             "ref": null,
@@ -234,7 +234,7 @@ ShallowWrapper {
             className="button-wrapper"
 >
             <button
-                        className="buttons"
+                        className="buttons back-buttons"
                         onClick={[Function]}
             >
                         Back
@@ -314,7 +314,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <button
-                className="buttons"
+                className="buttons back-buttons"
                 onClick={[Function]}
 >
                 Back
@@ -336,7 +336,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Back",
-                "className": "buttons",
+                "className": "buttons back-buttons",
                 "onClick": [Function],
               },
               "ref": null,
@@ -367,6 +367,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },

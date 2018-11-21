@@ -18,6 +18,11 @@ describe('Login', () => {
   let mockSpmsFromFirebase = jest.fn()
   let mockLocation = {hash: '#token=0123456789&nonsense=abcdefg'}
   let mockHistory = {push: jest.fn()}
+  window.localStorage = {
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+    removeItem: jest.fn()
+  }
 
   beforeEach(() => {
     wrapper = shallow(<Login 

@@ -3,11 +3,10 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "enzyme": "^3.3.0",
-    "firebase": "^4.10.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
+    "firebase": "^4.13.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.1",
     "spotify-web-api-js": "^0.23.0"
   },
@@ -19,10 +18,10 @@
     "eslint": "./node_modules/eslint/bin/eslint.js ./src .js"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react-redux": "^5.1.1",
+    "react-router": "^4.3.1",
     "redux": "^3.7.2"
   }
 }

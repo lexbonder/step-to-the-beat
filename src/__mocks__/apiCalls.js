@@ -46,9 +46,9 @@ export const getUserName = jest.fn()
     display_name: 'Alex Bonder',
     id: 'lxbndr',
     images: [{
-      url: 'superlongurl'}
-    ]}
-  ))
+      url: 'superlongurl'
+    }]
+  }))
 
 export const createNewPlaylist = jest.fn()
   .mockImplementationOnce(() => ({

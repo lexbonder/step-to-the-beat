@@ -22,20 +22,20 @@ export class SelectSpm extends Component {
     if (recentSpms && recentSpms.length) {
       return (
         <div>
-          <h3 className='recent-spms'>Past SPM's</h3>
+          <h3 className='recent-spms'>{'Past SPM\'s'}</h3>
           <ul className='spm-list'>
             {
               recentSpms.map((spm, index) => {
-              return <li
-                key={index} 
-                onClick={this.selectRecent}>
+                return <li
+                  key={index} 
+                  onClick={this.selectRecent}>
                   {spm}
-                </li>
+                </li>;
               })
             }
           </ul>
         </div>
-      )
+      );
     }
   }
 
