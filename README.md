@@ -4,7 +4,7 @@
 
 ## Synopsis
 
-This is my personal project from Mod 3. This app allows a user to enter or calculate their walking running pace (Steps per minute) and recieve a playlist using the Spotify API of songs matching their pace and chosen genre. They can then send that playlist to spotify and begin listening right away.
+This is my personal project from Mod 3. This app allows a user to enter or calculate their walking running pace (Steps per minute) and receive a playlist using the Spotify API of songs matching their pace and chosen genre. They can then send that playlist to spotify and begin listening right away.
 
 The project is currently functional but still in it's infancy. There are a few bugs that I am working on fixing as well as improving the UI/UX. I have had many fellow students use the app and I am seeing the common pain points and making changes to adapt.
 
